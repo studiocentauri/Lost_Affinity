@@ -26,13 +26,9 @@ public class playermovement : MonoBehaviour
         }
         speedX = Input.GetAxisRaw("Horizontal")*movSpeed;
         speedY = Input.GetAxisRaw("Vertical")*movSpeed;
-        if(Mathf.Abs(speedX) >= Mathf.Abs(speedY))
+        if(Mathf.Abs(speedX)== Mathf.Abs(speedY))
         {
             speedY=0;
-        }
-        else if(Mathf.Abs(speedX) < Mathf.Abs(speedY))
-        {
-            speedX = 0;
         }
         rb.velocity = new Vector2(speedX,speedY);
     }
