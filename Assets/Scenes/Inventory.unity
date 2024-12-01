@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 446984505}
   m_Layer: 0
   m_Name: item1
-  m_TagString: item
+  m_TagString: BlueItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 856724553}
   m_Layer: 0
   m_Name: item3
-  m_TagString: item
+  m_TagString: RedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,8 +794,8 @@ GameObject:
   - component: {fileID: 1062040505}
   - component: {fileID: 1062040504}
   m_Layer: 5
-  m_Name: Slot1
-  m_TagString: Untagged
+  m_Name: blueslot
+  m_TagString: BlueItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -978,9 +978,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85f4b0ef6d1fa443b5758745f35f5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot1Image: {fileID: 1062040504}
-  slot2Image: {fileID: 2044295955}
-  slot3Image: {fileID: 1426132882}
+  blueSlotImage: {fileID: 1062040504}
+  greenSlotImage: {fileID: 2044295955}
+  redSlotImage: {fileID: 1426132882}
 --- !u!4 &1218679154
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,8 +1008,8 @@ GameObject:
   - component: {fileID: 1426132883}
   - component: {fileID: 1426132882}
   m_Layer: 5
-  m_Name: Slot3
-  m_TagString: Untagged
+  m_Name: redslot
+  m_TagString: RedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 1837820687}
   m_Layer: 0
   m_Name: item 2
-  m_TagString: item
+  m_TagString: GreenItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1399,8 +1399,8 @@ GameObject:
   - component: {fileID: 2044295956}
   - component: {fileID: 2044295955}
   m_Layer: 5
-  m_Name: Slot2
-  m_TagString: Untagged
+  m_Name: greenslot
+  m_TagString: GreenItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
