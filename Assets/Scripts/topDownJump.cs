@@ -10,7 +10,7 @@ public class topDownJump : MonoBehaviour
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
 
-    [SerializeField] Transform player;
+    [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
 
     [SerializeField] float dragCoeff;
@@ -18,7 +18,7 @@ public class topDownJump : MonoBehaviour
     {
         velocity = 0;
         offset = new Vector3();
-        offset = player.position - transform.position;
+        offset = player.position - shadow.position;
         minHeight = offset.y;
     }
     void Jump()
@@ -37,14 +37,16 @@ public class topDownJump : MonoBehaviour
         }
         if(isJumping)
         {
+            GetComponent<BoxCollider2D> ().enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
             if(offset.y <= minHeight)
             {
                 isJumping=false;
+                GetComponent<BoxCollider2D> ().enabled = true;
                 velocity=0;
             }
         }
-        player.position = transform.position + offset;
+        player.position = shadow.position + offset;
     }
 }

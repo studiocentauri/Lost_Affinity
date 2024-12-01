@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playermovement : MonoBehaviour
+public class movecopy : MonoBehaviour
 {
     // Start is called before the first frame update
     public float movSpeed;
@@ -18,7 +18,6 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         speedX = Input.GetAxisRaw("Horizontal")*movSpeed;
         speedY = Input.GetAxisRaw("Vertical")*movSpeed;
         if(Mathf.Abs(speedX)== Mathf.Abs(speedY))
