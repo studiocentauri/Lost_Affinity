@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Shadow
   - item
+  - BlueItem
+  - GreenItem
+  - RedItem
   layers:
   - Default
   - TransparentFX

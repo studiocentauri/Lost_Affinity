@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    private GameObject slot1;
-    private GameObject slot2;
-    private GameObject slot3;
+    private GameObject blueSlot;
+    private GameObject greenSlot;
+    private GameObject redSlot;
 
-    public Image slot1Image;
-    public Image slot2Image;
-    public Image slot3Image;
+    public Image blueSlotImage;
+    public Image greenSlotImage;
+    public Image redSlotImage;
 
     private void Start()
     {
@@ -18,21 +18,21 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(GameObject item)
     {
-        if (slot1 == null)
+        if (item.CompareTag("BlueItem") && blueSlot == null)
         {
-            slot1 = item;
+            blueSlot = item;
         }
-        else if (slot2 == null)
+        else if (item.CompareTag("GreenItem") && greenSlot == null)
         {
-            slot2 = item;
+            greenSlot = item;
         }
-        else if (slot3 == null)
+        else if (item.CompareTag("RedItem") && redSlot == null)
         {
-            slot3 = item;
+            redSlot = item;
         }
         else
         {
-            Debug.Log("Inventory is full.");
+            Debug.Log("Inventory is full or item does not match any slot.");
             return;
         }
 
@@ -40,26 +40,26 @@ public class InventoryManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void RemoveItem(int index, Vector2 position)
+    public void RemoveItem(string color, Vector2 position)
     {
         GameObject item = null;
 
-        switch (index)
+        switch (color)
         {
-            case 0:
-                item = slot1;
-                slot1 = null;
+            case "Blue":
+                item = blueSlot;
+                blueSlot = null;
                 break;
-            case 1:
-                item = slot2;
-                slot2 = null;
+            case "Green":
+                item = greenSlot;
+                greenSlot = null;
                 break;
-            case 2:
-                item = slot3;
-                slot3 = null;
+            case "Red":
+                item = redSlot;
+                redSlot = null;
                 break;
             default:
-                Debug.Log("Invalid index.");
+                Debug.Log("Invalid color.");
                 return;
         }
 
@@ -74,16 +74,16 @@ public class InventoryManager : MonoBehaviour
         UpdateUI();
     }
 
-    public GameObject GetItem(int index)
+    public GameObject GetItem(string color)
     {
-        switch (index)
+        switch (color)
         {
-            case 0:
-                return slot1;
-            case 1:
-                return slot2;
-            case 2:
-                return slot3;
+            case "Blue":
+                return blueSlot;
+            case "Green":
+                return greenSlot;
+            case "Red":
+                return redSlot;
             default:
                 return null;
         }
@@ -91,9 +91,9 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        UpdateSlotUI(slot1, slot1Image);
-        UpdateSlotUI(slot2, slot2Image);
-        UpdateSlotUI(slot3, slot3Image);
+        UpdateSlotUI(blueSlot, blueSlotImage);
+        UpdateSlotUI(greenSlot, greenSlotImage);
+        UpdateSlotUI(redSlot, redSlotImage);
     }
 
     private void UpdateSlotUI(GameObject slot, Image slotImage)
@@ -107,7 +107,7 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Color color = slotImage.color;
-            color.a = 0.0f; // Transparent
+            color.a = 0.5f; // Transparent
             slotImage.color = color;
         }
     }

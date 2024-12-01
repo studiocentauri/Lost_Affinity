@@ -14,6 +14,7 @@ public class TestMovement : MonoBehaviour
 
         if (inventoryManager == null)
         {
+            // Try to find InventoryManager on another GameObject
             inventoryManager = FindObjectOfType<InventoryManager>();
         }
 
@@ -48,40 +49,40 @@ public class TestMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (inventoryManager.GetItem(0) != null)
+            if (inventoryManager.GetItem("Blue") != null)
             {
-                inventoryManager.RemoveItem(0, transform.position);
-                Debug.Log("Item removed from inventory");
+                inventoryManager.RemoveItem("Blue", transform.position);
+                Debug.Log("Blue item removed from inventory");
             }
             else
             {
-                Debug.Log("No item at index 0 to remove.");
+                Debug.Log("No blue item to remove.");
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (inventoryManager.GetItem(1) != null)
+            if (inventoryManager.GetItem("Green") != null)
             {
-                inventoryManager.RemoveItem(1, transform.position);
-                Debug.Log("Item removed from inventory");
+                inventoryManager.RemoveItem("Green", transform.position);
+                Debug.Log("Green item removed from inventory");
             }
             else
             {
-                Debug.Log("No item at index 1 to remove.");
+                Debug.Log("No green item to remove.");
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if (inventoryManager.GetItem(2) != null)
+            if (inventoryManager.GetItem("Red") != null)
             {
-                inventoryManager.RemoveItem(2, transform.position);
-                Debug.Log("Item removed from inventory");
+                inventoryManager.RemoveItem("Red", transform.position);
+                Debug.Log("Red item removed from inventory");
             }
             else
             {
-                Debug.Log("No item at index 2 to remove.");
+                Debug.Log("No red item to remove.");
             }
         }
     }
@@ -93,7 +94,7 @@ public class TestMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "item")
+        if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem"))
         {
             SetNearbyItem(other.gameObject);
         }
@@ -101,7 +102,7 @@ public class TestMovement : MonoBehaviour
 
     public void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.tag == "item")
+        if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem"))
         {
             SetNearbyItem(null);
         }
