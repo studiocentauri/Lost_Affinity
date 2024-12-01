@@ -23,6 +23,7 @@ public class weather : MonoBehaviour
             weatherStates[state].gameObject.SetActive(true);
             weatherStates[state].Clear();
             weatherStates[state].Play();
+            Debug.Log(state);
         }
     }
     void Inactive()
