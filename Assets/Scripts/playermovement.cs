@@ -8,6 +8,7 @@ public class playermovement : MonoBehaviour
     public float movSpeed;
     float speedX, speedY;
     Rigidbody2D rb;
+    [SerializeField] topDownJump JumpControl;
 
     void Start()
     {
@@ -18,8 +19,21 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(JumpControl.canNotJump && !JumpControl.isJumping) 
+        {
+            rb.velocity = new Vector2(0,0);
+            return;
+        }
         speedX = Input.GetAxisRaw("Horizontal")*movSpeed;
         speedY = Input.GetAxisRaw("Vertical")*movSpeed;
+        if(Mathf.Abs(speedX) >= Mathf.Abs(speedY))
+        {
+            speedY=0;
+        }
+        else if(Mathf.Abs(speedX) < Mathf.Abs(speedY))
+        {
+            speedX = 0;
+        }
         rb.velocity = new Vector2(speedX,speedY);
     }
 }
