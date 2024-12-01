@@ -10,6 +10,7 @@ TagManager:
   - BlueItem
   - GreenItem
   - RedItem
+  - DestructingTile
   layers:
   - Default
   - TransparentFX

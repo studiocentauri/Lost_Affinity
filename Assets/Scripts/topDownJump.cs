@@ -29,6 +29,13 @@ public class topDownJump : MonoBehaviour
             velocity = jumpSpeed;
         }
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("DestructingTile"))
+        {
+            Debug.Log("Stepped on DestructingTile");
+        }
+    }
     void Update()
     {
         if(Input.GetKeyDown("space"))

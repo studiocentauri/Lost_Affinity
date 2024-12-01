@@ -410,11 +410,10 @@ GameObject:
   - component: {fileID: 1098984867}
   - component: {fileID: 1098984869}
   - component: {fileID: 1098984868}
-  - component: {fileID: 1098984870}
   - component: {fileID: 1098984871}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: DestructingTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1905,18 +1904,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1098984870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098984866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd11159e5813f4336bb19c6478d1e8ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!19719996 &1098984871
 TilemapCollider2D:
   m_ObjectHideFlags: 0
