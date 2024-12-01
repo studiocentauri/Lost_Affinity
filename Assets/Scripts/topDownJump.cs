@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class topDownJump : MonoBehaviour
 {
-    [SerializeField] bool isGrounded;
+    public bool isGrounded;
     [SerializeField] bool isJumping;
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
@@ -16,20 +16,14 @@ public class topDownJump : MonoBehaviour
         if(isGrounded && !isJumping)
         {
             rb.velocity = rb.velocity + new Vector2(0, jumpSpeed);
+            isJumping = true;
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            isGrounded = true;
-        }
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
+            isJumping = false;
         }
     }
     void Update()
