@@ -19,11 +19,11 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(JumpControl.canNotJump && !JumpControl.isJumping) 
+       /* if(JumpControl.canNotJump && !JumpControl.isJumping) 
         {
             rb.velocity = new Vector2(0,0);
             return;
-        }
+        }*/
         speedX = Input.GetAxisRaw("Horizontal")*movSpeed;
         speedY = Input.GetAxisRaw("Vertical")*movSpeed;
         if(Mathf.Abs(speedX)== Mathf.Abs(speedY))
