@@ -48,3 +48,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 776307175
+    locked: 0
+  - name: Water
+    uniqueID: 2246920157
+    locked: 0
+  - name: postGround
+    uniqueID: 2285380429
+    locked: 0
+  - name: Foreground
+    uniqueID: 3673004771
+    locked: 0
+  - name: Foreground2
+    uniqueID: 892930365
+    locked: 0
