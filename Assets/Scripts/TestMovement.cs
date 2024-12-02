@@ -25,21 +25,6 @@ public class TestMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        float moveX = 0.0f;
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX = -1.0f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX = 1.0f;
-        }
-        //float moveY = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
-    }
-
     void Update()
     {
         if (NearbyItem != null && Input.GetKeyDown(KeyCode.I))

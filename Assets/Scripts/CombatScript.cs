@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CombatScript : MonoBehaviour
 {
     public Transform enemyposition;
     private Vector3 startpos;
     public float maginture,val;
+    public GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
+        canvas.SetActive(false);
         startpos=transform.position;
     }
 
@@ -30,6 +33,7 @@ public class CombatScript : MonoBehaviour
     }
     void respawn()
     {
+        canvas.SetActive(true);
         transform.position=startpos;
     }
 }
