@@ -9,17 +9,22 @@ public class topDownJump : MonoBehaviour
     public bool isJumping;
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
-    [SerializeField] List<TilemapCollider2D> canJumpAcross;
+    List<TilemapCollider2D> canJumpAcross;
     [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
 
     [SerializeField] float dragCoeff;
     void Start()
     {
+        canJumpAcross = new List<TilemapCollider2D>();
         velocity = 0;
         offset = new Vector3();
         offset = player.position - shadow.position;
         minHeight = offset.y;
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("CanJumpAcross"))
+        {
+            canJumpAcross.Add(obj.GetComponent<TilemapCollider2D>());
+        }
     }
     void Jump()
     {

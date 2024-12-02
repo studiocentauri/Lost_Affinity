@@ -5083,8 +5083,6 @@ MonoBehaviour:
   isJumping: 0
   jumpSpeed: 15
   gravity: 50
-  canJumpAcross:
-  - {fileID: 1098984871}
   shadow: {fileID: 150546188}
   player: {fileID: 460285301}
   dragCoeff: 0.0075
@@ -15227,7 +15225,7 @@ GameObject:
   - component: {fileID: 1098984871}
   m_Layer: 0
   m_Name: Water
-  m_TagString: DestructingTile
+  m_TagString: CanJumpAcross
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
