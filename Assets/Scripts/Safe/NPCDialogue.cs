@@ -3,24 +3,23 @@ using TMPro;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
-    private SafeManager safeManager;
+    public TextMeshProUGUI dialogueText; //to set the NPC dialogue
+    private SafeManager safeManager; //to get the passcode from SafeManager
 
     void Start()
     {
-        dialogueText.gameObject.SetActive(false);
-        safeManager = FindObjectOfType<SafeManager>();
+        dialogueText.gameObject.SetActive(false); 
+        safeManager = FindObjectOfType<SafeManager>(); //find the SafeManager in the scene
         if (safeManager != null){
             int combination = safeManager.passcode;
-            string text = $"The code to the safe is: {combination}";
+            string text = $"The code to the safe is: {combination}"; //set the dialogue text
             dialogueText.text = text;
             Debug.Log(text);
         }
-        else{
+        else
             dialogueText.text = "Sorry, I can't seem to remember the code!";
-        }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //when the player enters the NPC's trigger
     {
         if (other.CompareTag("Player")){
             dialogueText.gameObject.SetActive(true);
@@ -28,7 +27,7 @@ public class NPCDialogue : MonoBehaviour
         }
     }
     
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other) //when the player exits the NPC's trigger
     {
         if (other.CompareTag("Player")){
             dialogueText.gameObject.SetActive(false);
