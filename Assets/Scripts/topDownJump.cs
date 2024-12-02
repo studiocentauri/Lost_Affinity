@@ -26,6 +26,7 @@ public class topDownJump : MonoBehaviour
         {
             canJumpAcross.Add(obj.GetComponent<TilemapCollider2D>());
         }
+        canJumpAcross.Add(GameObject.FindGameObjectWithTag("BlueItem").GetComponent<EdgeCollider2D>());
     }
     void Jump()
     {
@@ -50,14 +51,14 @@ public class topDownJump : MonoBehaviour
         }
         if(isJumping)
         {
-            foreach(TilemapCollider2D collider in canJumpAcross)
+            foreach(Collider2D collider in canJumpAcross)
                 collider.enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
             if(offset.y <= minHeight)
             {
                 isJumping=false;
-            foreach(TilemapCollider2D collider in canJumpAcross)
+            foreach(Collider2D collider in canJumpAcross)
                 collider.enabled = true;
                 velocity=0;
             }
