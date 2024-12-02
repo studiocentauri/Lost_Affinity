@@ -2,6 +2,11 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 //using my brain in this goddamn PS, cuz I have no life to live
+
+/*
+    This script is to be put on the safe or the thing which requires the code.
+    The trigger volume needs to be adjusted accordingly
+*/
 public class SafeManager : MonoBehaviour
 {
     public int combinationLength = 4;
