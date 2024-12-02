@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class NPCDialogue : MonoBehaviour
+public class NPC_Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; //to set the NPC dialogue
     private SafeManager safeManager; //to get the passcode from SafeManager
@@ -14,7 +14,7 @@ public class NPCDialogue : MonoBehaviour
             int combination = safeManager.passcode;
             string text = $"The code to the safe is: {combination}"; //set the dialogue text
             dialogueText.text = text;
-            Debug.Log(text);
+            //Debug.Log(text);
         }
         else
             dialogueText.text = "Sorry, I can't seem to remember the code!";

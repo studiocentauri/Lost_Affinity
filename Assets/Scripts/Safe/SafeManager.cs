@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+//using my brain in this goddamn PS, cuz I have no life to live
 public class SafeManager : MonoBehaviour
 {
     public int combinationLength = 4;
@@ -7,12 +8,10 @@ public class SafeManager : MonoBehaviour
     public TextMeshProUGUI promptText; //set the prompt text
     public GameObject safeCanvas; //to enable or disable the safeInput canvas
     private bool playerInContact; //to check if the player is in contact with the safe
-    public int inputPasscode; //the player's input passcode
 
     void Awake()
     {
         passcode=0;
-        inputPasscode=0;
         for(int i=1;i<=combinationLength;i++)
             passcode = passcode*10+Random.Range(0,10); //generate a random passcode
     }
