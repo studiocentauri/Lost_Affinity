@@ -74,3 +74,4 @@ crashlytics-build.properties
 # Temporary local files
 Assets/Scripts/TemporaryScripts
 /[Aa]ssets/TilesT/*
+.DS_Store
