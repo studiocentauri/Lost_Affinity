@@ -69,20 +69,21 @@ public class LaserController : MonoBehaviour
         {
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
-            EndPoint = Mathf.Lerp(0, l, Timelaser*laserSpeed);
+            EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
             // If the laser hits something, set the laser's endpoint to the collision point
-            laserRenderer.SetPosition(0,laserStartPosition);  // Rotate the laser in the correct direction
+            laserRenderer.SetPosition(0, laserStartPosition);  // Rotate the laser in the correct direction
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
             // Set the target laser distance to the distance from the emitter to the hit point
-            // targetLaserDistance = direction.magnitude;
+            targetLaserDistance = LaserDirection.magnitude;
             Debug.Log("Laser hit object: " + hit.collider.gameObject.name + " at position: " + hit.point);
 
         }
         else
         {
+
             // If the laser doesn't hit anything, extend it to the max distance
             laserRenderer.positionCount = 2;  // Keep laser pointing in the right direction
-            EndPoint = Mathf.Lerp(0, maxLaserDistance, Timelaser*laserSpeed);
+            EndPoint = Mathf.Lerp(0, maxLaserDistance, Timelaser * laserSpeed);
             laserRenderer.SetPosition(0, laserStartPosition);
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
             // Set the target laser distance to the maximum range

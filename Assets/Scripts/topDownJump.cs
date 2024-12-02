@@ -26,7 +26,7 @@ public class topDownJump : MonoBehaviour
         {
             canJumpAcross.Add(obj.GetComponent<TilemapCollider2D>());
         }
-        canJumpAcross.Add(GameObject.FindGameObjectWithTag("BlueItem").GetComponent<EdgeCollider2D>());
+//        canJumpAcross.Add(GameObject.FindGameObjectWithTag("BlueItem").GetComponent<EdgeCollider2D>());
     }
     void Jump()
     {
