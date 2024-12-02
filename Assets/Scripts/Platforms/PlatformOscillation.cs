@@ -8,6 +8,7 @@ public class PlatformOscillation : MonoBehaviour
     public Vector3 endPointCoords;
     private Vector3 targetPosition;
     public bool movementIsTriggered;
+    public Vector3 direction;
     void Start()
     {
         startPoint = transform.position;
@@ -26,6 +27,7 @@ public class PlatformOscillation : MonoBehaviour
     }
     void Update()
     {
+        direction = (targetPosition - transform.position).normalized; 
         if(movementIsTriggered)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);

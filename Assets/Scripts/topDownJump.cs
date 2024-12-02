@@ -24,7 +24,7 @@ public class topDownJump : MonoBehaviour
         minHeight = offset.y;
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("CanJumpAcross"))
         {
-            canJumpAcross.Add(obj.GetComponent<TilemapCollider2D>());
+            canJumpAcross.Add(obj.GetComponent<Collider2D>());
         }
 //        canJumpAcross.Add(GameObject.FindGameObjectWithTag("BlueItem").GetComponent<EdgeCollider2D>());
     }
