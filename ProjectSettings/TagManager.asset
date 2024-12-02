@@ -11,6 +11,8 @@ TagManager:
   - GreenItem
   - RedItem
   - DestructingTile
+  - Triangle
+  - CanJumpAcross
   layers:
   - Default
   - TransparentFX
