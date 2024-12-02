@@ -57,7 +57,7 @@ public class SafeUI : MonoBehaviour
             string buttonName="Button_"+ch;
             Button button = GameObject.Find("Button_"+ch).GetComponent<Button>(); // get the button
             ColorBlock colors = button.colors;
-            colors.normalColor = new Color32(0xD7, 0xD7, 0xD7, 0xFF); //
+            colors.normalColor = hintColor; //
             button.colors = colors;
         }
             /*ColorBlock colors = button.colors;
