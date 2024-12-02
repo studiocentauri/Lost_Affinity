@@ -74,7 +74,6 @@ public class LaserController : MonoBehaviour
             // Set the target laser distance to the distance from the emitter to the hit point
             targetLaserDistance = LaserDirection.magnitude;
             Debug.Log("Laser hit object: " + hit.collider.gameObject.name + " at position: " + hit.point );
-
         }
         else
         {
