@@ -1,19 +1,29 @@
 using UnityEngine;
 using TMPro;
+using System.Linq;
 //using my brain in this goddamn PS, cuz I have no life to live
 public class SafeManager : MonoBehaviour
 {
     public int combinationLength = 4;
-    public int passcode; //actual passcode
+    public string passcode; //actual passcode
     public TextMeshProUGUI promptText; //set the prompt text
     public GameObject safeCanvas; //to enable or disable the safeInput canvas
     private bool playerInContact; //to check if the player is in contact with the safe
 
     void Awake()
     {
-        passcode=0;
-        for(int i=1;i<=combinationLength;i++)
-            passcode = passcode*10+Random.Range(0,10); //generate a random passcode
+        // Generate a random string of length 4 with distinct digits
+        passcode = "";
+        var random = new System.Random();
+        passcode = string.Concat(Enumerable.Range(0, 10).OrderBy(_ => random.Next()).Take(4));
+        /*List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        for (int i = 0; i < combinationLength; i++)
+        {
+            int index = Random.Range(0, digits.Count);
+            passcode += digits[index].ToString();
+            digits.RemoveAt(index);
+        }*/
+        Debug.Log("Hi "+passcode);
     }
     void Start()
     {
@@ -25,7 +35,7 @@ public class SafeManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-            promptText.text = "You have found a safe! Press P to enter the passcode to unlock it.";
+            promptText.text = "You have found a safe! \nPress P to enter the passcode to unlock it.";
             promptText.gameObject.SetActive(true);
             playerInContact = true;
         }

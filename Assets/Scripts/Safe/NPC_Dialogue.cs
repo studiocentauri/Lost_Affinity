@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+//using an NPC that is as retarded as I am
 public class NPC_Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; //to set the NPC dialogue
@@ -11,8 +11,9 @@ public class NPC_Dialogue : MonoBehaviour
         dialogueText.gameObject.SetActive(false); 
         safeManager = FindObjectOfType<SafeManager>(); //find the SafeManager in the scene
         if (safeManager != null){
-            int combination = safeManager.passcode;
-            string text = $"The code to the safe is: {combination}"; //set the dialogue text
+            string combination = safeManager.passcode;
+            combination = combination.Substring(0,combination.Length-2);
+            string text = $"The code to the safe is: {combination}_ _"; //set the dialogue text
             dialogueText.text = text;
             //Debug.Log(text);
         }
@@ -23,7 +24,6 @@ public class NPC_Dialogue : MonoBehaviour
     {
         if (other.CompareTag("Player")){
             dialogueText.gameObject.SetActive(true);
-            //Debug.Log(dialogueText.text);
         }
     }
     

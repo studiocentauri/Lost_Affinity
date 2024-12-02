@@ -1,28 +1,32 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 //using my one and only retarded brain cell, how many do you have?
 public class SafeUI : MonoBehaviour
 {
     private int combinationLength;
     public TextMeshProUGUI promptText; //to display the prompt
     public TextMeshProUGUI displayText; //to display the input passcode
-    private int passcode; //actual passcode
-    private int inputPasscode; //input passcode
+    private string passcode; //actual passcode
+    private string inputPasscode; //input passcode
+    private Color32 hintColor;
 
     void Start(){
         displayText.text = "Enter Passcode";
-        inputPasscode = 0;
+        inputPasscode = "";
+        hintColor = new Color32(0xD7, 0xD7, 0xD7, 0xFF);
         GameObject SafeManager = FindObjectOfType<SafeManager>().gameObject;
         passcode = SafeManager.GetComponent<SafeManager>().passcode;
         combinationLength = SafeManager.GetComponent<SafeManager>().combinationLength;
-        Debug.Log("Hi: " + passcode);
+        //Debug.Log(passcode);
+        GiveHint(); //Hint dede lawde ko
     }
     public void TakeInput(int digit){
-        inputPasscode = inputPasscode*10+digit;
+        inputPasscode+=digit.ToString();
         updateDisplay();
     }
     public void Delete(){
-        inputPasscode/=10;
+        inputPasscode=inputPasscode.Substring(0,inputPasscode.Length-1);
         updateDisplay();
     }
 
@@ -31,22 +35,36 @@ public class SafeUI : MonoBehaviour
             promptText.text = "Safe Unlocked!";
             promptText.gameObject.SetActive(true);
             gameObject.SetActive(false);
-
-
             //do something to unlock the safe and other shit
         }
         else{
-            inputPasscode = 0;
+            inputPasscode = "";
         }
         updateDisplay();
     }
 
     void updateDisplay(){
-        if(inputPasscode>9999)
-            inputPasscode/=10;
-        if(inputPasscode==0)
+        if(inputPasscode.Length>combinationLength)
+            inputPasscode=inputPasscode.Substring(0,combinationLength);
+        if(inputPasscode=="")
             displayText.text = "Wrong Passcode!";
         else
             displayText.text = inputPasscode.ToString();
+    }
+
+    void GiveHint(){
+        foreach(char ch in passcode){
+            string buttonName="Button_"+ch;
+            Button button = GameObject.Find("Button_"+ch).GetComponent<Button>(); // get the button
+            ColorBlock colors = button.colors;
+            colors.normalColor = new Color32(0xD7, 0xD7, 0xD7, 0xFF); //
+            button.colors = colors;
+        }
+            /*ColorBlock colors = button.colors;
+            colors.normalColor = normal;
+            colors.highlightedColor = highlighted;
+            colors.pressedColor = pressed;
+            button.colors = colors;
+            */
     }
 }
