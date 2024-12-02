@@ -2,6 +2,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 //using my one and only retarded brain cell, how many do you have?
+
+/*
+    This script is to be put on the safe UI canvas
+*/
 public class SafeUI : MonoBehaviour
 {
     private int combinationLength;
