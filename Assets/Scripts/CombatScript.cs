@@ -6,6 +6,7 @@ public class CombatScript : MonoBehaviour
 {
     public Transform enemyposition;
     private Vector3 startpos;
+    public float maginture,val;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +18,11 @@ public class CombatScript : MonoBehaviour
     {
         
         Vector3 a= enemyposition.position-transform.position;
-        if(magnitude(a) < 2.5)
+        if(magnitude(a) < val)
         {
-            respawn();
-            
+            respawn();  
         }
+        enemyposition.position+=new Vector3(maginture*Mathf.Sin(Time.time)*Time.deltaTime,0.0f,0.0f);
     }
     float magnitude(Vector3 pos)
     {
