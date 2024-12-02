@@ -60,24 +60,31 @@ public class LaserController : MonoBehaviour
     {
         laserRenderer.enabled = true;  // Show the laser
         Vector3 LaserDirection = transform.right;
+        Debug.Log(LaserDirection);
         // Fire a ray from the player's position (or wherever the laser should start)
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
         float EndPoint;
         if (hit.collider != null)
         {
             laserRenderer.positionCount = 2;
+            Debug.Log(laserStartPosition);
+            Debug.Log(hit.point);
             float l = Vector3.Distance(laserStartPosition, hit.point);
             EndPoint = Mathf.Lerp(0, l, 1f);
+            Debug.Log(EndPoint);
+            Debug.Log("maa chudao----");
             // If the laser hits something, set the laser's endpoint to the collision point
             laserRenderer.SetPosition(0,laserStartPosition);  // Rotate the laser in the correct direction
-            laserRenderer.SetPosition(1, LaserDirection * EndPoint);
+            laserRenderer.SetPosition(1, laserStartPosition+LaserDirection * EndPoint);
+            Debug.Log(LaserDirection * EndPoint);
             // Set the target laser distance to the distance from the emitter to the hit point
-            // targetLaserDistance = direction.magnitude;
-            Debug.Log("Laser hit object: " + hit.collider.gameObject.name + " at position: " + hit.point);
+            targetLaserDistance = LaserDirection.magnitude;
+            Debug.Log("Laser hit object: " + hit.collider.gameObject.name + " at position: " + hit.point );
 
         }
         else
         {
+            
             // If the laser doesn't hit anything, extend it to the max distance
             laserRenderer.positionCount = 2;  // Keep laser pointing in the right direction
             EndPoint = Mathf.Lerp(0, maxLaserDistance, 1f);
