@@ -1,6 +1,11 @@
 using UnityEngine;
 using TMPro;
 //using an NPC that is as retarded as I am
+
+/*
+    This script is to be put on the hint-giving object.
+    The trigger has to be adjusted accordingly.
+*/
 public class NPC_Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; //to set the NPC dialogue
