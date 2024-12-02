@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class topDownJump : MonoBehaviour
 {
-    public bool canNotJump;
     public bool isJumping;
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
-
+    [SerializeField] List<TilemapCollider2D> canJumpAcross;
     [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
 
@@ -23,7 +23,7 @@ public class topDownJump : MonoBehaviour
     }
     void Jump()
     {
-        if(!canNotJump && !isJumping)
+        if(!isJumping)
         {
             isJumping = true;
             velocity = jumpSpeed;
@@ -33,7 +33,7 @@ public class topDownJump : MonoBehaviour
     {
         if(other.gameObject.CompareTag("DestructingTile"))
         {
-            Debug.Log("Stepped on DestructingTile");
+            Debug.Log("Stepped on DestructingTile");// for traps etc
         }
     }
     void Update()
@@ -44,13 +44,15 @@ public class topDownJump : MonoBehaviour
         }
         if(isJumping)
         {
-            GetComponent<BoxCollider2D> ().enabled = false;
+            foreach(TilemapCollider2D collider in canJumpAcross)
+                collider.enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
             if(offset.y <= minHeight)
             {
                 isJumping=false;
-                GetComponent<BoxCollider2D> ().enabled = true;
+            foreach(TilemapCollider2D collider in canJumpAcross)
+                collider.enabled = true;
                 velocity=0;
             }
         }

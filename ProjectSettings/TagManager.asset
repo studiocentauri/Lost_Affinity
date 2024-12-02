@@ -11,6 +11,7 @@ TagManager:
   - GreenItem
   - RedItem
   - DestructingTile
+  - Triangle
   layers:
   - Default
   - TransparentFX
