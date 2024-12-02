@@ -9,7 +9,8 @@ public class topDownJump : MonoBehaviour
     public bool isJumping;
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
-    List<TilemapCollider2D> canJumpAcross;
+    [SerializeField] List<TilemapCollider2D> canJumpAcross;
+    
     [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
 

@@ -6,6 +6,7 @@ public class TestMovement : MonoBehaviour
     private GameObject NearbyItem;
     private Rigidbody2D rb;
     public float speed = 5.0f;
+    GameObject triggerObject;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class TestMovement : MonoBehaviour
         {
             moveX = 1.0f;
         }
+        //float moveY = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
     }
 
@@ -52,6 +54,7 @@ public class TestMovement : MonoBehaviour
             if (inventoryManager.GetItem("Blue") != null)
             {
                 inventoryManager.RemoveItem("Blue", transform.position);
+
                 Debug.Log("Blue item removed from inventory");
             }
             else
@@ -97,12 +100,13 @@ public class TestMovement : MonoBehaviour
         if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem"))
         {
             SetNearbyItem(other.gameObject);
+            triggerObject = other.gameObject;
         }
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem"))
+        if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem") && triggerObject == other.gameObject)
         {
             SetNearbyItem(null);
         }

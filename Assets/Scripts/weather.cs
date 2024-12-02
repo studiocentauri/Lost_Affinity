@@ -9,7 +9,7 @@ public class weather : MonoBehaviour
     [SerializeField] List<ParticleSystem> weatherStates;
     [SerializeField] float transitTime;
     [SerializeField] float weatherTime;// Note that transit time must be less than weatherTime
-    float time = 0f;
+    [SerializeField] float time = 0f;
     int state = 0;
     void Update()
     {
