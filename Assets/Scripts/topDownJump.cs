@@ -9,7 +9,7 @@ public class topDownJump : MonoBehaviour
     public bool isJumping;
     [SerializeField] float jumpSpeed;
     [SerializeField] float gravity;
-    [SerializeField] List<TilemapCollider2D> canJumpAcross;
+    [SerializeField] List<Collider2D> canJumpAcross;
     
     [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
@@ -17,7 +17,7 @@ public class topDownJump : MonoBehaviour
     [SerializeField] float dragCoeff;
     void Start()
     {
-        canJumpAcross = new List<TilemapCollider2D>();
+        canJumpAcross = new List<Collider2D>();
         velocity = 0;
         offset = new Vector3();
         offset = player.position - shadow.position;
@@ -26,6 +26,7 @@ public class topDownJump : MonoBehaviour
         {
             canJumpAcross.Add(obj.GetComponent<TilemapCollider2D>());
         }
+        canJumpAcross.Add(GameObject.FindGameObjectWithTag("BlueItem").GetComponent<EdgeCollider2D>());
     }
     void Jump()
     {
@@ -50,14 +51,14 @@ public class topDownJump : MonoBehaviour
         }
         if(isJumping)
         {
-            foreach(TilemapCollider2D collider in canJumpAcross)
+            foreach(Collider2D collider in canJumpAcross)
                 collider.enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
             if(offset.y <= minHeight)
             {
                 isJumping=false;
-            foreach(TilemapCollider2D collider in canJumpAcross)
+            foreach(Collider2D collider in canJumpAcross)
                 collider.enabled = true;
                 velocity=0;
             }
