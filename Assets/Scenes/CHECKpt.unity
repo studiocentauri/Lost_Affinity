@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 431576402}
   - component: {fileID: 431576401}
   - component: {fileID: 431576400}
-  - component: {fileID: 431576399}
   - component: {fileID: 431576403}
   m_Layer: 0
   m_Name: checkpt
@@ -142,18 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &431576399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431576398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f884ef38b2f9b1e4d847ccde7ff58a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &431576400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -289,7 +276,6 @@ GameObject:
   - component: {fileID: 873316348}
   - component: {fileID: 873316347}
   - component: {fileID: 873316346}
-  - component: {fileID: 873316345}
   - component: {fileID: 873316344}
   m_Layer: 0
   m_Name: checkpt (1)
@@ -308,18 +294,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e66eb345fdc084dbd17ba0bfd68ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &873316345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873316343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f884ef38b2f9b1e4d847ccde7ff58a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &873316346
@@ -469,7 +443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movSpeed: 5
-  JumpControl: {fileID: 0}
 --- !u!114 &1004937938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1304,6 @@ GameObject:
   - component: {fileID: 1556568905}
   - component: {fileID: 1556568904}
   - component: {fileID: 1556568903}
-  - component: {fileID: 1556568902}
   - component: {fileID: 1556568901}
   m_Layer: 0
   m_Name: checkpt (2)
@@ -1350,18 +1322,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e66eb345fdc084dbd17ba0bfd68ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1556568902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556568900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f884ef38b2f9b1e4d847ccde7ff58a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1556568903
