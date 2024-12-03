@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
     }
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("Main Menu_Arsal");
+        SceneManager.LoadScene("MainMenu_Arsal");
     }
     public void Resume(){
         pausemenu.SetActive(false);
