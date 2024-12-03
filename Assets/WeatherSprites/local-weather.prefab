@@ -19434,8 +19434,8 @@ MonoBehaviour:
   - {fileID: 816091553483283654}
   - {fileID: 6056798567864777776}
   - {fileID: 483172267832080093}
-  transitTime: 30
-  weatherTime: 90
+  transitTime: 25
+  weatherTime: 30
   time: 0
 --- !u!50 &874789692408966639
 Rigidbody2D:

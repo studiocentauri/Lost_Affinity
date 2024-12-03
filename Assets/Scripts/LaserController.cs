@@ -21,6 +21,7 @@ public class LaserController : MonoBehaviour
     bool cooled=false;
     bool usedonce=false;
     public float cooldown;
+    public Vector3 Lab;
     Vector3 endpoiiinnttt;
     void Start()
     {

@@ -326,4 +326,5 @@ MonoBehaviour:
   animator: {fileID: 2603259888307224053}
   movement: {fileID: 5326375528891933982}
   playerTransform: {fileID: 4364800334275045293}
+  jumpControl: {fileID: 1736352939597358005}
   helmetSwitchKey: q
