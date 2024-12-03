@@ -31,8 +31,7 @@ public class Interaction : MonoBehaviour
         {
             if(dialoguePanel.activeInHierarchy)
             {
-                //StopCoroutine(Typing());
-                zeroText();
+                NextLine();
             }
             else
             {
@@ -44,7 +43,7 @@ public class Interaction : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
-                NextLine();
+                //NextLine();
             }
         }
         
@@ -76,7 +75,6 @@ public class Interaction : MonoBehaviour
     {
         foreach( char letter in dialogue[index].ToCharArray())
         {
-            Debug.Log(letter);
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }

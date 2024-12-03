@@ -1013,6 +1013,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2174407946479722267, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174407946479722267, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174407946479722267, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174407946479722267, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1059,6 +1071,50 @@ PrefabInstance:
     - target: {fileID: 2174407946479722267, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200444891653309508, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200444891653309508, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200444891653309508, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200444891653309508, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200444891653309508, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514534889009197672, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514534889009197672, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110054525066427190, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 477875759}
+    - target: {fileID: 6110054525066427190, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110054525066427190, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110054525066427190, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8233454095556548222, guid: 6aafedf6a997013409d9479728aae14f, type: 3}
       propertyPath: m_Name
