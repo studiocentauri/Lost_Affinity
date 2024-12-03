@@ -6,6 +6,7 @@ public class CarController : MonoBehaviour
     private float minDistance = 2.5f; // Minimum distance for speed adjustments
     private float minSpeed = 0f; // Minimum speed (stopped)
     private float currentSpeed;
+    private float deathDelay = 8f;
     private Vector2 direction; // Direction of movement
     public Vector2 intersectionPoint; // Intersection point defined in the Inspector
 
@@ -13,7 +14,7 @@ public class CarController : MonoBehaviour
     public void SetDirection(Vector2 spawnDirection){
         direction = spawnDirection;
         currentSpeed = baseSpeed; // Initialize current speed
-        Destroy(gameObject, 8f);
+        Destroy(gameObject, deathDelay);
     }
 
     void Update(){

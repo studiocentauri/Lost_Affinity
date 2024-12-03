@@ -3,6 +3,12 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public GameObject[] pinkCar; // The car prefab array in order left, right, top, bottom to spawn
+    public GameObject[] lightBlueCar; // The car prefab array in order left, right, top, bottom to spawn
+    public GameObject[] greenCar; // The car prefab array in order left, right, top, bottom to spawn
+    public GameObject[] darkBlueCar; // The car prefab array in order left, right, top, bottom to spawn
+    private GameObject[][] cars;
+
+    private GameObject[] currentCars; // The current car prefab array to spawn
 
     private GameObject carPrefab; // The car prefab to spawn
     public float spawnInterval = 1f; // Time interval between spawns
@@ -18,37 +24,39 @@ public class CarSpawner : MonoBehaviour
 
     void Start(){
         InvokeRepeating("SpawnCar",0f,spawnInterval);
+        cars = new GameObject[][] {pinkCar, lightBlueCar, greenCar, darkBlueCar};
     }
 
     void SpawnCar()
     {
+        currentCars = cars[Random.Range(0, cars.Length)];
         if (spawnPositions.Length == 0){
             Debug.LogError("No spawn positions defined for CarSpawner.");
             return;
         }
 
         do{
-            randomIndex = Random.Range(0, spawnPositions.Length);
-        } while (spawnPositions.Length > 1 && randomIndex == lastSpawnIndex);
+            randomIndex = Random.Range(0,spawnPositions.Length);
+        }while (spawnPositions.Length > 1 && randomIndex == lastSpawnIndex);
 
         Vector3 spawnPosition = spawnPositions[randomIndex];
         lastSpawnIndex = randomIndex;
 
         if (spawnPosition.x < 0 && spawnPosition.y > 0){ // Left side
             direction = Vector2.right;
-            carPrefab = pinkCar[0];
+            carPrefab = currentCars[0];
         }
         else if (spawnPosition.x > 0 && spawnPosition.y < 0){ // Right side
             direction = Vector2.left;
-            carPrefab = pinkCar[1];
+            carPrefab = currentCars[1];
         }
         else if (spawnPosition.y > 0 && spawnPosition.x > 0){ // Top side
             direction = Vector2.down;
-            carPrefab = pinkCar[2];
+            carPrefab = currentCars[2];
         }
         else if (spawnPosition.y < 0 && spawnPosition.x < 0){ // Bottom side
             direction = Vector2.up;
-            carPrefab = pinkCar[3];
+            carPrefab = currentCars[3];
         }
         else 
             direction = Vector2.zero; // Fallback
