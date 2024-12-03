@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: FlowingLiquid
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 274058844, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: -216603162, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1626571198, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 194867775, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 989430663, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: -1200899445, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1976359066, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1903130101, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1421070846, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 400326773, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: -190950593, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 465437734, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: -567071630, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1180377613, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: -1937130183, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  - {fileID: 1626930513, guid: cc2d8cf4b19c14dcba95f1f1b42c1e5b, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
