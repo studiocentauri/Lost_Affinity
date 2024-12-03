@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] Animator animator;
+    [SerializeField] Vector2 direction;
+    [SerializeField] bool HelmetOn;
+    
 }
