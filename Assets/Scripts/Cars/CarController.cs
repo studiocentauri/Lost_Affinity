@@ -3,7 +3,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public float baseSpeed = 5f; // Base speed of the car
-    public float minDistance = 0.8f; // Minimum distance for speed adjustments
+    public float minDistance; // Minimum distance for speed adjustments
     public float maxSpeed = 5f; // Maximum speed when far from other cars
     public float minSpeed = 0f; // Minimum speed (stopped)
     private float currentSpeed;
@@ -14,7 +14,7 @@ public class CarController : MonoBehaviour
     public void SetDirection(Vector2 spawnDirection){
         direction = spawnDirection;
         currentSpeed = baseSpeed; // Initialize current speed
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 10f);
     }
 
     void Update(){
@@ -25,7 +25,7 @@ public class CarController : MonoBehaviour
 
     void CheckForIntersection(){
 
-        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, 3f);
+        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, 8f);
         
         foreach (var car in nearbyCars)
         {
@@ -70,7 +70,7 @@ public class CarController : MonoBehaviour
             currentSpeed = minSpeed; // Stop completely
             otherCar.currentSpeed = minSpeed; // Also stop the other car for safety
         }
-        else if (distance < minDistance * 2) // Close but not too close
+        else if (distance < minDistance * 1.5) // Close but not too close
         {
             if (hasCrossedIntersection)
                 currentSpeed = baseSpeed; // Maintain speed if this car has crossed the intersection
