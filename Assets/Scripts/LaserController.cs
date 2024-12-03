@@ -21,6 +21,7 @@ public class LaserController : MonoBehaviour
     bool cooled=false;
     bool usedonce=false;
     public float cooldown;
+    public Vector3 Lab;
     Vector3 endpoiiinnttt;
     void Start()
     {
@@ -80,7 +81,7 @@ public class LaserController : MonoBehaviour
     void ShootLaser()
     {
         laserRenderer.enabled = true;  // Show the laser
-        Vector3 LaserDirection = transform.right;
+        Vector3 LaserDirection = Lab;
         Timelaser += Time.deltaTime;
         // Fire a ray from the player's position (or wherever the laser should start)
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
