@@ -3,12 +3,18 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public GameObject carPrefab; // The car prefab to spawn
-    public float spawnInterval = 1.0f; // Time interval between spawns
+    public float spawnInterval = 1f; // Time interval between spawns
     public Vector3[] spawnPositions; // Array of spawn positions
 
     public Vector2 intersectionPoint; // Intersection point defined in Inspector
 
     private int randomIndex;
+    Quaternion[] spawnRotations = {
+            Quaternion.Euler(0, 0, 0),  // Left side
+            Quaternion.Euler(0, 0, -180), // Right side
+            Quaternion.Euler(0, 0, 90), // Bottom side
+            Quaternion.Euler(0, 0, -90)    // Top side
+    };
     private int lastSpawnIndex = -1; // Index of the last spawn position
 
     private Vector2 direction; // Direction of movement
@@ -32,16 +38,13 @@ public class CarSpawner : MonoBehaviour
         Vector3 spawnPosition = spawnPositions[randomIndex];
         lastSpawnIndex = randomIndex;
 
-        Quaternion[] spawnRotations = {
-            Quaternion.Euler(0, 0, 0),  // Left side
-            Quaternion.Euler(0, 0, -180), // Right side
-            Quaternion.Euler(0, 0, 90), // Bottom side
-            Quaternion.Euler(0, 0, -90)    // Top side
-        };
-
-        Quaternion spawnRotation = spawnRotations[randomIndex];
-        GameObject newCar = Instantiate(carPrefab, spawnPosition, spawnRotation);
-        
+        //Quaternion spawnRotation = spawnRotations[randomIndex];
+        //GameObject newCar = Instantiate(carPrefab, spawnPosition, spawnRotation);
+        GameObject newCar = Instantiate(carPrefab, spawnPosition, Quaternion.identity);
+        //get first child
+        GameObject car = newCar.transform.GetChild(0).gameObject;
+        car.transform.Rotate(new Vector3(0, 0, spawnRotations[randomIndex].eulerAngles.z), Space.Self);
+        //newCar.transform.eulerAngles+=new Vector3(0, 0, spawnRotations[randomIndex].eulerAngles.z);
         CarController carController = newCar.GetComponent<CarController>();
         
         if (carController != null)
@@ -62,6 +65,10 @@ public class CarSpawner : MonoBehaviour
             
             // Set the intersection point for each car controller instance.
             carController.intersectionPoint = intersectionPoint;
+        }
+        else
+        {
+            Debug.LogError("CarController component not found in the car prefab.");
         }
     }
 }
