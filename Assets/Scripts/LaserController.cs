@@ -7,14 +7,16 @@ public class LaserController : MonoBehaviour
     public float laserWidth = 0.1f;        // Width of the laser beam (can be adjusted)
     public float laserSpeed = 5f;          // Speed of the laser retraction/extension (higher is faster)
     public LayerMask collisionLayer;       // The layer to detect collisions with
-
+    bool a;
     private LineRenderer laserRenderer;  // Sprite renderer of the laser object
     private Vector3 laserStartPosition;    // Position from where the laser will start
     private float currentLaserDistance;    // Current length of the laser
     private float targetLaserDistance;     // Target length of the laser
     private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
-
+    float t=0f;
+    bool hashit=false;
+    Vector3 endpoiiinnttt;
     void Start()
     {
         laserRenderer = laserObject.GetComponent<LineRenderer>();
@@ -25,35 +27,22 @@ public class LaserController : MonoBehaviour
     void Update()
     {
         // Listen for key press to start the laser
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            ShootLaser();  // Start shooting the laser when K is pressed
+            a=true;
+        }
+        Debug.Log(a);
+        if(a)
+        {
+            ShootLaser();
+            Debug.Log(hashit);
         }
 
         // Listen for key release to retract the laser
-        if (Input.GetKeyUp(KeyCode.K) && isLaserActive)
+        if (hashit)
         {
             // Start retracting the laser
             StartLaserRetraction();
-        }
-
-        // Smoothly scale the laser length over time if it's active (extending or retracting)
-        if (isLaserActive)
-        {
-            currentLaserDistance = Mathf.Lerp(currentLaserDistance, targetLaserDistance, Time.deltaTime * laserSpeed);
-            laserObject.transform.localScale = new Vector3(currentLaserDistance, laserWidth, 1);  // Scale the laser
-        }
-        else if (currentLaserDistance > 0)
-        {
-            // If the laser is not active (key released), retract the laser smoothly
-            currentLaserDistance = Mathf.Lerp(currentLaserDistance, 0, Time.deltaTime * laserSpeed);
-            laserObject.transform.localScale = new Vector3(currentLaserDistance, laserWidth, 1);
-
-            // If the laser has completely retracted, hide it
-            if (currentLaserDistance <= 0.1f)
-            {
-                laserRenderer.enabled = false;
-            }
         }
     }
 
@@ -75,8 +64,13 @@ public class LaserController : MonoBehaviour
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
             // Set the target laser distance to the distance from the emitter to the hit point
             targetLaserDistance = LaserDirection.magnitude;
-            Debug.Log("Laser hit object: " + hit.collider.gameObject.name + " at position: " + hit.point);
-
+            endpoiiinnttt=hit.point;
+            Vector3 tri=new Vector3(hit.point.x,hit.point.y,laserRenderer.GetPosition(1).z);
+            if(tri==laserRenderer.GetPosition(1))
+            {
+                hashit=true;
+                a=false;
+            }
         }
         else
         {
@@ -87,18 +81,33 @@ public class LaserController : MonoBehaviour
             laserRenderer.SetPosition(0, laserStartPosition);
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
             // Set the target laser distance to the maximum range
-            // targetLaserDistance = maxLaserDistance;
+            targetLaserDistance = maxLaserDistance;
         }
 
         // Reset current laser distance for smooth animation
-        currentLaserDistance = 0;
         isLaserActive = true;  // Start the laser scaling
     }
 
     void StartLaserRetraction()
     {
-        Timelaser = 0;
-        isLaserActive = false;  // Set laser to not active, start retracting
-        laserRenderer.positionCount = 0;  // Hide the laser
+        // Timelaser = 0;
+        if(hashit)
+        {
+            t+=Time.deltaTime;
+            float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
+            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo);
+        }
+        
+        if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
+        {
+            isLaserActive = false;  // Set laser to not active, start retracting
+            laserRenderer.positionCount = 0;  // Hide the laser
+            laserRenderer.enabled = false;
+            laserStartPosition=transform.position;
+            hashit=false;
+            Timelaser=0f;
+            t=0f;
+        }
+        //Debug.Log(laserStartPosition+transform.right*Time.deltaTime*laserSpeed);
     }
 }
