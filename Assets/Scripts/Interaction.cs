@@ -31,8 +31,7 @@ public class Interaction : MonoBehaviour
         {
             if(dialoguePanel.activeInHierarchy)
             {
-                //StopCoroutine(Typing());
-                zeroText();
+                NextLine();
             }
             else
             {
@@ -44,7 +43,7 @@ public class Interaction : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
-                NextLine();
+                //NextLine();
             }
         }
         
@@ -74,12 +73,18 @@ public class Interaction : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach( char letter in dialogue[index].ToCharArray())
+        //istyping = true;
+        int i = index;
+        foreach ( char letter in dialogue[index].ToCharArray())
         {
-            Debug.Log(letter);
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
+            if(i != index)
+            {
+                break;
+            }
         }
+        //istyping = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
