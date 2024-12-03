@@ -8,21 +8,29 @@ public class CarSpawner : MonoBehaviour
 
     public Vector2 intersectionPoint; // Intersection point defined in Inspector
 
-    void Start()
-    {
-        InvokeRepeating("SpawnCar", 0f, spawnInterval);
+    private int randomIndex;
+    private int lastSpawnIndex = -1; // Index of the last spawn position
+
+    private Vector2 direction; // Direction of movement
+
+
+    void Start(){
+        InvokeRepeating("SpawnCar",0f,spawnInterval);
     }
 
     void SpawnCar()
     {
-        if (spawnPositions.Length == 0)
-        {
-            Debug.LogWarning("No spawn positions defined for CarSpawner.");
+        if (spawnPositions.Length == 0){
+            Debug.LogError("No spawn positions defined for CarSpawner.");
             return;
         }
 
-        int randomIndex = Random.Range(0, spawnPositions.Length);
+        do{
+            randomIndex = Random.Range(0, spawnPositions.Length);
+        } while (spawnPositions.Length > 1 && randomIndex == lastSpawnIndex);
+
         Vector3 spawnPosition = spawnPositions[randomIndex];
+        lastSpawnIndex = randomIndex;
 
         GameObject newCar = Instantiate(carPrefab, spawnPosition, Quaternion.identity);
         
@@ -30,8 +38,6 @@ public class CarSpawner : MonoBehaviour
         
         if (carController != null)
         {
-            Vector2 direction;
-            
             // Set direction based on spawn position
             if (spawnPosition.x < 0 && spawnPosition.y > 0) // Left side
                 direction = Vector2.right;
