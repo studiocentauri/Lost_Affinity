@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] playermovement movement;
     [SerializeField] Transform playerTransform;
+    [SerializeField] topDownJump jumpControl;
     [SerializeField] string helmetSwitchKey;
     AnimatorStateInfo stateInfo;
     float speed;
@@ -35,7 +36,7 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(helmetSwitchKey) && movement.moveDirection.magnitude==0)   SwitchHelmet();
-        if(movement.moveDirection.magnitude == 0)   Stop();
+        if(movement.moveDirection.magnitude == 0 || jumpControl.isJumping)   Stop();
         else    
         {
             Move();

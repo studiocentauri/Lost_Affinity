@@ -2025,6 +2025,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
   m_PrefabInstance: {fileID: 2292555940160168835}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375033140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1736352939597358005, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+  m_PrefabInstance: {fileID: 2292555940160168835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff107abc4f2c64327b5ab3de148db7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1455116359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2647,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400865428709292072, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: jumpControl
+      value: 
+      objectReference: {fileID: 1375033140}
     - target: {fileID: 1625309857018052127, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_Name
       value: Player_shadow
