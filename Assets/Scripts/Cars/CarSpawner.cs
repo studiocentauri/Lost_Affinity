@@ -32,7 +32,15 @@ public class CarSpawner : MonoBehaviour
         Vector3 spawnPosition = spawnPositions[randomIndex];
         lastSpawnIndex = randomIndex;
 
-        GameObject newCar = Instantiate(carPrefab, spawnPosition, Quaternion.identity);
+        Quaternion[] spawnRotations = {
+            Quaternion.Euler(0, 0, 0),  // Left side
+            Quaternion.Euler(0, 0, -180), // Right side
+            Quaternion.Euler(0, 0, 90), // Bottom side
+            Quaternion.Euler(0, 0, -90)    // Top side
+        };
+
+        Quaternion spawnRotation = spawnRotations[randomIndex];
+        GameObject newCar = Instantiate(carPrefab, spawnPosition, spawnRotation);
         
         CarController carController = newCar.GetComponent<CarController>();
         
