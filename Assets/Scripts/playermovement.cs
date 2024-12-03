@@ -1,31 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float movSpeed;
+    public float moveSpeed = 7.5f;
+    private Vector2 moveDirection;
+    private Rigidbody2D rb;
+
     public bool isAttachedToPlatform;
-    float speedX, speedY;
-    Rigidbody2D rb;
+
+    /* 
+       Handles player input for movement.
+    
+       This method captures raw input from the horizontal and vertical axes and determines the movement direction based on the input.
+       If both horizontal and vertical inputs are detected simultaneously, it prioritises the latest input direction.
+       If only one axis input is detected, it sets the movement direction accordingly.
+       If no input is detected, it stops the movement.
+    */
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-        speedX = Input.GetAxisRaw("Horizontal")*movSpeed;
-        speedY = Input.GetAxisRaw("Vertical")*movSpeed;
-        if(Mathf.Abs(speedX)== Mathf.Abs(speedY))
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        if (horizontal != 0 && vertical != 0)
         {
-            speedY=0;
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+            {
+                moveDirection = new Vector2(0, vertical).normalized; // Prioritise vertical
+            }
+            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                moveDirection = new Vector2(horizontal, 0).normalized; // Prioritise horizontal
+            }
         }
-        rb.velocity = new Vector2(speedX,speedY);
+
+        else if (horizontal != 0){
+            moveDirection = new Vector2(horizontal, 0).normalized;
+        }
+
+        else if (vertical != 0){
+            moveDirection = new Vector2(0, vertical).normalized;
+        }
+
+        else{
+            moveDirection = Vector2.zero; // No input, stop movement
+        }
+
+        rb.velocity = moveDirection * moveSpeed;
     }
 }

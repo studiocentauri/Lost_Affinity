@@ -13,7 +13,7 @@ public class topDownJump : MonoBehaviour
     
     [SerializeField] Transform shadow , player;
     Vector3 offset; float velocity, minHeight;
-
+    float ground;
     [SerializeField] float dragCoeff;
     void Start()
     {
@@ -21,7 +21,7 @@ public class topDownJump : MonoBehaviour
         velocity = 0;
         offset = new Vector3();
         offset = player.position - shadow.position;
-        minHeight = offset.y;
+        ground = offset.y;
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("CanJumpAcross"))
         {
             canJumpAcross.Add(obj.GetComponent<Collider2D>());
@@ -55,7 +55,7 @@ public class topDownJump : MonoBehaviour
                 collider.enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
-            if(offset.y <= minHeight)
+            if(offset.y <= ground)
             {
                 isJumping=false;
             foreach(Collider2D collider in canJumpAcross)
@@ -63,6 +63,21 @@ public class topDownJump : MonoBehaviour
                 velocity=0;
             }
         }
+        else
+        {
+            offset = new Vector3(0, ground, 0);
+        }
         player.position = shadow.position + offset;
+        //Debug.Log(offset);
     }
+
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    Debug.Log(other.gameObject.name);
+    //    if (other.gameObject.CompareTag("Player") && isJumping)
+    //    {
+    //        isJumping = false;
+    //        Debug.Log("detected player");
+    //    }
+    //}
 }
