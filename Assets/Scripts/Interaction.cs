@@ -73,11 +73,18 @@ public class Interaction : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach( char letter in dialogue[index].ToCharArray())
+        //istyping = true;
+        int i = index;
+        foreach ( char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
+            if(i != index)
+            {
+                break;
+            }
         }
+        //istyping = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
