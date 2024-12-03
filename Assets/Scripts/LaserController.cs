@@ -14,8 +14,13 @@ public class LaserController : MonoBehaviour
     private float targetLaserDistance;     // Target length of the laser
     private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
+    public float iter;
     float t=0f;
+    float t2=0f;
     bool hashit=false;
+    bool cooled=false;
+    bool usedonce=false;
+    public float cooldown;
     Vector3 endpoiiinnttt;
     void Start()
     {
@@ -31,11 +36,9 @@ public class LaserController : MonoBehaviour
         {
             a=true;
         }
-        Debug.Log(a);
-        if(a)
+        if(a && !cooled)
         {
             ShootLaser();
-            Debug.Log(hashit);
         }
 
         // Listen for key release to retract the laser
@@ -43,6 +46,34 @@ public class LaserController : MonoBehaviour
         {
             // Start retracting the laser
             StartLaserRetraction();
+        }
+        if(cooled)
+        {
+            
+            t2+=Time.deltaTime;
+            if(t2<cooldown)
+            {
+                if (Input.GetKeyDown(KeyCode.K))
+                {
+                    a=true;
+                }
+                if(a && !cooled)
+                {
+                    ShootLaser();
+                }
+
+                // Listen for key release to retract the laser
+                if (hashit)
+                {
+                    // Start retracting the laser
+                    StartLaserRetraction();
+                }
+            }
+            else
+            {
+                t2=0f;
+                cooled=false;
+            }
         }
     }
 
@@ -95,7 +126,8 @@ public class LaserController : MonoBehaviour
         {
             t+=Time.deltaTime;
             float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
-            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo);
+            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo*iter);
+
         }
         
         if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
@@ -107,6 +139,8 @@ public class LaserController : MonoBehaviour
             hashit=false;
             Timelaser=0f;
             t=0f;
+            cooled=true;
+            if(usedonce==false)usedonce=true;
         }
         //Debug.Log(laserStartPosition+transform.right*Time.deltaTime*laserSpeed);
     }
