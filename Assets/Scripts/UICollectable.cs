@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UITutorial : MonoBehaviour
+public class UICollectable : MonoBehaviour
 {
     public GameObject promptText;
+    // Start is called before the first frame update public GameObject promptText;
     private bool isPlayerNearby = false;
     public GameObject colliders;
 
@@ -22,9 +23,8 @@ public class UITutorial : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.I))
         {
-            // Hide the text after pressing E
             if (promptText != null)
             {
                 promptText.SetActive(false);
