@@ -4795,8 +4795,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -649621193
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9625,8 +9625,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -649621193
+  m_SortingLayer: 6
   m_SortingOrder: 30
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14513,8 +14513,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -649621193
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -19344,8 +19344,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -649621193
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -19434,8 +19434,8 @@ MonoBehaviour:
   - {fileID: 816091553483283654}
   - {fileID: 6056798567864777776}
   - {fileID: 483172267832080093}
-  transitTime: 30
-  weatherTime: 90
+  transitTime: 25
+  weatherTime: 30
   time: 0
 --- !u!50 &874789692408966639
 Rigidbody2D:
@@ -24304,8 +24304,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -649621193
+  m_SortingLayer: 6
   m_SortingOrder: 30
   m_RenderMode: 0
   m_MeshDistribution: 0
