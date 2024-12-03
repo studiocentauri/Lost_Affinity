@@ -87,6 +87,10 @@ public class TestMovement : MonoBehaviour
             SetNearbyItem(other.gameObject);
             triggerObject = other.gameObject;
         }
+        if(other.gameObject.CompareTag("BlueItem"))
+        {
+            other.gameObject.GetComponent<Scaling_new2>().enabled = true;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -94,6 +98,10 @@ public class TestMovement : MonoBehaviour
         if (other.gameObject.CompareTag("BlueItem") || other.gameObject.CompareTag("GreenItem") || other.gameObject.CompareTag("RedItem") && triggerObject == other.gameObject)
         {
             SetNearbyItem(null);
+        }
+        if (other.gameObject.CompareTag("BlueItem"))
+        {
+            other.gameObject.GetComponent<Scaling_new2>().enabled = false;
         }
     }
 }

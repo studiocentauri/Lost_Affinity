@@ -6,6 +6,7 @@ public class playermovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float movSpeed;
+    public bool isAttachedToPlatform;
     float speedX, speedY;
     Rigidbody2D rb;
 
