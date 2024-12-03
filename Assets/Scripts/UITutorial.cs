@@ -7,6 +7,7 @@ public class UITutorial : MonoBehaviour
     public GameObject promptText;
     private bool isPlayerNearby = false;
     public GameObject colliders;
+    public string[] key;
 
     void Start()
     {
@@ -22,15 +23,15 @@ public class UITutorial : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
-        {
-            // Hide the text after pressing E
-            if (promptText != null)
+        foreach(string k in key){
+            if (isPlayerNearby && Input.GetKeyDown(k))
             {
-                promptText.SetActive(false);
+                // Hide the text after pressing E
+                if (promptText != null)
+                {
+                    promptText.SetActive(false);
+                }
             }
-
-
         }
     }
 
