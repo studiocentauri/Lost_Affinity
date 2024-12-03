@@ -443,7 +443,7 @@ MonoBehaviour:
   laserObject: {fileID: 1720678540}
   maxLaserDistance: 20
   laserWidth: 7.91
-  laserSpeed: 10
+  laserSpeed: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
