@@ -37,7 +37,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if(Input.GetKeyDown(helmetSwitchKey) && movement.moveDirection.magnitude==0)   SwitchHelmet();
         if(movement.moveDirection.magnitude == 0 || jumpControl.isJumping)   Stop();
-        else    
+        else if (movement.moveDirection.magnitude != 0)
         {
             Move();
             animator.SetFloat("X", movement.moveDirection.x);

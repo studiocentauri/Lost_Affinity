@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float baseSpeed = 5f; // Base speed of the car
-    public float minDistance; // Minimum distance for speed adjustments
-    public float maxSpeed = 5f; // Maximum speed when far from other cars
-    public float minSpeed = 0f; // Minimum speed (stopped)
+    private float baseSpeed = 8f; // Base speed of the car
+    private float minDistance = 2.5f; // Minimum distance for speed adjustments
+    private float minSpeed = 0f; // Minimum speed (stopped)
     private float currentSpeed;
+    private float deathDelay = 8f;
     private Vector2 direction; // Direction of movement
     public Vector2 intersectionPoint; // Intersection point defined in the Inspector
 
@@ -14,7 +14,7 @@ public class CarController : MonoBehaviour
     public void SetDirection(Vector2 spawnDirection){
         direction = spawnDirection;
         currentSpeed = baseSpeed; // Initialize current speed
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, deathDelay);
     }
 
     void Update(){
@@ -25,7 +25,7 @@ public class CarController : MonoBehaviour
 
     void CheckForIntersection(){
 
-        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, 8f);
+        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, 10f);
         
         foreach (var car in nearbyCars)
         {
