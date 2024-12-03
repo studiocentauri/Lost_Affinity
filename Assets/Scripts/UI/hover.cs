@@ -15,8 +15,8 @@ public class hover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = hoverObject.position;
-        pos.x+= speed * Time.deltaTime;
-        hoverObject.position = pos;
+        if(hoverObject.position.y < -10.0){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level-1");
+        }
     }
 }
