@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 5
-  minDistance: 1
+  minDistance: 0.8
   maxSpeed: 5
   minSpeed: 0
   intersectionPoint: {x: 0, y: 0}
