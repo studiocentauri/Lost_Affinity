@@ -128,7 +128,6 @@ public class LaserController : MonoBehaviour
             t+=Time.deltaTime;
             float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
             laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo*iter);
-
         }
         
         if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
