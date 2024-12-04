@@ -91,9 +91,9 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        //UpdateSlotUI(blueSlot, blueSlotImage);
-        //UpdateSlotUI(greenSlot, greenSlotImage);
-        //UpdateSlotUI(redSlot, redSlotImage);
+        UpdateSlotUI(blueSlot, blueSlotImage);
+        UpdateSlotUI(greenSlot, greenSlotImage);
+        UpdateSlotUI(redSlot, redSlotImage);
     }
 
     private void UpdateSlotUI(GameObject slot, Image slotImage)
