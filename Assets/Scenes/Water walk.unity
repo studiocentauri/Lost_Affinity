@@ -270,12 +270,12 @@ GameObject:
   - component: {fileID: 690444021}
   - component: {fileID: 690444020}
   - component: {fileID: 690444023}
+  - component: {fileID: 690444027}
   - component: {fileID: 690444025}
   - component: {fileID: 690444026}
-  - component: {fileID: 690444027}
   m_Layer: 0
   m_Name: Square
-  m_TagString: BlueItem
+  m_TagString: CanJumpAcross
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
