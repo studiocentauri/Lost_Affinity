@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LabLaser : MonoBehaviour
 {
@@ -25,12 +27,15 @@ public class LabLaser : MonoBehaviour
     public float cooldown;
     public Vector3 Lab;
     Vector3 endpoiiinnttt;
+
+    public GameObject laserDeathPanel;
     void Start()
     {
         laserObject = gameObject;
         laserRenderer = laserObject.GetComponent<LineRenderer>();
         //laserRenderer.enabled = false;  // Initially hidden
         laserStartPosition = transform.position;  // The position of the laser emitter
+        laserDeathPanel.SetActive(false);
     }
 
     void Update()
@@ -43,11 +48,16 @@ public class LabLaser : MonoBehaviour
         //laserRenderer.enabled = true;
         Vector3 LaserDirection = Lab;
         Timelaser += Time.deltaTime;
+        int layerIndex = LayerMask.NameToLayer("Player");
 
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
         float EndPoint;
         if (hit.collider != null)
         {
+            if(layerIndex==6){
+                laserDeathPanel.SetActive(true);
+                LoadSceneWithDelay();
+            }
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
@@ -78,5 +88,16 @@ public class LabLaser : MonoBehaviour
 
         // Reset current laser distance for smooth animation
         isLaserActive = true;  // Start the laser scaling
+    }
+
+    public void LoadSceneWithDelay()
+    {
+        StartCoroutine(LoadSceneAfterDelay());
+    }
+
+    private IEnumerator LoadSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(2f); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
