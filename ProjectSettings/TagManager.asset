@@ -13,6 +13,7 @@ TagManager:
   - DestructingTile
   - Triangle
   - CanJumpAcross
+  - NPC
   layers:
   - Default
   - TransparentFX

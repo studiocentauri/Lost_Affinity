@@ -32,12 +32,9 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level-1");
+        SceneManager.LoadScene("Level-1 1");
     }
-    public void StartKaroBhai(){
-        Destroy(GameObject.Find("Wall"));
-        Invoke("PlayGame", 5.0f);
-    }
+    
     public void Settings(){
         panel2.SetActive(false);
         panel.SetActive(true);
