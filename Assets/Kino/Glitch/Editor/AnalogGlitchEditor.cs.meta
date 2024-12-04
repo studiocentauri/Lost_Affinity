@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d762aa6e2346cb4ca4bfdc1d4fa8314
+guid: 83a6afa77757d4190add8354f39c902c
+timeCreated: 1435909592
+licenseType: Pro
 MonoImporter:
-  externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - glitchMaterial: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

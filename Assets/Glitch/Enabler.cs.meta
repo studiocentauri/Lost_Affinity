@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 1d762aa6e2346cb4ca4bfdc1d4fa8314
+guid: 1c2f4629bc48fe24488f66df9da3fce8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - glitchMaterial: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
