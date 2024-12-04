@@ -333,6 +333,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: 0, y: -1, z: 0}
+  laserDeathPanel: {fileID: 212058602}
 --- !u!1 &8697857
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +626,72 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &212058601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 404536371970107192, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_Name
+      value: Lasered prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 404536371970107192, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6812128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4282972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1680799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094913497227501400, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+--- !u!1 &212058602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 404536371970107192, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+  m_PrefabInstance: {fileID: 212058601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223801405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1529,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: 1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 212058602}
 --- !u!1 &1183811916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,6 +4367,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: 0, y: -1, z: 0}
+  laserDeathPanel: {fileID: 212058602}
 --- !u!1 &1544967654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,6 +4849,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: -1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 212058602}
 --- !u!4 &1803526322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8473156336637401684, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
@@ -4889,3 +4959,4 @@ SceneRoots:
   - {fileID: 4580665}
   - {fileID: 1691255735}
   - {fileID: 1429873532}
+  - {fileID: 212058601}

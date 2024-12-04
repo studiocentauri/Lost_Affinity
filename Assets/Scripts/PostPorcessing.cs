@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class wallism : MonoBehaviour
+public class PostPorcessing : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
