@@ -15,7 +15,7 @@ public class Scaling_new2 : MonoBehaviour
     void Start()
     {
         // Define the scale levels
-        scaleLevels = new float[] { min_scale, 1.0f, max_scale };
+        scaleLevels = new float[] { min_scale, transform.localScale.x, max_scale };
         currentScaleIndex = 1; // Start at the middle scale (1.0x)
     }
 

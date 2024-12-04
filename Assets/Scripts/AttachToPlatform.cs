@@ -10,6 +10,7 @@ public class AttachToPlatform : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            Debug.Log(other);
             other.gameObject.GetComponent<playermovement>().isAttachedToPlatform = true;
             playerAttached = true;
             playerTransform = other.transform;
