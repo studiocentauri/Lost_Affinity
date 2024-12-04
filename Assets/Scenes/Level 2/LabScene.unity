@@ -413,6 +413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206888770061705803, guid: 748bc0706195dea4594b6345befc03e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.62
+      objectReference: {fileID: 0}
     - target: {fileID: 3534853178611523312, guid: 748bc0706195dea4594b6345befc03e6, type: 3}
       propertyPath: m_ChunkCullingBounds.x
       value: 0
@@ -2199,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a89e803539f094f8c98ce3e98021d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLaserDistance: 14.5
+  maxLaserDistance: 14.6
   laserWidth: 0.1
   laserSpeed: 5
   collisionLayer:

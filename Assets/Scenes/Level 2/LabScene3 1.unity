@@ -188,7 +188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -621962525
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1541606694, guid: b5babf8f170c341de928e52f5b45f4f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -621962525
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -502696908, guid: b5babf8f170c341de928e52f5b45f4f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -819,6 +819,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: 1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 0}
 --- !u!1 &256775880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1190714394237388814, guid: 7857da09e35cc244c9bb2b54aa51e2eb, type: 3}
@@ -947,6 +948,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: -1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 0}
 --- !u!1 &432833524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1245,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: 1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 0}
 --- !u!1 &520583533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,7 +2801,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -4, y: -5, z: 0}
@@ -3436,6 +3439,7 @@ MonoBehaviour:
   iter: 0
   cooldown: 0
   Lab: {x: -1, y: 0, z: 0}
+  laserDeathPanel: {fileID: 0}
 --- !u!4 &2089889408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5667836670959886747, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
