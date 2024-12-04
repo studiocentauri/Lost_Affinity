@@ -9,6 +9,7 @@ public class StandingOnBox : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if(other.gameObject.GetComponent<playermovement>().isAttachedToPlatform)
             transform.parent.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
