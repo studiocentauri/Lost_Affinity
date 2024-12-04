@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - glitchMaterial: {fileID: 2100000, guid: b790fe6472a19ef44955c680d1468abd, type: 2}
+  - glitchMaterial: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

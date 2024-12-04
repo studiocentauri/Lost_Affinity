@@ -1,17 +1,17 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class GlitchEffect : MonoBehaviour
+public class GlitchScript : MonoBehaviour
 {
-    public Material glitchMaterial; // Assign your glitch material here
+    public Material glitchMaterial; // Reference to the glitch material
 
-    public bool enable;
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
+    void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         if (glitchMaterial != null)
         {
-            // Apply the glitch effect using Graphics.Blit
+            // Apply the glitch effect using the material
             Graphics.Blit(source, destination, glitchMaterial);
+            Debug.LogError("Glitch effect applied");
         }
         else
         {
@@ -22,15 +22,6 @@ public class GlitchEffect : MonoBehaviour
 
     public void ToggleGlitchEffect(bool enable)
     {
-        if (glitchMaterial != null)
-        {
-            glitchMaterial.SetFloat("_GlitchAmount", enable ? 1 : 0); // Toggle glitch amount based on enable state
-        }
+        glitchMaterial.SetFloat("_EffectEnabled", enable ? 1 : 0); // Assuming you have a property in your shader to control this
     }
-
-    void Start()
-    {
-        glitchMaterial.SetFloat("_GlitchAmount",1);
-    }
-    
 }
