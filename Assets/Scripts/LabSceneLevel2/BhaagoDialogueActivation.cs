@@ -6,6 +6,9 @@ using UnityEngine;
 public class BhaagoDialogueActivation : MonoBehaviour
 {
     [SerializeField]
+    private List<GameObject> NPCs;
+    
+    [SerializeField]
     private GameObject dialoguePanel;
     [SerializeField]
     public TextMeshProUGUI dialogueText;
@@ -16,8 +19,10 @@ public class BhaagoDialogueActivation : MonoBehaviour
     [SerializeField]
     private bool playerClose;
 
-    private GameObject player;
+    public GameObject player;
     private int index;
+
+    private bool escaped = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +32,13 @@ public class BhaagoDialogueActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerClose)
+
+    }
+    public void startDialogues()
+    {
+        if (!escaped)
         {
+            
             if (dialoguePanel.activeInHierarchy)
             {
                 NextLine();
@@ -37,25 +47,18 @@ public class BhaagoDialogueActivation : MonoBehaviour
             {
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
+                StartCoroutine(CheckInputs());
             }
         }
-        if (dialogueText.text == dialogue[index])
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                NextLine();
-            }
-        }
-
+        
     }
-
     public void zeroText()
     {
         StopAllCoroutines();
         dialogueText.text = "";
         index = 0;
 
-        dialoguePanel.SetActive(false);
+        if(dialoguePanel != null) dialoguePanel.SetActive(false);
     }
     public void NextLine()
     {
@@ -64,13 +67,33 @@ public class BhaagoDialogueActivation : MonoBehaviour
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            StartCoroutine(CheckInputs());
         }
         else
         {
             zeroText();
+            foreach(GameObject g in NPCs)
+            {
+                AutoMoveNPCs x = g.GetComponent<AutoMoveNPCs>();
+                x.dialogueCompleted = true;
+            }
+            escaped = true;
         }
     }
-
+    IEnumerator CheckInputs()
+    {
+        while (true)
+        {
+            if (dialogueText.text == dialogue[index])
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    NextLine();
+                }
+            }
+            yield return null;
+        }
+    }
     IEnumerator Typing()
     {
         //istyping = true;
@@ -92,6 +115,7 @@ public class BhaagoDialogueActivation : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerClose = true;
+            startDialogues();
             player = collision.gameObject;
         }
 
