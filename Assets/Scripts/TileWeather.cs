@@ -23,13 +23,13 @@ public class TileWeather : MonoBehaviour
         {
             sunny[i].color = new Color(1,1,1,1);
             rain[i].color = new Color(1,1,1,0);
-            autumn[i].color = new Color(1,1,1,0);
             snow[i].color = new Color(1,1,1,0);
+            autumn[i].color = new Color(1,1,1,0);
         }
         weathers.Add(sunny);
         weathers.Add(rain);
-        weathers.Add(autumn);
         weathers.Add(snow);
+        weathers.Add(autumn);
     }
     void Update()
     {
