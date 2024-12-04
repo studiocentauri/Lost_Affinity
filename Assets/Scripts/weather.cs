@@ -11,7 +11,7 @@ public class weather : MonoBehaviour
     public float weatherTime;// Note that transit time must be less than weatherTime
     public float time = 0f;
     public bool isInTransit;
-    int state = 0;
+    public int state = 0;
     void Update()
     {
         time += Time.deltaTime;
