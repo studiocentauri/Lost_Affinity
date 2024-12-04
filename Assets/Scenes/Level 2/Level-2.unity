@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1006900035}
   - component: {fileID: 1006900034}
   - component: {fileID: 1006900037}
+  - component: {fileID: 1006900038}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -259,6 +260,45 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1006900038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006900033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63c0fd92ca14a84e81f132510b02580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinkCar:
+  - {fileID: 7863251476532197771, guid: 01361147aced24b4ba71042b8b681b77, type: 3}
+  - {fileID: 1403025353663709627, guid: 38ed85e10c9040d4b929d4f69eeb3917, type: 3}
+  - {fileID: 3046324606994837929, guid: 80ed5a931b6320a4596af23e2fa2560c, type: 3}
+  - {fileID: 8502512495488305607, guid: f4eed22ffcb118142ae0bec9b93ccd48, type: 3}
+  lightBlueCar:
+  - {fileID: 8741990815866760794, guid: 57a699550c4ae4c45a4b4d03fba9641d, type: 3}
+  - {fileID: 2895036914603792906, guid: 7bd5d653cb1a74f47b64c7acde7878f4, type: 3}
+  - {fileID: 3721657572239232001, guid: bbdbb962660ed7d48a5cfbbb4df0303f, type: 3}
+  - {fileID: 8933188790372317239, guid: 8f4a1a9440f473f4381f3657227c6df0, type: 3}
+  greenCar:
+  - {fileID: 9080362643487521936, guid: 53a57db7ed24ffc42b654a8956e0979a, type: 3}
+  - {fileID: 4562778285256891905, guid: 30e374f4c6e5f6541a30ad078f83079f, type: 3}
+  - {fileID: 68507522441406391, guid: c89b5d1cc9424534fb8f20f81a674f1b, type: 3}
+  - {fileID: 8321492728257043784, guid: af4a24f0ed9336443a39b5bfd3818f77, type: 3}
+  darkBlueCar:
+  - {fileID: 9202247962710424596, guid: 7951241e834d9e44aa3e0204e735bb6a, type: 3}
+  - {fileID: 4356480110232084196, guid: c30d1d3e5634f4640a43738d4731b429, type: 3}
+  - {fileID: 8921757510545199689, guid: f5245f4bf2455d84fa2c7d8676fe2672, type: 3}
+  - {fileID: 1178454634715739877, guid: f7e4ab035e639e9498a2bcbd231737ed, type: 3}
+  spawnInterval: 1
+  spawnPositions:
+  - {x: -20, y: 1.6, z: 0}
+  - {x: 17, y: -1.5, z: 0}
+  - {x: 1.5, y: 21, z: 0}
+  - {x: -1.6, y: -18, z: 0}
+  intersectionPoint: {x: 0, y: 0}
 --- !u!1001 &1234610343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,17 +307,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4683242030195093360, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6797042312850244138, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
     - target: {fileID: 9126121789795304018, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8675289
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9126121789795304018, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7021265
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9126121789795304018, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_LocalPosition.z

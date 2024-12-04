@@ -1,12 +1,23 @@
 using UnityEngine;
-
+//using my retarded brain to get some cars moving on the roads, cuz I got no one to do it for me irl.
 public class CarController : MonoBehaviour
 {
-    public float baseSpeed = 5f; // Base speed of the car
-    public float minDistance; // Minimum distance for speed adjustments
-    public float maxSpeed = 5f; // Maximum speed when far from other cars
-    public float minSpeed = 0f; // Minimum speed (stopped)
+
+    /*
+    * All the variables have been made private in the script for consistency among all car instances, cuz inspector values shit.
+    * CarController.cs
+    * This script controls the movement of the cars on the road.
+    * It adjusts the speed of the cars based on the distance from other cars.
+    * The cars will stop if they are too close to each other to avoid collisions.
+    * The cars will also slow down if they are approaching an intersection.
+    * The script also handles the logic for detecting nearby cars and adjusting speed accordingly.
+    */
+    private float baseSpeed = 8f; // Base speed of the car
+    private float minDistance = 2.5f; // Minimum distance for speed adjustments
+    private float minSpeed = 0f; // Minimum speed (stopped)
     private float currentSpeed;
+    private float deathDelay = 8f;
+    private float detectionRadius = 10f; // Radius for detecting nearby cars
     private Vector2 direction; // Direction of movement
     public Vector2 intersectionPoint; // Intersection point defined in the Inspector
 
@@ -14,7 +25,7 @@ public class CarController : MonoBehaviour
     public void SetDirection(Vector2 spawnDirection){
         direction = spawnDirection;
         currentSpeed = baseSpeed; // Initialize current speed
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, deathDelay);
     }
 
     void Update(){
@@ -25,7 +36,7 @@ public class CarController : MonoBehaviour
 
     void CheckForIntersection(){
 
-        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, 8f);
+        Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, detectionRadius); // Find nearby cars
         
         foreach (var car in nearbyCars)
         {

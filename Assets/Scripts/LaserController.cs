@@ -80,10 +80,10 @@ public class LaserController : MonoBehaviour
 
     void ShootLaser()
     {
-        laserRenderer.enabled = true;  // Show the laser
+        laserRenderer.enabled = true;  
         Vector3 LaserDirection = Lab;
         Timelaser += Time.deltaTime;
-        // Fire a ray from the player's position (or wherever the laser should start)
+        
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
         float EndPoint;
         if (hit.collider != null)
@@ -91,10 +91,10 @@ public class LaserController : MonoBehaviour
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
-            // If the laser hits something, set the laser's endpoint to the collision point
-            laserRenderer.SetPosition(0, laserStartPosition);  // Rotate the laser in the correct direction
+           
+            laserRenderer.SetPosition(0, laserStartPosition);  
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
-            // Set the target laser distance to the distance from the emitter to the hit point
+            
             targetLaserDistance = LaserDirection.magnitude;
             endpoiiinnttt=hit.point;
             Vector3 tri=new Vector3(hit.point.x,hit.point.y,laserRenderer.GetPosition(1).z);
@@ -107,12 +107,12 @@ public class LaserController : MonoBehaviour
         else
         {
 
-            // If the laser doesn't hit anything, extend it to the max distance
-            laserRenderer.positionCount = 2;  // Keep laser pointing in the right direction
+            
+            laserRenderer.positionCount = 2;  
             EndPoint = Mathf.Lerp(0, maxLaserDistance, Timelaser * laserSpeed);
             laserRenderer.SetPosition(0, laserStartPosition);
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
-            // Set the target laser distance to the maximum range
+            
             targetLaserDistance = maxLaserDistance;
         }
 
@@ -132,8 +132,8 @@ public class LaserController : MonoBehaviour
         
         if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
         {
-            isLaserActive = false;  // Set laser to not active, start retracting
-            laserRenderer.positionCount = 0;  // Hide the laser
+            isLaserActive = false;  
+            laserRenderer.positionCount = 0;  
             laserRenderer.enabled = false;
             laserStartPosition=transform.position;
             hashit=false;
@@ -142,6 +142,6 @@ public class LaserController : MonoBehaviour
             cooled=true;
             if(usedonce==false)usedonce=true;
         }
-        //Debug.Log(laserStartPosition+transform.right*Time.deltaTime*laserSpeed);
+        
     }
 }
