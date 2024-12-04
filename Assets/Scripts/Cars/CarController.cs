@@ -16,7 +16,7 @@ public class CarController : MonoBehaviour
     private float minDistance = 2.5f; // Minimum distance for speed adjustments
     private float minSpeed = 0f; // Minimum speed (stopped)
     private float currentSpeed;
-    private float deathDelay = 8f;
+    public float deathDelay = 8f;
     private float detectionRadius = 10f; // Radius for detecting nearby cars
     private Vector2 direction; // Direction of movement
     public Vector2 intersectionPoint; // Intersection point defined in the Inspector
