@@ -776,6 +776,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1778690190272691283, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2692451
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778690190272691283, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0040798187
+      objectReference: {fileID: 0}
     - target: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04
@@ -4634,19 +4642,19 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 1.3
+  m_YDamping: 1.3
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
+  m_DeadZoneWidth: 0.1
+  m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 2
+  m_SoftZoneHeight: 2
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
