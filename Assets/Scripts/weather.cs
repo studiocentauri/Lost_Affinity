@@ -7,15 +7,17 @@ using UnityEngine;
 public class weather : MonoBehaviour
 {
     [SerializeField] List<ParticleSystem> weatherStates;
-    [SerializeField] float transitTime;
-    [SerializeField] float weatherTime;// Note that transit time must be less than weatherTime
-    [SerializeField] float time = 0f;
+    public float transitTime;
+    public float weatherTime;// Note that transit time must be less than weatherTime
+    public float time = 0f;
+    public bool isInTransit;
     int state = 0;
     void Update()
     {
         time += Time.deltaTime;
         if(time >= weatherTime)
         {
+            isInTransit = true;
             time = 0;
             weatherStates[state].Stop(withChildren: true, ParticleSystemStopBehavior.StopEmitting);;
             Invoke("Inactive",transitTime);
@@ -28,6 +30,7 @@ public class weather : MonoBehaviour
     }
     void Inactive()
     {
+        isInTransit=false;
         weatherStates[(state+weatherStates.Count-1)%weatherStates.Count].gameObject.SetActive(false);
     }
 }
