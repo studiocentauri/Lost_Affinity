@@ -1150,6 +1150,144 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &958100878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958100879}
+  - component: {fileID: 958100880}
+  m_Layer: 0
+  m_Name: Collider11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958100879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958100878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.26, y: 6.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1294760203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &958100880
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958100878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: 0.050716877, y: 0.0066990852}
+  - {x: 0.2212205, y: 0.13875532}
+  - {x: 0.22966814, y: 0.25746727}
+  - {x: 0.16632605, y: 0.33028984}
+  - {x: 0.03959894, y: 0.3199892}
+  - {x: 0.0408144, y: 0.534101}
+  - {x: 0.2846365, y: 0.7033019}
+  - {x: 0.2768426, y: 0.8818302}
+  - {x: 0.22218513, y: 0.89027834}
+  - {x: 0.21623802, y: 1.0713496}
+  - {x: 0.10751438, y: 1.2625225}
+  - {x: 0.17258692, y: 1.5152092}
+  - {x: 0.36714172, y: 1.5095258}
+  - {x: 0.36751366, y: 2.8288178}
+  - {x: 0.17446995, y: 3.111403}
+  - {x: 0.01616764, y: 3.1333735}
+  - {x: 0.0137887, y: 3.375373}
+  - {x: 0.14157867, y: 3.4016588}
+  - {x: 0.26105356, y: 3.5147076}
+  - {x: 0.26894093, y: 3.6669927}
+  - {x: 0.12753296, y: 4.087947}
+  - {x: 0.10560036, y: 4.7455635}
+  - {x: 0.09194279, y: 4.811621}
+  - {x: -0.044450283, y: 4.8827376}
+  - {x: -0.46958113, y: 4.8827176}
+  - {x: -0.60788345, y: 4.835601}
+  - {x: -0.7074082, y: 4.7371225}
+  - {x: -0.68418384, y: 4.1380587}
+  - {x: -0.60182285, y: 4.0394516}
+  - {x: -0.71130013, y: 3.9987028}
+  - {x: -0.769047, y: 3.7297497}
+  - {x: -0.82507706, y: 3.688779}
+  - {x: -0.81823874, y: 3.4860797}
+  - {x: -0.57064795, y: 3.330623}
+  - {x: -0.5685005, y: 3.1343567}
+  - {x: -0.6978502, y: 3.123977}
+  - {x: -0.75124526, y: 3.0571325}
+  - {x: -0.76041555, y: 2.9308827}
+  - {x: -0.6148281, y: 2.8253284}
+  - {x: -1.6454518, y: 2.8229983}
+  - {x: -1.4871607, y: 3.1491845}
+  - {x: -1.7162318, y: 3.1421397}
+  - {x: -1.7179341, y: 3.3575642}
+  - {x: -1.485637, y: 3.5325634}
+  - {x: -1.4662175, y: 3.691869}
+  - {x: -1.6819434, y: 4.0938764}
+  - {x: -1.6216693, y: 4.214453}
+  - {x: -1.5998516, y: 4.488377}
+  - {x: -1.849854, y: 4.8410835}
+  - {x: -2.1875114, y: 4.822884}
+  - {x: -2.422227, y: 4.5918684}
+  - {x: -2.4410594, y: 4.244058}
+  - {x: -2.6129503, y: 3.5604253}
+  - {x: -2.359354, y: 3.3270628}
+  - {x: -2.4791589, y: 3.0976577}
+  - {x: -2.667207, y: 2.783904}
+  - {x: -2.6509106, y: 1.5266378}
+  - {x: -2.3844547, y: 1.516099}
+  - {x: -2.3986971, y: 1.0181246}
+  - {x: -2.1369047, y: 1.0312119}
+  - {x: -2.131529, y: 1.2664552}
+  - {x: -0.62447596, y: 1.2472389}
+  - {x: -0.8111162, y: 0.7546916}
+  - {x: -0.5662279, y: 0.5601983}
+  - {x: -0.763926, y: 0.20280361}
+  - {x: -0.5194926, y: -0.029692173}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &969276517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1390,6 +1528,7 @@ Transform:
   - {fileID: 1596726411}
   - {fileID: 1759769140}
   - {fileID: 1205667081}
+  - {fileID: 958100879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300228082
