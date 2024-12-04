@@ -6,7 +6,7 @@ public class UITutorial : MonoBehaviour
 {
     public GameObject promptText;
     private bool isPlayerNearby = false;
-    public GameObject colliders;
+    //public GameObject colliders;
     public string[] key;
 
     void Start()
@@ -58,7 +58,7 @@ public class UITutorial : MonoBehaviour
             {
                 promptText.SetActive(false); // Hide the "Press E to Talk" text
             }
-            colliders.SetActive(false);
+            gameObject.SetActive(false);
         }
 
     }
