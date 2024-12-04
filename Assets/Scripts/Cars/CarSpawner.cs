@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
+    [SerializeField] float destroyTime;
     public GameObject[] pinkCar; // The car prefab array in order left, right, top, bottom to spawn
     public GameObject[] lightBlueCar; // The car prefab array in order left, right, top, bottom to spawn
     public GameObject[] greenCar; // The car prefab array in order left, right, top, bottom to spawn
@@ -42,19 +43,19 @@ public class CarSpawner : MonoBehaviour
         Vector3 spawnPosition = spawnPositions[randomIndex];
         lastSpawnIndex = randomIndex;
 
-        if (spawnPosition.x < 0 && spawnPosition.y > 0){ // Left side
+        if (spawnPosition.x < intersectionPoint.x && spawnPosition.y > intersectionPoint.y){ // Left side
             direction = Vector2.right;
             carPrefab = currentCars[0];
         }
-        else if (spawnPosition.x > 0 && spawnPosition.y < 0){ // Right side
+        else if (spawnPosition.x > intersectionPoint.x && spawnPosition.y < intersectionPoint.y){ // Right side
             direction = Vector2.left;
             carPrefab = currentCars[1];
         }
-        else if (spawnPosition.y > 0 && spawnPosition.x > 0){ // Top side
+        else if (spawnPosition.y > intersectionPoint.y && spawnPosition.x > intersectionPoint.x){ // Top side
             direction = Vector2.down;
             carPrefab = currentCars[2];
         }
-        else if (spawnPosition.y < 0 && spawnPosition.x < 0){ // Bottom side
+        else if (spawnPosition.y < intersectionPoint.y && spawnPosition.x < intersectionPoint.x){ // Bottom side
             direction = Vector2.up;
             carPrefab = currentCars[3];
         }
@@ -66,8 +67,8 @@ public class CarSpawner : MonoBehaviour
         
         if (carController != null)
         {
+            carController.deathDelay = destroyTime;
             carController.SetDirection(direction); // Set direction for the new car
-            
             // Set the intersection point for each car controller instance.
             carController.intersectionPoint = intersectionPoint;
         }
