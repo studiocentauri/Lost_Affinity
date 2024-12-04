@@ -31,10 +31,12 @@ public class playermovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
             {
+
                 moveDirection = new Vector2(0, vertical).normalized; // Prioritise vertical
             }
             else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
+
                 moveDirection = new Vector2(horizontal, 0).normalized; // Prioritise horizontal
             }
         }
