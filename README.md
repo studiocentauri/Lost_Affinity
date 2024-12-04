@@ -31,3 +31,5 @@ This project is licensed under the Gen-Z License.
 Got questions or feedback? Reach out to us at [gamedeviitk@gmail.com](mailto:gamedeviitk@gmail.com).
 
 Enjoy the adventure!
+
+~Full Fraud
