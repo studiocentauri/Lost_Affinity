@@ -19432,8 +19432,8 @@ MonoBehaviour:
   weatherStates:
   - {fileID: 8117378520995139364}
   - {fileID: 816091553483283654}
-  - {fileID: 6056798567864777776}
   - {fileID: 483172267832080093}
+  - {fileID: 6056798567864777776}
   transitTime: 5
   weatherTime: 30
   time: 0
