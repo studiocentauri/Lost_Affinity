@@ -17,7 +17,6 @@ public class topDownJump : MonoBehaviour
     [SerializeField] float dragCoeff;
     void Start()
     {
-        canJumpAcross = new List<Collider2D>();
         velocity = 0;
         offset = new Vector3();
         offset = player.position - shadow.position;

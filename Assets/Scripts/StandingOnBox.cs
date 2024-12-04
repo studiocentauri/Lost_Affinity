@@ -7,15 +7,16 @@ public class StandingOnBox : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Shadow")
+        if (other.tag == "Player")
         {
+            if(other.gameObject.GetComponent<playermovement>().isAttachedToPlatform)
             transform.parent.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Shadow")
+        if (other.tag == "Player")
         {
             transform.parent.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }

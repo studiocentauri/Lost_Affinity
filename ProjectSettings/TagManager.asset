@@ -13,6 +13,7 @@ TagManager:
   - DestructingTile
   - Triangle
   - CanJumpAcross
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -23,6 +24,8 @@ TagManager:
   - Player
   - Test
   - 
+  - Edge Collider
+  - Cars
   - 
   - 
   - 

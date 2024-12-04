@@ -3,7 +3,8 @@ guid: 96e2718005bfb45159822d325fc740e7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - drowningPanel: {fileID: 7229368143347981776, guid: e3b8d42357bdc3348b2d9ddfe32481bc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
