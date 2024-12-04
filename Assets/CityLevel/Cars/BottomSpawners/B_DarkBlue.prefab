@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8417463067898407387}
   - component: {fileID: 4910570333202840321}
   - component: {fileID: 1275153267215966719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_DarkBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
