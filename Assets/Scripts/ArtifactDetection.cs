@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class TestMovement : MonoBehaviour
+public class ArtifactDetection : MonoBehaviour
 {
     private InventoryManager inventoryManager;
     private GameObject NearbyItem;
-    private Rigidbody2D rb;
-    public float speed = 5.0f;
     GameObject triggerObject;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         inventoryManager = GetComponent<InventoryManager>();
 
         if (inventoryManager == null)
