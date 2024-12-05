@@ -24,9 +24,9 @@ public class i1j : MonoBehaviour
         }
         if(Input.GetKeyDown("1"))
             {
-                o2.SetActive(false);
-                o3.SetActive(true);
                 
+                o3.SetActive(true);
+                o2.SetActive(false);
             }
             if(Input.GetKeyDown("f"))
                 {
