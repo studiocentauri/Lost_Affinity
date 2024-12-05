@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    private GameObject blueSlot;
-    private GameObject greenSlot;
-    private GameObject redSlot;
+    public GameObject blueSlot;
+    public GameObject greenSlot;
+    public GameObject redSlot;
 
     public Image blueSlotImage;
     public Image greenSlotImage;

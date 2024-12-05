@@ -30,7 +30,7 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerClose && Input.GetKeyDown(KeyCode.E))
+        if(playerClose && Input.GetKeyDown(KeyCode.Return))
         {
             if(dialoguePanel.activeInHierarchy)
             {
