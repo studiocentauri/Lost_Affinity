@@ -63,7 +63,7 @@ public class NPC_Passcode : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         
-        dialoguePanel.SetActive(false);
+        if(dialoguePanel != null) dialoguePanel.SetActive(false);
     }
     public void NextLine()
     {
