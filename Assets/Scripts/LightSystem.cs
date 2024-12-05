@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightsOn : MonoBehaviour
+public class LightSystem : MonoBehaviour
 {
-    public GameObject targetObject; // The GameObject to deactivate
-    public GameObject target2;
-    public GameObject ToOff;
+
+    public GameObject darkObject;
+    public GameObject LaserOject;
+    public GameObject LaserObject2;
     private bool isPlayerInTrigger = false; // Track if the player is in the trigger area
 
     // Called when another collider enters the trigger
+    void start()
+    {
+        darkObject.SetActive(true);
+        LaserOject.SetActive(false);
+        LaserObject2.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // Check if the collider is tagged as "Player"
@@ -31,11 +38,11 @@ public class LightsOn : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E)) // Check if Enter (Return) is pressed
         {
-            if (ToOff != null) // Ensure the targetObject is assigned
+            if (darkObject != null)
             {
-                ToOff.SetActive(false);
-                targetObject.SetActive(true); // Deactivate the target object
-                target2.SetActive(true);
+                darkObject.SetActive(false);
+                LaserOject.SetActive(true);
+                LaserObject2.SetActive(true);
             }
         }
     }
