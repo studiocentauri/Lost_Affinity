@@ -11628,6 +11628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 0CompletePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.75
@@ -11671,7 +11675,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1625309857018052127, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2106017738}
   m_SourcePrefab: {fileID: 100100000, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
 --- !u!1 &538023607
 GameObject:
@@ -41916,7 +41923,7 @@ SpriteRenderer:
   m_Size: {x: 4.84375, y: 4.78125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1755437975
@@ -42339,6 +42346,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920670053}
   m_CullTransparentMesh: 1
+--- !u!1 &1921952706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797042312850244138, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+  m_PrefabInstance: {fileID: 1234610343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1939120169
 GameObject:
   m_ObjectHideFlags: 0
@@ -42432,6 +42444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e592e4399c1f344dafd6bfa9bbd7415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptText: {fileID: 0}
   dialoguePanel: {fileID: 339163303}
   dialogueText: {fileID: 339163302}
   dialogue:
@@ -43457,6 +43470,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064279532}
   m_CullTransparentMesh: 1
+--- !u!1 &2106017737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1625309857018052127, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+  m_PrefabInstance: {fileID: 503785817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106017738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106017737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad27e0700f9449b3a742261f4ab5682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaserDeath: {fileID: 955553504}
+  CarSpawner: {fileID: 1921952706}
+  GameOverDuration: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
