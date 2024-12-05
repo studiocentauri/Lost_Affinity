@@ -904,11 +904,6 @@ RectTransform:
   m_AnchoredPosition: {x: -62, y: 127.25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &310181661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3325202642555077342, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
-  m_PrefabInstance: {fileID: 1352015534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339163301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1661,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: blueSlot
       value: 
-      objectReference: {fileID: 310181661}
+      objectReference: {fileID: 0}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6901,7 +6896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1970093580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7117,3 +7112,4 @@ SceneRoots:
   - {fileID: 1057172292}
   - {fileID: 570882733}
   - {fileID: 1352015534}
+  - {fileID: 1085487308}
