@@ -14,6 +14,7 @@ TagManager:
   - Triangle
   - CanJumpAcross
   - NPC
+  - Car
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,6 @@ TagManager:
   - 
   - Edge Collider
   - Cars
-  - 
-  - 
   - 
   - 
   - 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716324112412039240}
-  - component: {fileID: 4437883703559173256}
+  - component: {fileID: 8553005850940328817}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5571253541791885718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4437883703559173256
+--- !u!114 &8553005850940328817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 17525549594133896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4797eb28e2bc91f438c2a9d03ea9aef6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5369c89e33b9f444da39262be3383f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  panel2: {fileID: 0}
-  pausemenu: {fileID: 3416111521938987668}
+  panel: {fileID: 3416111521938987668}
 --- !u!1 &558736308225893580
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,8 +651,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4437883703559173256}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 8553005850940328817}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -786,8 +784,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4437883703559173256}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 8553005850940328817}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -953,9 +951,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4437883703559173256}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: MainMenuButton
+      - m_Target: {fileID: 8553005850940328817}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
