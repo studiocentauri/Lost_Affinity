@@ -228,6 +228,7 @@ MonoBehaviour:
   blueSlotImage: {fileID: 0}
   greenSlotImage: {fileID: 0}
   redSlotImage: {fileID: 0}
+  player: {fileID: 6169057957279024386}
   offset: {x: 3, y: 0, z: 0}
 --- !u!114 &8253732163186703895
 MonoBehaviour:
