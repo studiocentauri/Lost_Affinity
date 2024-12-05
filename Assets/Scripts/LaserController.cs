@@ -126,7 +126,6 @@ public class LaserController : MonoBehaviour
             
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
-            Debug.Log(l); 
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
            
             laserRenderer.SetPosition(0, laserStartPosition);  
