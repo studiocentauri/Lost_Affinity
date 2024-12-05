@@ -46,7 +46,7 @@ public class GateOpener : MonoBehaviour
             fade.StartFadeOut();
             yield return new WaitForSeconds(fade.fadeDuration);
             Debug.Log("SceneChange");
-            SceneManager.LoadScene("Level-2");
+            SceneManager.LoadScene("Level-2 1");
             yield return null;
         }
     }

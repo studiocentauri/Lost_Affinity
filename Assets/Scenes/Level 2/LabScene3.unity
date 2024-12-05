@@ -1771,7 +1771,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.4, y: -22, z: -10}
-  m_LocalPosition: {x: -12.4, y: -22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2424,6 +2423,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432833525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &848572029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3416111521938987668, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+  m_PrefabInstance: {fileID: 1748699733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887561252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3223,7 +3227,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.4, y: -22, z: -10}
-  m_LocalPosition: {x: -12.4, y: -22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3783,7 +3786,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: -9, z: 0}
@@ -3843,7 +3846,6 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10
       m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
@@ -4365,7 +4367,7 @@ PrefabInstance:
     - target: {fileID: 8553005850940328817, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 1917030441}
+      objectReference: {fileID: 848572029}
     - target: {fileID: 9183971752950955989, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_Layer
       value: 5
