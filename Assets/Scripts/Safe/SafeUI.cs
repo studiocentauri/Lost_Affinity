@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SafeUI : MonoBehaviour
 {
+    public string sceneToLoad; //uncomment the line in CheckPasscode() to load the scene
     private int combinationLength;
     public TextMeshProUGUI promptText; //to display the prompt
     public TextMeshProUGUI displayText; //to display the input passcode
@@ -42,6 +44,7 @@ public class SafeUI : MonoBehaviour
 
             Destroy(SafeManager);
             Debug.Log("Safe Unlocked");
+            //SceneManager.LoadScene(sceneToLoad);
         }
         else{
             inputPasscode = "";
