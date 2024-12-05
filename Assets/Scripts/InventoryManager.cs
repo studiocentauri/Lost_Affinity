@@ -68,7 +68,7 @@ public class InventoryManager : MonoBehaviour
         {
             Transform itemTransform = item.transform;
             Transform playerTransform = GameObject.FindWithTag("Player").transform;
-            itemTransform.position = playerTransform.position + offset;
+            itemTransform.position = playerTransform.position + offset * item.transform.localScale.x;
             item.SetActive(true);
         }
 
