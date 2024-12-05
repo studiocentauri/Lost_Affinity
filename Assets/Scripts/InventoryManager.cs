@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public Image blueSlotImage;
     public Image greenSlotImage;
     public Image redSlotImage;
+    [SerializeField] Vector3 offset;
 
     private void Start()
     {
@@ -67,7 +68,7 @@ public class InventoryManager : MonoBehaviour
         {
             Transform itemTransform = item.transform;
             Transform playerTransform = GameObject.FindWithTag("Player").transform;
-            itemTransform.position = playerTransform.position;
+            itemTransform.position = playerTransform.position + offset * item.transform.localScale.x;
             item.SetActive(true);
         }
 
