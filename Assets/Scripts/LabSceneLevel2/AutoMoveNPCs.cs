@@ -7,10 +7,10 @@ public class AutoMoveNPCs : MonoBehaviour
 {
     [SerializeField] private Waypoints waypoints;
     public float moveSpeed = 5f;
-    [SerializeField] private float rotateSpeed = 5f;
+    //[SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private float distanceThreshold = 0.01f;
     private Transform currentWaypoint;
-    private Quaternion rotationGoal;
+    //private Quaternion rotationGoal;
 
 
     public bool dialogueCompleted = false;

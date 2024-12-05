@@ -16,8 +16,8 @@ public class BhaagoDialogueActivation : MonoBehaviour
     public string[] dialogue;
     [SerializeField]
     public float wordSpeed;
-    [SerializeField]
-    private bool playerClose;
+    /*[SerializeField]
+    private bool playerClose;*/
 
     public GameObject player;
     private int index;
@@ -114,7 +114,7 @@ public class BhaagoDialogueActivation : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerClose = true;
+            //playerClose = true;
             startDialogues();
             player = collision.gameObject;
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
@@ -136,7 +136,7 @@ public class BhaagoDialogueActivation : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerClose = false;
+            //playerClose = false;
             zeroText();
         }
     }

@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class LaserController : MonoBehaviour
 {
-    public GameObject laserObject;         // The laser object (the sprite)
+    public GameObject laserObject;
+    public Transform player;// The laser object (the sprite)
     public float maxLaserDistance = 20f;   // Max distance the laser can travel
     public float laserWidth = 0.1f;        // Width of the laser beam (can be adjusted)
     public float laserSpeed = 5f;          // Speed of the laser retraction/extension (higher is faster)
@@ -12,7 +14,7 @@ public class LaserController : MonoBehaviour
     private Vector3 laserStartPosition;    // Position from where the laser will start
     private float currentLaserDistance;    // Current length of the laser
     private float targetLaserDistance;     // Target length of the laser
-    private bool isLaserActive = false;    // Whether the laser is currently being fired
+   // private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
     public float iter;
     float t=0f;
@@ -22,6 +24,10 @@ public class LaserController : MonoBehaviour
     bool usedonce=false;
     public float cooldown;
     Vector3 endpoiiinnttt;
+    public GameObject playerObject; /// The player object
+    private Vector3 lastNonZeroVelocity;
+
+    public Transform[] startPositions;
     void Start()
     {
         laserRenderer = laserObject.GetComponent<LineRenderer>();
@@ -31,6 +37,12 @@ public class LaserController : MonoBehaviour
 
     void Update()
     {
+        if (playerObject.GetComponent<Rigidbody2D>().velocity != new Vector2(0, 0))
+        {
+            lastNonZeroVelocity = playerObject.GetComponent<Rigidbody2D>().velocity.normalized;
+            //Debug.Log(lastNonZeroVelocity);
+        }
+        laserStartPosition = transform.position;
         // Listen for key press to start the laser
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -79,8 +91,26 @@ public class LaserController : MonoBehaviour
 
     void ShootLaser()
     {
-        laserRenderer.enabled = true;  
-        Vector3 LaserDirection = transform.right;
+        laserRenderer.enabled = true;
+        
+        Vector3 LaserDirection = lastNonZeroVelocity;
+        Debug.Log(LaserDirection);
+        if(LaserDirection == Vector3.right)
+        {
+            laserStartPosition = startPositions[0].position;
+        }
+        else if(LaserDirection == Vector3.left)
+        {
+            laserStartPosition = startPositions[1].position;
+        }
+        else if( LaserDirection == Vector3.up)
+        {
+            laserStartPosition = startPositions[2].position;
+        }
+        else if(LaserDirection == Vector3.down)
+        {
+            laserStartPosition = startPositions[3].position;
+        }
         Timelaser += Time.deltaTime;
         
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
@@ -116,7 +146,7 @@ public class LaserController : MonoBehaviour
         }
 
         // Reset current laser distance for smooth animation
-        isLaserActive = true;  // Start the laser scaling
+       // isLaserActive = true;  // Start the laser scaling
     }
 
     void StartLaserRetraction()
@@ -132,7 +162,7 @@ public class LaserController : MonoBehaviour
         
         if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
         {
-            isLaserActive = false;  
+            //isLaserActive = false;  
             laserRenderer.positionCount = 0;  
             laserRenderer.enabled = false;
             laserStartPosition=transform.position;
@@ -144,4 +174,5 @@ public class LaserController : MonoBehaviour
         }
         
     }
+    
 }

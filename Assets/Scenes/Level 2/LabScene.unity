@@ -12804,7 +12804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 472400494}
-  SceneName: 
+  SceneName: LabScene2
 --- !u!61 &1277544832
 BoxCollider2D:
   m_ObjectHideFlags: 0
