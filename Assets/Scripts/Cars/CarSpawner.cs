@@ -21,6 +21,7 @@ public class CarSpawner : MonoBehaviour
     private int lastSpawnIndex = -1; // Index of the last spawn position
 
     private Vector2 direction; // Direction of movement
+    public GameObject LaserDeath;
 
 
     void Start(){
@@ -67,6 +68,7 @@ public class CarSpawner : MonoBehaviour
         
         if (carController != null)
         {
+            carController.LaserDeath = LaserDeath;
             carController.deathDelay = destroyTime;
             carController.SetDirection(direction); // Set direction for the new car
             // Set the intersection point for each car controller instance.
