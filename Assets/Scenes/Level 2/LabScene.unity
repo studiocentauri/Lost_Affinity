@@ -494,8 +494,12 @@ MonoBehaviour:
   dialogue:
   - Hmm... The results are great!!!
   - We can expect this to be fully usable byl 4165
+  speakerImage: []
+  speaker: []
   wordSpeed: 0.06
   playerClose: 0
+  rawImage: {fileID: 0}
+  speakerName: {fileID: 0}
 --- !u!1001 &381653702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12505,6 +12509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 472400494}
+  SceneName: LabScene2
 --- !u!61 &1277544832
 BoxCollider2D:
   m_ObjectHideFlags: 0
