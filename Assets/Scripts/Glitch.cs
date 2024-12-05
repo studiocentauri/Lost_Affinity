@@ -5,6 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Glitch : MonoBehaviour
 {
+    public GameObject Player;
+    void Start()
+    {
+        if(SceneManager.GetActiveScene().name == "Level-2")
+        {
+            Player.GetComponent<playermovement>().enabled = false;
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponentInChildren<PlayerAnimation>().enabled = false;
+            Animator anim = Player.GetComponentInChildren<Animator>();
+            anim.SetBool("Glitch", true);
+            Invoke("GlitchOff", 2f);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -16,6 +30,15 @@ public class Glitch : MonoBehaviour
             anim.SetBool("Glitch", true);
             Invoke("Level2", 2f);
         }
+    }
+
+    void GlitchOff()
+    {
+        Player.GetComponent<playermovement>().enabled = true;
+        Player.GetComponentInChildren<PlayerAnimation>().enabled = true;
+        Animator anim = Player.GetComponentInChildren<Animator>();
+        anim.SetBool("Glitch", false);
+        Destroy(gameObject);
     }
 
     void Level2()
