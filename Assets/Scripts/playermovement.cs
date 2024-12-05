@@ -21,6 +21,12 @@ public class playermovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log(other.gameObject.name);
+    }
+
 
     void Update()
     {
@@ -29,12 +35,12 @@ public class playermovement : MonoBehaviour
 
         if (horizontal != 0 && vertical != 0)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             {
 
                 moveDirection = new Vector2(0, vertical).normalized; // Prioritise vertical
             }
-            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
 
                 moveDirection = new Vector2(horizontal, 0).normalized; // Prioritise horizontal
