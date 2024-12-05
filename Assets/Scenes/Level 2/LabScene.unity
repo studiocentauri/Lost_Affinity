@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1736352939597358005, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: jumpSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: redSlotImage
       value: 
@@ -12785,6 +12789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 472400494}
+  SceneName: 
 --- !u!61 &1277544832
 BoxCollider2D:
   m_ObjectHideFlags: 0
