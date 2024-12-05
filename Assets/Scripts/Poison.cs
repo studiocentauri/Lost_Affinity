@@ -28,20 +28,24 @@ public class Poison : MonoBehaviour
                 }
                 else
                 {
-                    Kill();
+                    KillByPoison();
                 }
             }
             else 
             {
                 Kill();
-                timer=0f;
             }
         }
     }
-    void Kill()
+    void KillByPoison()
     {
         Debug.Log("killed by poison");
         start=false;
-        
+    }
+    void Kill()
+    {
+        Debug.Log("killed at start");
+        start=false;
+        timer=0f;
     }
 }

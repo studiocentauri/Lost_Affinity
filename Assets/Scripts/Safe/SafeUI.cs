@@ -43,7 +43,7 @@ public class SafeUI : MonoBehaviour
             // Do something to unlock the safe
 
             Destroy(SafeManager);
-            Debug.Log("Safe Unlocked");
+            SceneManager.LoadScene(sceneToLoad);
             //SceneManager.LoadScene(sceneToLoad);
         }
         else{

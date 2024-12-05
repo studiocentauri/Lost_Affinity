@@ -1377,8 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Warning: {fileID: 1937277663}
   hintf: {fileID: 1924706695}
-  hint2: {fileID: 544118501}
-  artifact2: {fileID: 624704189}
+  hint2: {fileID: 934625033}
 --- !u!1 &512028798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1769,7 @@ Transform:
   m_GameObject: {fileID: 593320682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -5.1, z: -10}
+  m_LocalPosition: {x: -12.39, y: -23.36, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2454,6 +2453,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432833525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &934625033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6474474885554013891, guid: b7073b364c373204dade91a70e390f19, type: 3}
+  m_PrefabInstance: {fileID: 795951286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947706196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,7 +3145,7 @@ Transform:
   m_GameObject: {fileID: 1311876114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -5.1, z: -10}
+  m_LocalPosition: {x: -12.39, y: -23.36, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3716,7 +3720,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -4, y: -5, z: 0}
@@ -3761,7 +3765,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -17, y: 1, z: 0}
@@ -4758,11 +4762,11 @@ PrefabInstance:
       objectReference: {fileID: 731495346}
     - target: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1
+      value: -22
       objectReference: {fileID: 0}
     - target: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5524,7 +5528,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c233f29061ea8a74f92fa300c1c2fe41, type: 2}
@@ -21096,3 +21099,4 @@ SceneRoots:
   - {fileID: 1748699733}
   - {fileID: 1797573220}
   - {fileID: 434215591}
+  - {fileID: 588744809}
