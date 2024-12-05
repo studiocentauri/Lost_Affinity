@@ -29,7 +29,7 @@ public class AutoMoveNPCs : MonoBehaviour
     {
         if(dialogueCompleted)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceThreshold)
             {
                 currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
