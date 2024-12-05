@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         UpdateUI();
-        onCollisionText.SetActive(false);
+        if(onCollisionText!=null) onCollisionText.SetActive(false);
     }
 
     public void AddItem(GameObject item)
@@ -76,7 +76,7 @@ public class InventoryManager : MonoBehaviour
             offset = new Vector3(_x ,_y, 0) * 2.0f;
             itemTransform.position = player.transform.position + offset;
             //collision test
-            if(Physics2D.Raycast(itemTransform.GetChild(0).position, offset, offset.magnitude))
+            if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude))
             {
                 if(onCollisionText != null) onCollisionText.SetActive(true);
                 else    item.SetActive(true);
