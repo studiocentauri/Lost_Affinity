@@ -51,14 +51,14 @@ public class topDownJump : MonoBehaviour
         if(isJumping)
         {
             foreach(Collider2D collider in canJumpAcross)
-                collider.enabled = false;
+                if(collider!=null) collider.enabled = false;
             offset += new Vector3(0,velocity*Time.deltaTime,0);
             velocity -= gravity * Time.deltaTime + dragCoeff * velocity;
             if(offset.y <= ground)
             {
                 isJumping=false;
             foreach(Collider2D collider in canJumpAcross)
-                collider.enabled = true;
+                if(collider!=null) collider.enabled = true;
                 velocity=0;
             }
         }
