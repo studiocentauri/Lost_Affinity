@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //using my retarded brain to get some cars moving on the roads, cuz I got no one to do it for me irl.
 public class CarController : MonoBehaviour
 {
@@ -20,8 +22,14 @@ public class CarController : MonoBehaviour
     private float detectionRadius = 10f; // Radius for detecting nearby cars
     private Vector2 direction; // Direction of movement
     public Vector2 intersectionPoint; // Intersection point defined in the Inspector
+    public GameObject LaserDeath;
+    public float GameOverDuration = 50f;
 
     // Method to set the direction of the car
+    void Start()
+    {
+        LaserDeath.SetActive(false);
+    }
     public void SetDirection(Vector2 spawnDirection){
         direction = spawnDirection;
         currentSpeed = baseSpeed; // Initialize current speed
@@ -32,8 +40,23 @@ public class CarController : MonoBehaviour
         transform.Translate(direction * currentSpeed * Time.deltaTime); // Move the car as per the current speed
         CheckForIntersection();
     }
-
-
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            LaserDeath.SetActive(true);
+            RestartScene();
+            //Invoke("RestartScene", GameOverDuration);
+        }
+    }
+    void RestartScene()
+    {
+        StartCoroutine(restart());
+    }
+    IEnumerator restart(){
+        yield return new WaitForSeconds(GameOverDuration);
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     void CheckForIntersection(){
 
         Collider2D[] nearbyCars = Physics2D.OverlapCircleAll(transform.position, detectionRadius); // Find nearby cars
