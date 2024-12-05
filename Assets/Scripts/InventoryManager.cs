@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -67,8 +68,10 @@ public class InventoryManager : MonoBehaviour
         if (item != null)
         {
             Transform itemTransform = item.transform;
-            Transform playerTransform = GameObject.FindWithTag("Player").transform;
-            itemTransform.position = playerTransform.position + offset * item.transform.localScale.x;
+            GameObject player = GameObject.FindWithTag("Player");
+            float _x = player.GetComponent<Animator>().GetFloat("X");
+            float _y = player.GetComponent<Animator>().GetFloat("Y");
+            itemTransform.position = player.transform.position + new Vector3(_x ,_y, 0) * 2.0f;
             item.SetActive(true);
         }
 
