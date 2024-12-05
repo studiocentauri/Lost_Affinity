@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChangeGateOpen : MonoBehaviour
 {
     public Animator animator;
-
+    public string SceneName;
     private bool isOpen;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,7 +27,7 @@ public class SceneChangeGateOpen : MonoBehaviour
             if (isOpen)
             {
                 Debug.Log("SceneChange");
-                SceneManager.LoadScene("LabScene2");
+                SceneManager.LoadScene(SceneName);
                 yield return null;
             }
             yield return new WaitForSeconds(0.01f);
