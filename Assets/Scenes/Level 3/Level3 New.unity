@@ -5766,17 +5766,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 351467024708383116, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: cooldown
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 351467024708383116, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 318626753}
-    - target: {fileID: 351467024708383116, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: collisionLayer.m_Bits
-      value: 136
-      objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.780287
@@ -5817,33 +5809,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4071112643328097975, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5719414849167409110, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782171925752780666, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6463277641898348232, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_Name
       value: Artifact2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19105,7 +19073,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
-  m_LinearDrag: 1
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

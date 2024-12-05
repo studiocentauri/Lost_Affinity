@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6297813988756710111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6842491033592843283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7057994998573680907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4724858072074466686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,13 +139,13 @@ GameObject:
   - component: {fileID: 513941948243361731}
   - component: {fileID: 1748812992840756176}
   - component: {fileID: 5255272517861772795}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Artifact2
   m_TagString: GreenItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2946024552622955294
 Transform:
   m_ObjectHideFlags: 0
@@ -235,9 +235,9 @@ MonoBehaviour:
   laserSpeed: 1
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 136
   iter: 0.8
-  cooldown: 5
+  cooldown: 0
   playerObject: {fileID: 0}
   startPositions:
   - {fileID: 4724858072074466686}
@@ -441,7 +441,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
-  m_LinearDrag: 1
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
