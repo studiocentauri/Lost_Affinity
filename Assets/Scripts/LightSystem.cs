@@ -11,7 +11,7 @@ public class LightSystem : MonoBehaviour
     private bool isPlayerInTrigger = false; // Track if the player is in the trigger area
 
     // Called when another collider enters the trigger
-    void start()
+    void Start()
     {
         darkObject.SetActive(true);
         LaserOject.SetActive(false);
