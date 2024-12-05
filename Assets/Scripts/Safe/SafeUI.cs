@@ -41,6 +41,8 @@ public class SafeUI : MonoBehaviour
             promptText.text = "Safe Unlocked!";
             promptText.gameObject.SetActive(true);
             gameObject.SetActive(false);
+
+
             //do something to unlock the safe and other shit
 
             Destroy(SafeManager);
@@ -63,7 +65,6 @@ public class SafeUI : MonoBehaviour
 
     void GiveHint(){
         foreach(char ch in passcode){
-            string buttonName="Button_"+ch;
             Button button = GameObject.Find("Button_"+ch).GetComponent<Button>(); // get the button
             ColorBlock colors = button.colors;
             colors.normalColor = hintColor; //
