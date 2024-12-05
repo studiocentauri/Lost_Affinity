@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,9 +18,14 @@ public class trapArea : MonoBehaviour
             if(!other.gameObject.GetComponent<playermovement>().isAttachedToPlatform && !other.gameObject.GetComponent<topDownJump>().isJumping)
             {
                 drowningPanel.SetActive(true);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Invoke("ChangeScene", 4f);
                 Debug.Log("Drowned");
             }
         }
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
