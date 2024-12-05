@@ -44,6 +44,7 @@ public class SafeUI : MonoBehaviour
             //do something to unlock the safe and other shit
 
             Destroy(SafeManager);
+            Debug.Log("Safe Unlocked");
         }
         else{
             inputPasscode = "";
