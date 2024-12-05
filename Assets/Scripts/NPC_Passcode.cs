@@ -35,7 +35,7 @@ public class NPC_Passcode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerClose && Input.GetKeyDown(KeyCode.Return))
+        if(playerClose && Input.GetKeyDown(KeyCode.E))
         {
             if(dialoguePanel.activeInHierarchy)
             {
@@ -103,7 +103,7 @@ public class NPC_Passcode : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerClose = true;
-            promptText.text = "Press Enter to eavesdrop";
+            promptText.text = "Press E to eavesdrop";
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
