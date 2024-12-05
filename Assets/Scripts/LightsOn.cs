@@ -5,6 +5,8 @@ using UnityEngine;
 public class LightsOn : MonoBehaviour
 {
     public GameObject targetObject; // The GameObject to deactivate
+    public GameObject target2;
+    public GameObject ToOff;
     private bool isPlayerInTrigger = false; // Track if the player is in the trigger area
 
     // Called when another collider enters the trigger
@@ -31,7 +33,9 @@ public class LightsOn : MonoBehaviour
         {
             if (targetObject != null) // Ensure the targetObject is assigned
             {
-                targetObject.SetActive(false); // Deactivate the target object
+                targetObject.SetActive(true); // Deactivate the target object
+                target2.SetActive(true);
+                ToOff.SetActive(false);
             }
         }
     }
