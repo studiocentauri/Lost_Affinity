@@ -14,9 +14,12 @@ public class InventoryManager : MonoBehaviour
     public GameObject player;
     [SerializeField] Vector3 offset;
     public GameObject onCollisionText;
+    public float delayTimeForText = 3f;
+    [SerializeField] bool canSpawn;
 
     private void Start()
     {
+        canSpawn = true;
         UpdateUI();
         if(onCollisionText!=null) onCollisionText.SetActive(false);
     }
@@ -48,20 +51,20 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(string color, Vector2 position)
     {
         GameObject item = null;
-
+        
         switch (color)
         {
             case "Blue":
                 item = blueSlot;
-                blueSlot = null;
+                if(canSpawn) blueSlot = null;
                 break;
             case "Green":
                 item = greenSlot;
-                greenSlot = null;
+                if(canSpawn) greenSlot = null;
                 break;
             case "Red":
                 item = redSlot;
-                redSlot = null;
+                if(canSpawn) redSlot = null;
                 break;
             default:
                 Debug.Log("Invalid color.");
@@ -71,15 +74,18 @@ public class InventoryManager : MonoBehaviour
         if (item != null)
         {
             Transform itemTransform = item.transform;
-            float _x = player.GetComponent<Animator>().GetFloat("X");
-            float _y = player.GetComponent<Animator>().GetFloat("Y");
-            offset = new Vector3(_x ,_y, 0) * 2.0f;
             itemTransform.position = player.transform.position + offset;
             //collision test
-            if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude))
+            if(!canSpawn)
             {
-                if(onCollisionText != null) onCollisionText.SetActive(true);
-                else    item.SetActive(true);
+                if(onCollisionText != null) 
+                {
+                    onCollisionText.SetActive(true);
+                    item.SetActive(false);
+                    Invoke("stopText", delayTimeForText);
+                }
+                else    
+                    item.SetActive(true);
             }
             else
             {
@@ -88,6 +94,20 @@ public class InventoryManager : MonoBehaviour
         }
 
         UpdateUI();
+    }
+    void Update()
+    {
+        float _x = player.GetComponent<Animator>().GetFloat("X");
+        float _y = player.GetComponent<Animator>().GetFloat("Y");
+        offset = new Vector3(_x ,_y, 0) * 2.0f;
+            
+        if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude)) canSpawn = false;
+        else canSpawn = true;
+        
+    }
+    void stopText()
+    {
+        onCollisionText.SetActive(false);
     }
 
     public GameObject GetItem(string color)

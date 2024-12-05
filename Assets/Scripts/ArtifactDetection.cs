@@ -28,7 +28,7 @@ public class ArtifactDetection : MonoBehaviour
         {
             inventoryManager.AddItem(NearbyItem);
             NearbyItem = null;
-            Debug.Log("Item added to inventory");
+            //Debug.Log("Item added to inventory");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -37,11 +37,11 @@ public class ArtifactDetection : MonoBehaviour
             {
                 inventoryManager.RemoveItem("Blue", transform.position);
 
-                Debug.Log("Blue item removed from inventory");
+            //    Debug.Log("Blue item removed from inventory");
             }
             else
             {
-                Debug.Log("No blue item to remove.");
+              //  Debug.Log("No blue item to remove.");
             }
         }
 
@@ -50,11 +50,11 @@ public class ArtifactDetection : MonoBehaviour
             if (inventoryManager.GetItem("Green") != null)
             {
                 inventoryManager.RemoveItem("Green", transform.position);
-                Debug.Log("Green item removed from inventory");
+            //    Debug.Log("Green item removed from inventory");
             }
             else
             {
-                Debug.Log("No green item to remove.");
+            //    Debug.Log("No green item to remove.");
             }
         }
 
@@ -63,11 +63,11 @@ public class ArtifactDetection : MonoBehaviour
             if (inventoryManager.GetItem("Red") != null)
             {
                 inventoryManager.RemoveItem("Red", transform.position);
-                Debug.Log("Red item removed from inventory");
+            //    Debug.Log("Red item removed from inventory");
             }
             else
             {
-                Debug.Log("No red item to remove.");
+            //    Debug.Log("No red item to remove.");
             }
         }
     }
