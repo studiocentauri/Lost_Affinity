@@ -143,7 +143,6 @@ public class LaserController : MonoBehaviour
                 {
                     hit.collider.gameObject.GetComponent<Animator>().SetBool("GateOpen", true);
                     hit.collider.gameObject.GetComponent<Animator>().SetBool("GateClose", false);
-                    StartCoroutine(SceneChange());
                 }
             }
         }
@@ -160,11 +159,6 @@ public class LaserController : MonoBehaviour
         }
         // Reset current laser distance for smooth animation
       isLaserActive = true;  // Start the laser scaling
-    }
-    IEnumerator SceneChange()
-    {
-        yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("Level-2");
     }
     void StartLaserRetraction()
     {
