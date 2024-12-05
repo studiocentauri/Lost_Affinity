@@ -68,7 +68,6 @@ public class CarSpawner : MonoBehaviour
         
         if (carController != null)
         {
-            carController.LaserDeath = LaserDeath;
             carController.deathDelay = destroyTime;
             carController.SetDirection(direction); // Set direction for the new car
             // Set the intersection point for each car controller instance.

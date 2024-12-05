@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8569028527506149804}
   m_Layer: 8
   m_Name: T_Green
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92218503c14cd05489e64bbf879bdb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathDelay: 8
   intersectionPoint: {x: 0, y: 0}
+  LaserDeath: {fileID: 0}
+  GameOverDuration: 0
 --- !u!50 &268176836333024605
 Rigidbody2D:
   serializedVersion: 4

@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
@@ -10,10 +11,14 @@ public class Interaction : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     [SerializeField]
     public string[] dialogue;
+    public Texture[] speakerImage;
+    public string[] speaker;
     [SerializeField]
     public float wordSpeed;
     [SerializeField]
     private bool playerClose;
+    public RawImage rawImage;
+    public TMP_Text speakerName;
 
     private int index;
     // Start is called before the first frame update
@@ -72,6 +77,8 @@ public class Interaction : MonoBehaviour
     IEnumerator Typing()
     {
         //istyping = true;
+        rawImage.texture = speakerImage[index];
+        speakerName.text = speaker[index];
         int i = index;
         foreach ( char letter in dialogue[index].ToCharArray())
         {
@@ -82,6 +89,7 @@ public class Interaction : MonoBehaviour
                 break;
             }
         }
+        
         //istyping = false;
     }
 
