@@ -1485,7 +1485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539801738}
   - component: {fileID: 539801739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697373071}
   - component: {fileID: 697373072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2637,7 +2637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229815618}
   - component: {fileID: 1229815619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2885,7 +2885,7 @@ Transform:
   m_GameObject: {fileID: 1294760202}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3811855, y: -11.151715, z: -0.016161244}
+  m_LocalPosition: {x: 3.3811855, y: -11.151715, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3776,7 +3776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496959974}
   - component: {fileID: 1496959975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1742030389121110567, guid: f3d8fa70ec5566a46aa43c43fc859ff5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6742188911813762283, guid: f3d8fa70ec5566a46aa43c43fc859ff5, type: 3}
       propertyPath: m_Pivot.x
@@ -4137,7 +4137,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 391a12b2ee5061d45ba1114201bea14b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 391eab6c05a6537419c3bccf92817c5f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4248,7 +4248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851184585}
   - component: {fileID: 1851184586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4325,7 +4325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903186915}
   - component: {fileID: 1903186916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4407,6 +4407,10 @@ PrefabInstance:
     - target: {fileID: 1625309857018052127, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736352939597358005, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1778690190272691283, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_Size.x
@@ -4576,7 +4580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048826012}
   - component: {fileID: 2048826013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
