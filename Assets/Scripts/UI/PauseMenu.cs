@@ -34,15 +34,18 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
     public void Resume(){
+        Debug.Log("Resuming");
         Time.timeScale = 1f;
         panel.SetActive(false);
         isPaused = false;
     }
     public void Restart(){
+        Debug.Log("Restarting");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
     }
     public void MainMenu(){
+        Debug.Log("Main Menu");
         SceneManager.LoadScene("MainMenu_Arsal");
         Time.timeScale = 1f;
     }
