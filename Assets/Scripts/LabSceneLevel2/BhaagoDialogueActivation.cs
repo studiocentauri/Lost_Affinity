@@ -86,7 +86,7 @@ public class BhaagoDialogueActivation : MonoBehaviour
         {
             if (dialogueText.text == dialogue[index])
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.Return))
                 {
                     NextLine();
                 }
