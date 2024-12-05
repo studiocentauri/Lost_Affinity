@@ -3787,6 +3787,7 @@ Tilemap:
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       m_AnimationSpeed: 10
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: -9, z: 0}
@@ -21042,6 +21043,5 @@ SceneRoots:
   - {fileID: 623030640}
   - {fileID: 490423407}
   - {fileID: 1383851567}
-  - {fileID: 1748699733}
   - {fileID: 434215591}
   - {fileID: 588744809}
