@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2/LabScene3.unity
     guid: 2185c632db9f5e3459c2bdbe4eeb8a5a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu_Arsal.unity
+    guid: d3051fc71dd78ad4eb3745caf8def33d
+  - enabled: 1
+    path: Assets/Scenes/Level 1/Level-1 1.unity
+    guid: 5db294fedd95e4b0fadec5370442773d
   m_configObjects: {}
