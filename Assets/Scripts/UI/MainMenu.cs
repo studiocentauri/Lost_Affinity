@@ -8,26 +8,18 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject panel;
     public GameObject panel2;
-    public GameObject pausemenu;
+    
     bool isPaused = false;
     // Start is called before the first frame update
     void Start()
     {
         panel.SetActive(false);
-        pausemenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(isPaused){
-                Resume();
-            }
-            else{
-                Pause();
-            }
-        }
+        
     }
     public void PlayGame()
     {
@@ -44,26 +36,13 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Back(){
+    public void Back()
+    {
         panel.SetActive(false);
         panel2.SetActive(true);
     }
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu_Arsal");
-    }
-    public void Resume(){
-        Time.timeScale = 1f;
-        pausemenu.SetActive(false);
-        isPaused = false;
-    }
-    public void Pause(){
-        pausemenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-    }
-    public void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
     }
 }
