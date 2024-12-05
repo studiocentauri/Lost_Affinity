@@ -4561,6 +4561,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 318626753}
+    - target: {fileID: 351467024708383116, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: collisionLayer.m_Bits
+      value: 136
+      objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.780287
