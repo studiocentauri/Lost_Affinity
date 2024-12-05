@@ -54,7 +54,7 @@ public class LabLaser : MonoBehaviour
         float EndPoint;
         if (hit.collider != null)
         {
-            if(layerIndex==6){
+            if(hit.collider.gameObject.layer==layerIndex){
                 laserDeathPanel.SetActive(true);
                 LoadSceneWithDelay();
             }

@@ -16,7 +16,11 @@ public class LaserController : MonoBehaviour
     float Timelaser = 0.0f;
     public float iter;
     float t=0f;
+    float t2=0f;
     bool hashit=false;
+    bool cooled=false;
+    bool usedonce=false;
+    public float cooldown;
     Vector3 endpoiiinnttt;
     void Start()
     {
@@ -32,7 +36,7 @@ public class LaserController : MonoBehaviour
         {
             a=true;
         }
-        if(a)
+        if(a && !cooled)
         {
             ShootLaser();
         }
@@ -43,7 +47,34 @@ public class LaserController : MonoBehaviour
             // Start retracting the laser
             StartLaserRetraction();
         }
-        
+        if(cooled)
+        {
+            
+            t2+=Time.deltaTime;
+            if(t2<cooldown)
+            {
+                if (Input.GetKeyDown(KeyCode.K))
+                {
+                    a=true;
+                }
+                if(a && !cooled)
+                {
+                    ShootLaser();
+                }
+
+                // Listen for key release to retract the laser
+                if (hashit)
+                {
+                    // Start retracting the laser
+                    StartLaserRetraction();
+                }
+            }
+            else
+            {
+                t2=0f;
+                cooled=false;
+            }
+        }
     }
 
     void ShootLaser()
@@ -80,6 +111,7 @@ public class LaserController : MonoBehaviour
             EndPoint = Mathf.Lerp(0, maxLaserDistance, Timelaser * laserSpeed);
             laserRenderer.SetPosition(0, laserStartPosition);
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
+            
             targetLaserDistance = maxLaserDistance;
         }
 
@@ -94,7 +126,7 @@ public class LaserController : MonoBehaviour
         {
             t+=Time.deltaTime;
             float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
-            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo);
+            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo*iter);
 
         }
         
@@ -106,6 +138,9 @@ public class LaserController : MonoBehaviour
             laserStartPosition=transform.position;
             hashit=false;
             Timelaser=0f;
+            t=0f;
+            cooled=true;
+            if(usedonce==false)usedonce=true;
         }
         
     }
