@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public string SceneName;
-    public float delay = 1f;
+    public float delay = 0.5f;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
