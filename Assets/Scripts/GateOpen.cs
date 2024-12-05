@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSystem : MonoBehaviour
+public class GateOpen : MonoBehaviour
 {
+    public GameObject GateClosed;
+    public GameObject gateOpen;
 
-    public GameObject darkObject;
-    public GameObject LaserOject;
-    public GameObject LaserObject2;
     private bool isPlayerInTrigger = false; // Track if the player is in the trigger area
 
     // Called when another collider enters the trigger
     void Start()
     {
-        darkObject.SetActive(true);
-        LaserOject.SetActive(false);
-        LaserObject2.SetActive(false);
+        GateClosed.SetActive(true);
+        gateOpen.SetActive(false);
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,11 +37,11 @@ public class LightSystem : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E)) // Check if Enter (Return) is pressed
         {
-            if (darkObject != null)
+            if (GateClosed != null)
             {
-                darkObject.SetActive(false);
-                LaserOject.SetActive(true);
-                LaserObject2.SetActive(true);
+                GateClosed.SetActive(false);
+                gateOpen.SetActive(true);
+
             }
         }
     }
