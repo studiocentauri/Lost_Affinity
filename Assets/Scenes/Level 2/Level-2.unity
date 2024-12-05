@@ -5703,7 +5703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474e702a480dbb34c9aaaace7eb0923a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: LabScene
   promptText: {fileID: 1947074634}
   displayText: {fileID: 278493934}
   fingerprintSprites:
