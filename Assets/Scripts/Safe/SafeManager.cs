@@ -40,22 +40,17 @@ public class SafeManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-            //promptText.text = "You have found a safe! \nPress P to enter the passcode to unlock it.";
-            //promptText.gameObject.SetActive(true);
+            promptText.text = "You have found a safe! \nPress E to enter the passcode to unlock it.";
+            promptText.gameObject.SetActive(true);
             playerInContact = true;
-            if(!safeCanvas.activeSelf)
-                safeCanvas.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-            //promptText.gameObject.SetActive(false);
+            promptText.gameObject.SetActive(false);
             safeCanvas.SetActive(false);
             playerInContact = false;
-            if(safeCanvas.activeSelf){
-                safeCanvas.SetActive(false);
-            }
         }
     }
 
@@ -64,15 +59,15 @@ public class SafeManager : MonoBehaviour
 
 
 
-        // if(playerInContact && !safeCanvas.activeSelf){
-        //     safeCanvas.SetActive(true);
-        //     //promptText.gameObject.SetActive(false);
-        //     return;
-        // }
-        // if(playerInContact && safeCanvas.activeSelf){
-        //     safeCanvas.SetActive(false);
-        //     //promptText.gameObject.SetActive(true);
-        // }
+        if(Input.GetKeyDown(KeyCode.E) && playerInContact && !safeCanvas.activeSelf){
+            safeCanvas.SetActive(true);
+            promptText.gameObject.SetActive(false);
+            return;
+        }
+        if(Input.GetKeyDown(KeyCode.E) && playerInContact && safeCanvas.activeSelf){
+            safeCanvas.SetActive(false);
+            promptText.gameObject.SetActive(true);
+        }
 
     }
 }
