@@ -338,6 +338,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &700418033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 315893092641428690, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
+  m_PrefabInstance: {fileID: 1812020541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &700418037
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700418033}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &728527317
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +804,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 315893092641428690, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 785336161060315939, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1058,6 +1103,10 @@ PrefabInstance:
     - target: {fileID: 4840087192361868461, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841065049704838102, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4966689633945397291, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10559,6 +10608,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 315893092641428690, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 700418037}
     - targetCorrespondingSourceObject: {fileID: 7392943008075935736, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053085005}
