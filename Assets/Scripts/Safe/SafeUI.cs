@@ -40,6 +40,8 @@ public class SafeUI : MonoBehaviour
 
             // Do something to unlock the safe
 
+            // Change Scene to Lab Scene
+
             Destroy(SafeManager);
             Debug.Log("Safe Unlocked");
         }
