@@ -1,10 +1,11 @@
-using JetBrains.Annotations;
+
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserController : MonoBehaviour
 {
     public GameObject laserObject;
-    public Transform player;// The laser object (the sprite)
     public float maxLaserDistance = 20f;   // Max distance the laser can travel
     public float laserWidth = 0.1f;        // Width of the laser beam (can be adjusted)
     public float laserSpeed = 5f;          // Speed of the laser retraction/extension (higher is faster)
@@ -14,7 +15,7 @@ public class LaserController : MonoBehaviour
     private Vector3 laserStartPosition;    // Position from where the laser will start
     private float currentLaserDistance;    // Current length of the laser
     private float targetLaserDistance;     // Target length of the laser
-   // private bool isLaserActive = false;    // Whether the laser is currently being fired
+   private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
     public float iter;
     float t=0f;
@@ -23,6 +24,7 @@ public class LaserController : MonoBehaviour
     bool cooled=false;
     bool usedonce=false;
     public float cooldown;
+    int state;
     Vector3 endpoiiinnttt;
     public GameObject playerObject; /// The player object
     private Vector3 lastNonZeroVelocity;
@@ -98,18 +100,22 @@ public class LaserController : MonoBehaviour
         if(LaserDirection == Vector3.right)
         {
             laserStartPosition = startPositions[0].position;
+            state = 0;
         }
         else if(LaserDirection == Vector3.left)
         {
             laserStartPosition = startPositions[1].position;
+            state = 1;
         }
         else if( LaserDirection == Vector3.up)
         {
             laserStartPosition = startPositions[2].position;
+            state = 2;
         }
         else if(LaserDirection == Vector3.down)
         {
             laserStartPosition = startPositions[3].position;
+            state = 3;
         }
         Timelaser += Time.deltaTime;
         
@@ -117,13 +123,10 @@ public class LaserController : MonoBehaviour
         float EndPoint;
         if (hit.collider != null)
         {
-            /*if (hit.collider.CompareTag("Gates"))
-            {
-                hit.collider.gameObject.GetComponent<Animator>().SetBool("GateOpen", true);
-                hit.collider.gameObject.GetComponent<Animator>().SetBool("GateClose", false);
-            }*/
+            
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
+            Debug.Log(l); 
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
            
             laserRenderer.SetPosition(0, laserStartPosition);  
@@ -136,6 +139,11 @@ public class LaserController : MonoBehaviour
             {
                 hashit=true;
                 a=false;
+                if (hit.collider.CompareTag("Gates"))
+                {
+                    hit.collider.gameObject.GetComponent<Animator>().SetBool("GateOpen", true);
+                    hit.collider.gameObject.GetComponent<Animator>().SetBool("GateClose", false);
+                }
             }
         }
         else
@@ -150,31 +158,97 @@ public class LaserController : MonoBehaviour
             targetLaserDistance = maxLaserDistance;
         }
         // Reset current laser distance for smooth animation
-       // isLaserActive = true;  // Start the laser scaling
+      isLaserActive = true;  // Start the laser scaling
     }
-
     void StartLaserRetraction()
     {
         // Timelaser = 0;
-        if(hashit)
+        Vector3 LaserDirection = lastNonZeroVelocity;
+        Debug.Log(LaserDirection);
+        if (LaserDirection == Vector3.right)
+        {
+            laserStartPosition = startPositions[0].position;
+            state = 0;
+        }
+        else if (LaserDirection == Vector3.left)
+        {
+            laserStartPosition = startPositions[1].position;
+            state = 1;
+        }
+        else if (LaserDirection == Vector3.up)
+        {
+            laserStartPosition = startPositions[2].position;
+            state = 2;
+        }
+        else if (LaserDirection == Vector3.down)
+        {
+            laserStartPosition = startPositions[3].position;
+            state = 3;
+        }
+        if (hashit)
         {
             t+=Time.deltaTime;
             float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
-            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo*iter);
+            laserRenderer.SetPosition(0, laserStartPosition + LaserDirection*yoyo*iter);
 
         }
-        
-        if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
+        switch(state)
         {
-            //isLaserActive = false;  
-            laserRenderer.positionCount = 0;  
-            laserRenderer.enabled = false;
-            laserStartPosition=transform.position;
-            hashit=false;
-            Timelaser=0f;
-            t=0f;
-            cooled=true;
-            if(usedonce==false)usedonce=true;
+            case 0:
+                if (endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
+                {
+                    isLaserActive = false;
+                    laserRenderer.positionCount = 0;
+                    laserRenderer.enabled = false;
+                    laserStartPosition = transform.position;
+                    hashit = false;
+                    Timelaser = 0f;
+                    t = 0f;
+                    cooled = true;
+                    if (usedonce == false) usedonce = true;
+                } break;
+                case 1:
+                if(endpoiiinnttt.x > laserRenderer.GetPosition(0).x)
+                {
+                    isLaserActive = false;
+                    laserRenderer.positionCount = 0;
+                    laserRenderer.enabled = false;
+                    laserStartPosition = transform.position;
+                    hashit = false;
+                    Timelaser = 0f;
+                    t = 0f;
+                    cooled = true;
+                    if (usedonce == false) usedonce = true;
+                }
+                break;
+                case 2:
+                if(endpoiiinnttt.y < laserRenderer.GetPosition(0).y)
+                {
+                    isLaserActive = false;
+                    laserRenderer.positionCount = 0;
+                    laserRenderer.enabled = false;
+                    laserStartPosition = transform.position;
+                    hashit = false;
+                    Timelaser = 0f;
+                    t = 0f;
+                    cooled = true;
+                    if (usedonce == false) usedonce = true;
+                }
+                break;
+                case 3:
+                if(endpoiiinnttt.y > laserRenderer.GetPosition(0).y)
+                {
+                    isLaserActive = false;
+                    laserRenderer.positionCount = 0;
+                    laserRenderer.enabled = false;
+                    laserStartPosition = transform.position;
+                    hashit = false;
+                    Timelaser = 0f;
+                    t = 0f;
+                    cooled = true;
+                    if (usedonce == false) usedonce = true;
+                }
+                break;
         }
         
     }

@@ -8,6 +8,14 @@ public class SceneChangeGateOpen : MonoBehaviour
     public Animator animator;
     public string SceneName;
     private bool isOpen;
+    Fade fade;
+
+    void Start()
+    {
+        fade = GetComponent<Fade>();
+        fade.FadeIn();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -21,16 +29,14 @@ public class SceneChangeGateOpen : MonoBehaviour
 
     IEnumerator CheckGateOpen()
     {
-        while (true)
-        {
             isOpen = animator.GetBool("IsOpen");
             if (isOpen)
             {
+                fade.FadeOut();
+                yield return new WaitForSeconds(fade.FadeTime);
                 Debug.Log("SceneChange");
                 SceneManager.LoadScene(SceneName);
                 yield return null;
             }
-            yield return new WaitForSeconds(0.01f);
-        }
     }
 }
