@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class NPC_Interaction_Safe : MonoBehaviour
 {
     [SerializeField]
     private GameObject dialoguePanel;
@@ -10,16 +10,20 @@ public class Interaction : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     [SerializeField]
     public string[] dialogue;
+
+    public int passcodeIndexInDialogue=3;
     [SerializeField]
     public float wordSpeed;
     [SerializeField]
     private bool playerClose;
+    private SafeManager safeManager;
 
     private int index;
     // Start is called before the first frame update
     void Start()
     {
         dialoguePanel.SetActive(false);
+        SetCodeDialogue();
     }
 
     // Update is called once per frame
@@ -37,14 +41,6 @@ public class Interaction : MonoBehaviour
                 StartCoroutine(Typing());
             }
         }
-        if(dialogueText.text == dialogue[index])
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                //NextLine();
-            }
-        }
-        
     }
 
     public void zeroText()
@@ -99,5 +95,20 @@ public class Interaction : MonoBehaviour
             playerClose = false;
             zeroText();
         }
+    }
+
+    private void SetCodeDialogue()
+    {
+        safeManager = FindObjectOfType<SafeManager>(); //find the SafeManager in the scene
+        if (safeManager != null){
+            string combination = safeManager.passcode;
+            combination = combination.Substring(0,combination.Length-2);
+            string text = $"The code to the safe is: {combination}_ _"; //set the dialogue text
+            Debug.Log(combination);
+            dialogue[passcodeIndexInDialogue] = text;
+
+        }
+        else
+            dialogueText.text = "Sorry, I can't seem to remember the code!";
     }
 }
