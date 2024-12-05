@@ -31,11 +31,11 @@ public class LightsOn : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Return)) // Check if Enter (Return) is pressed
         {
-            if (targetObject != null) // Ensure the targetObject is assigned
+            if (ToOff != null) // Ensure the targetObject is assigned
             {
+                ToOff.SetActive(false);
                 targetObject.SetActive(true); // Deactivate the target object
                 target2.SetActive(true);
-                ToOff.SetActive(false);
             }
         }
     }

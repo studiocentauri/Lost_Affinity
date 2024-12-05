@@ -1599,8 +1599,8 @@ Tilemap:
   - first: {x: 24, y: -25, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 4
+      m_TileIndex: 4
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1788,27 +1788,27 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 8c4c5a8febb99dc40b8935188b4fe2ce, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: f0fe75f4cabce23468038bca6b0879f4, type: 2}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 0fab2b105d99b554eb8566163b203c36, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 153c4b4ea1323d345bbcf10058962d8b, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 70e392ab53972254b9893f0d5d531c99, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 10
     m_Data: {fileID: 1265240828, guid: fd30baf7a31bcce42b623c0b296dc2c0, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 798891500, guid: f858172c94cfe2b4f8a9f3669857f9ac, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 209148137, guid: fd30baf7a31bcce42b623c0b296dc2c0, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -1890653602, guid: f858172c94cfe2b4f8a9f3669857f9ac, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1509908578, guid: f858172c94cfe2b4f8a9f3669857f9ac, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 39
     m_Data:
@@ -98327,6 +98327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 315893092641428690}
+  target2: {fileID: 0}
+  ToOff: {fileID: 0}
 --- !u!1 &7392943008075935736
 GameObject:
   m_ObjectHideFlags: 0
@@ -98344,7 +98346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3146942819506081157
 Transform:
   m_ObjectHideFlags: 0
@@ -111802,7 +111804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e881b49888348479ef82a09ec41757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 7392943008075935736}
+  targetObject: {fileID: 0}
+  target2: {fileID: 0}
+  ToOff: {fileID: 7392943008075935736}
 --- !u!1 &8411065738698960120
 GameObject:
   m_ObjectHideFlags: 0
