@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: -89}
+  m_AnchoredPosition: {x: 97, y: -89}
   m_SizeDelta: {x: 503.14, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5350287105882757442
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Hint: Next time be careful with the cars?'
+  m_Text: 'Hint: Read traffic guidelines'
 --- !u!1 &1254485010563696170
 GameObject:
   m_ObjectHideFlags: 0
