@@ -117,6 +117,18 @@ public class BhaagoDialogueActivation : MonoBehaviour
             playerClose = true;
             startDialogues();
             player = collision.gameObject;
+            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.zero;
+            Animator _animator = player.GetComponentInChildren<Animator>();
+            _animator.SetBool("isMoving", false);
+            PlayerAnimation playerAnimation = player.GetComponentInChildren<PlayerAnimation>();
+            playerAnimation.enabled = false;
+            playermovement _playermovement = player.GetComponent<playermovement>();
+            topDownJump _topDownJump = player.GetComponent<topDownJump>();
+            _playermovement.enabled = false;
+            _topDownJump.enabled = false;
+            
+
         }
 
     }
