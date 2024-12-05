@@ -13,10 +13,12 @@ public class InventoryManager : MonoBehaviour
     public Image redSlotImage;
     public GameObject player;
     [SerializeField] Vector3 offset;
+    public GameObject onCollisionText;
 
     private void Start()
     {
         UpdateUI();
+        onCollisionText.SetActive(false);
     }
 
     public void AddItem(GameObject item)
@@ -71,8 +73,18 @@ public class InventoryManager : MonoBehaviour
             Transform itemTransform = item.transform;
             float _x = player.GetComponent<Animator>().GetFloat("X");
             float _y = player.GetComponent<Animator>().GetFloat("Y");
-            itemTransform.position = player.transform.position + new Vector3(_x ,_y, 0) * 2.0f;
-            item.SetActive(true);
+            offset = new Vector3(_x ,_y, 0) * 2.0f;
+            itemTransform.position = player.transform.position + offset;
+            //collision test
+            if(Physics2D.Raycast(itemTransform.GetChild(0).position, offset, offset.magnitude))
+            {
+                if(onCollisionText != null) onCollisionText.SetActive(true);
+                else    item.SetActive(true);
+            }
+            else
+            {
+                item.SetActive(true);
+            }
         }
 
         UpdateUI();
