@@ -1911,7 +1911,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1228712536}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1625309857018052127, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050800764}
   m_SourcePrefab: {fileID: 100100000, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
 --- !u!1 &446054110 stripped
 GameObject:
@@ -8376,6 +8379,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7459036096921733997, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
+      propertyPath: Poisonous
+      value: 
+      objectReference: {fileID: 2133622618}
     - target: {fileID: 7459036096921733997, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}
       propertyPath: LaserOject
       value: 
@@ -18867,6 +18874,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4364800334275045293, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
   m_PrefabInstance: {fileID: 382369222}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050800764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318626753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e22a581a0f6b0d42a25c430e232f1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  timelevel: 10
 --- !u!1 &2053085001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7392943008075935736, guid: 47a523075f5777e448e92a54e2f6d9f5, type: 3}

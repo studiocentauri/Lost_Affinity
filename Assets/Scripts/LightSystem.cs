@@ -8,6 +8,7 @@ public class LightSystem : MonoBehaviour
     public GameObject darkObject;
     public GameObject LaserOject;
     public GameObject LaserObject2;
+    public GameObject Poisonous;
     private bool isPlayerInTrigger = false; // Track if the player is in the trigger area
 
     // Called when another collider enters the trigger
@@ -16,6 +17,7 @@ public class LightSystem : MonoBehaviour
         darkObject.SetActive(true);
         LaserOject.SetActive(false);
         LaserObject2.SetActive(false);
+        Poisonous.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -43,6 +45,7 @@ public class LightSystem : MonoBehaviour
                 darkObject.SetActive(false);
                 LaserOject.SetActive(true);
                 LaserObject2.SetActive(true);
+                Poisonous.SetActive(true);
             }
         }
     }
