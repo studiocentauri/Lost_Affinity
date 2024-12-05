@@ -4600,9 +4600,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4071112643328097975, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719414849167409110, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782171925752780666, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463277641898348232, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_Name
       value: Artifact2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7032188882759093374, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_IsActive
