@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC_Interaction_Safe : MonoBehaviour
 {
+    public TextMeshProUGUI promptText;
     [SerializeField]
     private GameObject dialoguePanel;
     [SerializeField]
@@ -86,6 +87,7 @@ public class NPC_Interaction_Safe : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerClose = true;
+            promptText.text = "Press E to interact";
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -94,6 +96,7 @@ public class NPC_Interaction_Safe : MonoBehaviour
         {
             playerClose = false;
             zeroText();
+            promptText.text = "";
         }
     }
 

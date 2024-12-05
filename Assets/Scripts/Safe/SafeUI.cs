@@ -15,11 +15,13 @@ public class SafeUI : MonoBehaviour
     private string inputPasscode; //input passcode
     private Color32 hintColor;
 
+    GameObject SafeManager;
+
     void Start(){
         displayText.text = "Enter Passcode";
         inputPasscode = "";
         hintColor = new Color32(0xD7, 0xD7, 0xD7, 0xFF);
-        GameObject SafeManager = FindObjectOfType<SafeManager>().gameObject;
+        SafeManager = FindObjectOfType<SafeManager>().gameObject;
         passcode = SafeManager.GetComponent<SafeManager>().passcode;
         combinationLength = SafeManager.GetComponent<SafeManager>().combinationLength;
         //Debug.Log(passcode);
@@ -40,6 +42,9 @@ public class SafeUI : MonoBehaviour
             promptText.gameObject.SetActive(true);
             gameObject.SetActive(false);
             //do something to unlock the safe and other shit
+
+            Destroy(SafeManager);
+            Debug.Log("Safe Unlocked");
         }
         else{
             inputPasscode = "";
