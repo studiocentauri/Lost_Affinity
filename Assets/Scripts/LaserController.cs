@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserController : MonoBehaviour
 {
-    GameObject laserObject;         // The laser object (the sprite)
+    public GameObject laserObject;         // The laser object (the sprite)
     public float maxLaserDistance = 20f;   // Max distance the laser can travel
     public float laserWidth = 0.1f;        // Width of the laser beam (can be adjusted)
     public float laserSpeed = 5f;          // Speed of the laser retraction/extension (higher is faster)
@@ -17,33 +15,43 @@ public class LaserController : MonoBehaviour
     private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
     public float iter;
-    float t = 0f;
-    float t2 = 0f;
-    bool hashit = false;
-    bool cooled = false;
-    bool usedonce = false;
-    public float cooldown;
-    public Vector3 Lab;
+    float t=0f;
+    bool hashit=false;
     Vector3 endpoiiinnttt;
     void Start()
     {
-        laserObject = gameObject;
         laserRenderer = laserObject.GetComponent<LineRenderer>();
-        //laserRenderer.enabled = false;  // Initially hidden
+        laserRenderer.enabled = false;  // Initially hidden
         laserStartPosition = transform.position;  // The position of the laser emitter
     }
 
     void Update()
     {
-        ShootLaser();
+        // Listen for key press to start the laser
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            a=true;
+        }
+        if(a)
+        {
+            ShootLaser();
+        }
+
+        // Listen for key release to retract the laser
+        if (hashit)
+        {
+            // Start retracting the laser
+            StartLaserRetraction();
+        }
+        
     }
 
     void ShootLaser()
     {
-        //laserRenderer.enabled = true;
-        Vector3 LaserDirection = Lab;
+        laserRenderer.enabled = true;  
+        Vector3 LaserDirection = transform.right;
         Timelaser += Time.deltaTime;
-
+        
         RaycastHit2D hit = Physics2D.Raycast(laserStartPosition, LaserDirection, maxLaserDistance, collisionLayer);
         float EndPoint;
         if (hit.collider != null)
@@ -51,32 +59,54 @@ public class LaserController : MonoBehaviour
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
-
-            laserRenderer.SetPosition(0, laserStartPosition);
+           
+            laserRenderer.SetPosition(0, laserStartPosition);  
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
-
+            
             targetLaserDistance = LaserDirection.magnitude;
-            endpoiiinnttt = hit.point;
-            Vector3 tri = new Vector3(hit.point.x, hit.point.y, laserRenderer.GetPosition(1).z);
-            if (tri == laserRenderer.GetPosition(1))
+            endpoiiinnttt=hit.point;
+            Vector3 tri=new Vector3(hit.point.x,hit.point.y,laserRenderer.GetPosition(1).z);
+            if(tri==laserRenderer.GetPosition(1))
             {
-                hashit = true;
-                a = false;
+                hashit=true;
+                a=false;
             }
         }
         else
         {
 
-
-            laserRenderer.positionCount = 2;
+            
+            laserRenderer.positionCount = 2;  
             EndPoint = Mathf.Lerp(0, maxLaserDistance, Timelaser * laserSpeed);
             laserRenderer.SetPosition(0, laserStartPosition);
             laserRenderer.SetPosition(1, laserStartPosition + LaserDirection * EndPoint);
-
             targetLaserDistance = maxLaserDistance;
         }
 
         // Reset current laser distance for smooth animation
         isLaserActive = true;  // Start the laser scaling
+    }
+
+    void StartLaserRetraction()
+    {
+        // Timelaser = 0;
+        if(hashit)
+        {
+            t+=Time.deltaTime;
+            float yoyo = Mathf.Lerp(0,maxLaserDistance,t*laserSpeed);
+            laserRenderer.SetPosition(0, laserStartPosition + transform.right*yoyo*iter);
+
+        }
+        
+        if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
+        {
+            isLaserActive = false;  
+            laserRenderer.positionCount = 0;  
+            laserRenderer.enabled = false;
+            laserStartPosition=transform.position;
+            hashit=false;
+            Timelaser=0f;
+        }
+        
     }
 }
