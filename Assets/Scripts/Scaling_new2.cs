@@ -11,12 +11,13 @@ public class Scaling_new2 : MonoBehaviour
     private float[] scaleLevels; // Array to store the scale levels
     private int currentScaleIndex; // Index to track the current scale level
     private bool isScaling = false; // Flag to prevent overlapping scaling
+    bool big = false;
 
     void Start()
     {
         // Define the scale levels
-        scaleLevels = new float[] { min_scale, transform.localScale.x, max_scale };
-        currentScaleIndex = 1; // Start at the middle scale (1.0x)
+        scaleLevels = new float[] { min_scale, max_scale };
+        currentScaleIndex = 0; // Start at the middle scale (1.0x)
     }
 
     void Update()
@@ -29,11 +30,8 @@ public class Scaling_new2 : MonoBehaviour
                 currentScaleIndex--;
                 StartCoroutine(ScaleOverTime(scaleLevels[currentScaleIndex]));
             }
-        }
-        if (Input.GetKeyDown(KeyCode.G) && !isScaling)
-        {
             // Move to the next scale level, if possible
-            if (currentScaleIndex < scaleLevels.Length - 1)
+            else if (currentScaleIndex < scaleLevels.Length - 1)
             {
                 currentScaleIndex++;
                 StartCoroutine(ScaleOverTime(scaleLevels[currentScaleIndex]));
