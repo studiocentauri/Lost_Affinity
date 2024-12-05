@@ -11,19 +11,19 @@ public class LabLaser : MonoBehaviour
     public float laserWidth = 0.1f;        // Width of the laser beam (can be adjusted)
     public float laserSpeed = 5f;          // Speed of the laser retraction/extension (higher is faster)
     public LayerMask collisionLayer;       // The layer to detect collisions with
-    bool a;
+    //bool a;
     private LineRenderer laserRenderer;  // Sprite renderer of the laser object
     private Vector3 laserStartPosition;    // Position from where the laser will start
     private float currentLaserDistance;    // Current length of the laser
     private float targetLaserDistance;     // Target length of the laser
-    private bool isLaserActive = false;    // Whether the laser is currently being fired
+    //private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
     public float iter;
-    float t = 0f;
-    float t2 = 0f;
-    bool hashit = false;
-    bool cooled = false;
-    bool usedonce = false;
+    /*float t = 0f;
+    float t2 = 0f;*/
+    //bool hashit = false;
+    //bool cooled = false;
+    //bool usedonce = false;
     public float cooldown;
     public Vector3 Lab;
     Vector3 endpoiiinnttt;
@@ -70,8 +70,8 @@ public class LabLaser : MonoBehaviour
             Vector3 tri = new Vector3(hit.point.x, hit.point.y, laserRenderer.GetPosition(1).z);
             if (tri == laserRenderer.GetPosition(1))
             {
-                hashit = true;
-                a = false;
+                //hashit = true;
+                //a = false;
             }
         }
         else
@@ -87,7 +87,7 @@ public class LabLaser : MonoBehaviour
         }
 
         // Reset current laser distance for smooth animation
-        isLaserActive = true;  // Start the laser scaling
+       // isLaserActive = true;  // Start the laser scaling
     }
 
     public void LoadSceneWithDelay()

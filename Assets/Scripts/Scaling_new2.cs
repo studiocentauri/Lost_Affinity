@@ -11,7 +11,7 @@ public class Scaling_new2 : MonoBehaviour
     private float[] scaleLevels; // Array to store the scale levels
     private int currentScaleIndex; // Index to track the current scale level
     private bool isScaling = false; // Flag to prevent overlapping scaling
-    bool big = false;
+    //bool big = false;
 
     void Start()
     {

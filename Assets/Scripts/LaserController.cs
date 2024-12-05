@@ -14,7 +14,7 @@ public class LaserController : MonoBehaviour
     private Vector3 laserStartPosition;    // Position from where the laser will start
     private float currentLaserDistance;    // Current length of the laser
     private float targetLaserDistance;     // Target length of the laser
-    private bool isLaserActive = false;    // Whether the laser is currently being fired
+   // private bool isLaserActive = false;    // Whether the laser is currently being fired
     float Timelaser = 0.0f;
     public float iter;
     float t=0f;
@@ -146,7 +146,7 @@ public class LaserController : MonoBehaviour
         }
 
         // Reset current laser distance for smooth animation
-        isLaserActive = true;  // Start the laser scaling
+       // isLaserActive = true;  // Start the laser scaling
     }
 
     void StartLaserRetraction()
@@ -162,7 +162,7 @@ public class LaserController : MonoBehaviour
         
         if(endpoiiinnttt.x < laserRenderer.GetPosition(0).x)
         {
-            isLaserActive = false;  
+            //isLaserActive = false;  
             laserRenderer.positionCount = 0;  
             laserRenderer.enabled = false;
             laserStartPosition=transform.position;
