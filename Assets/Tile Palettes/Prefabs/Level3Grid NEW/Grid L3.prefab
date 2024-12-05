@@ -1895,7 +1895,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 23
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -37103,7 +37103,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -113297,7 +113297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5001808777169784367}
   - component: {fileID: 7260969649063276615}
-  - component: {fileID: 2940209410438186984}
+  - component: {fileID: 7459036096921733997}
   m_Layer: 0
   m_Name: Light's on
   m_TagString: Untagged
@@ -113365,7 +113365,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2940209410438186984
+--- !u!114 &7459036096921733997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113374,12 +113374,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8068099215854097268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e881b49888348479ef82a09ec41757, type: 3}
+  m_Script: {fileID: 11500000, guid: ffeea35880f00644eaf7ad4dc8ec746b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  target2: {fileID: 0}
-  ToOff: {fileID: 7392943008075935736}
+  darkObject: {fileID: 0}
+  LaserOject: {fileID: 0}
+  LaserObject2: {fileID: 0}
 --- !u!1 &8410675062665771317
 GameObject:
   m_ObjectHideFlags: 0

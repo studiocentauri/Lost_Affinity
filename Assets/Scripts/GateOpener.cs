@@ -43,8 +43,8 @@ public class GateOpener : MonoBehaviour
         bool isOpen = animator.GetBool("GateOpen");
         if (isOpen)
         {
-            fade.FadeOut();
-            yield return new WaitForSeconds(fade.FadeTime);
+            fade.StartFadeOut();
+            yield return new WaitForSeconds(fade.fadeDuration);
             Debug.Log("SceneChange");
             SceneManager.LoadScene("Level-2");
             yield return null;

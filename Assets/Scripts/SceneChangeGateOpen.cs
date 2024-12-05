@@ -32,8 +32,8 @@ public class SceneChangeGateOpen : MonoBehaviour
             isOpen = animator.GetBool("IsOpen");
             if (isOpen)
             {
-                fade.FadeOut();
-                yield return new WaitForSeconds(fade.FadeTime);
+                fade.StartFadeOut();
+                yield return new WaitForSeconds(fade.fadeDuration);
                 Debug.Log("SceneChange");
                 SceneManager.LoadScene(SceneName);
                 yield return null;

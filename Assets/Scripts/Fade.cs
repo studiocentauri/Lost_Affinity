@@ -1,47 +1,49 @@
 using System;
 using System.Collections;
 using UnityEngine;
+
 using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
-    public CanvasGroup fade;
-    bool In = false;
-    bool Out = false;
-    public float FadeTime = 2;
-    float speed;
-    void Start()
+    public Image fadeImage; // Assign this in the inspector with a full-screen UI Image.
+    public float fadeDuration = 1f; // Duration of the fade.
+
+    private void Start()
     {
-        speed = 1 / FadeTime;
+        // Ensure the fadeImage is fully opaque at the start
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
+        StartCoroutine(FadeIn()); // Start with a fade-in effect.
     }
 
-    void FixedUpdate()
+    public void StartFadeOut()
     {
-        if(In)
+        StartCoroutine(FadeOut());
+    }
+
+    public IEnumerator FadeIn()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
         {
-            fade.alpha -= Time.fixedDeltaTime * speed;
-            if (fade.alpha <= 0)
-            {
-                In = false;
-            }
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, alpha);
+            yield return null;
         }
-        if (Out)
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 0f); // Ensure fully transparent at the end.
+    }
+
+    public IEnumerator FadeOut()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
         {
-            fade.alpha += Time.fixedDeltaTime * speed;
-            if (fade.alpha >= 1)
-            {
-                Out = false;
-            }
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, alpha);
+            yield return null;
         }
-    }
-
-    public void FadeIn()
-    {
-        In = true;
-    }
-
-    public void FadeOut()
-    {
-        Out = true;
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f); // Ensure fully opaque at the end.
     }
 }
