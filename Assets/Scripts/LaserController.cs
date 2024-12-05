@@ -96,7 +96,6 @@ public class LaserController : MonoBehaviour
         laserRenderer.enabled = true;
         
         Vector3 LaserDirection = lastNonZeroVelocity;
-        Debug.Log(LaserDirection);
         if(LaserDirection == Vector3.right)
         {
             laserStartPosition = startPositions[0].position;
