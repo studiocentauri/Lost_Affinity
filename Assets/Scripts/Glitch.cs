@@ -15,7 +15,7 @@ public class Glitch : MonoBehaviour
             Player.GetComponentInChildren<PlayerAnimation>().enabled = false;
             Animator anim = Player.GetComponentInChildren<Animator>();
             anim.SetBool("Glitch", true);
-            Invoke("GlitchOff", 2f);
+            Invoke("GlitchOff", 1.25f);
         }
     }
 
@@ -28,7 +28,7 @@ public class Glitch : MonoBehaviour
             other.GetComponentInChildren<PlayerAnimation>().enabled = false;
             Animator anim = other.GetComponentInChildren<Animator>();
             anim.SetBool("Glitch", true);
-            Invoke("Level2", 2f);
+            Invoke("Level2", 1.25f);
         }
     }
 

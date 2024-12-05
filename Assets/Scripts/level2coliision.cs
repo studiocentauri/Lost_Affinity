@@ -15,6 +15,7 @@ public class level2coliision : MonoBehaviour
         {
             LaserDeath.SetActive(true);
             if(CarSpawner != null) CarSpawner.SetActive(false);
+            // CarSpawner.SetActive(false);
             RestartScene();
             //Invoke("RestartScene", GameOverDuration);
         }
