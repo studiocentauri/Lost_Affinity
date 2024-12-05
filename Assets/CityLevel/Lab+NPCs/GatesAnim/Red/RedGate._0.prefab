@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7336663533154724309}
   - component: {fileID: 5987826798408315723}
   - component: {fileID: 7064326823017298692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedGate._0
-  m_TagString: Untagged
+  m_TagString: Gates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

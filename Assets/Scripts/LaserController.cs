@@ -117,6 +117,11 @@ public class LaserController : MonoBehaviour
         float EndPoint;
         if (hit.collider != null)
         {
+            /*if (hit.collider.CompareTag("Gates"))
+            {
+                hit.collider.gameObject.GetComponent<Animator>().SetBool("GateOpen", true);
+                hit.collider.gameObject.GetComponent<Animator>().SetBool("GateClose", false);
+            }*/
             laserRenderer.positionCount = 2;
             float l = Vector3.Distance(laserStartPosition, hit.point);
             EndPoint = Mathf.Lerp(0, l, Timelaser * laserSpeed);
@@ -144,7 +149,6 @@ public class LaserController : MonoBehaviour
             
             targetLaserDistance = maxLaserDistance;
         }
-
         // Reset current laser distance for smooth animation
        // isLaserActive = true;  // Start the laser scaling
     }

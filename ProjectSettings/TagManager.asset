@@ -15,6 +15,7 @@ TagManager:
   - CanJumpAcross
   - NPC
   - Car
+  - Gates
   layers:
   - Default
   - TransparentFX
