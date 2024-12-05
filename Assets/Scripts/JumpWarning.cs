@@ -8,7 +8,6 @@ public class JumpWarning : MonoBehaviour
     public GameObject Warning;
     public GameObject hintf;
     public GameObject hint2;
-    public GameObject artifact2;
     int c = 0;
     void Start()
     {
