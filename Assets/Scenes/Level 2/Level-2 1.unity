@@ -656,6 +656,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5517085812649505543, guid: 5550f3c6428627f49a608c55cab3bc77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5726262010001628183, guid: 5550f3c6428627f49a608c55cab3bc77, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 1024
