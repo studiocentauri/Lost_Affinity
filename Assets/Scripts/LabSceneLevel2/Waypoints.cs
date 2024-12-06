@@ -6,6 +6,8 @@ public class Waypoints : MonoBehaviour
 {
     [SerializeField] private bool canLoop;
     public bool onLastWaypoint;
+    public bool reverseOrder;
+    private int variable = 1;
     private void OnDrawGizmos()
     {
         foreach( Transform t in transform)
@@ -28,25 +30,60 @@ public class Waypoints : MonoBehaviour
 
     public Transform GetNextWaypoint(Transform currentWaypoint)
     {
-        if(currentWaypoint == null) return transform.GetChild(0);
-        
-        if(currentWaypoint.GetSiblingIndex() < transform.childCount - 1)
+        if (currentWaypoint == null) return transform.GetChild(0);
+
+        int currentIndex = currentWaypoint.GetSiblingIndex();
+        int nextIndex = currentIndex;
+
+        if (reverseOrder)
         {
-            return transform.GetChild(currentWaypoint.GetSiblingIndex() + 1);
-            
+            nextIndex += variable;
+            if(nextIndex == transform.childCount)
+            {
+                
+                if (canLoop)
+                {
+                    nextIndex = transform.childCount - 2;
+                    variable = -1;
+                }
+                else
+                {
+                    nextIndex -= variable;
+                }
+            }
+            if(nextIndex < 0)
+            {
+                if (canLoop)
+                {
+                    nextIndex = 0;
+                    variable = 1;
+                }
+                else
+                {
+                    nextIndex = 0;
+                    variable = 0;
+                }
+            }
         }
         else
         {
-            if (canLoop)
+            nextIndex += 1;
+            if(nextIndex == transform.childCount)
             {
-                return transform.GetChild(0);
+                if (canLoop)
+                {
+                    nextIndex = 0;
+                }
+                else
+                {
+                    nextIndex -= 1;
+                }
             }
-            else
-            {
-                onLastWaypoint = true;
-                return transform.GetChild(currentWaypoint.GetSiblingIndex());
-            }
-            
         }
+
+        Debug.Log(nextIndex);
+        return transform.GetChild(nextIndex);   
+        
+        
     }
 }

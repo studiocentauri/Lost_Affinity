@@ -14,6 +14,7 @@ public class AutoMoveNPCs : MonoBehaviour
 
 
     public bool dialogueCompleted = false;
+    public float waitInBetweenWaypoints = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class AutoMoveNPCs : MonoBehaviour
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
         
     }
-
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -38,6 +39,6 @@ public class AutoMoveNPCs : MonoBehaviour
         }
         
     }
-
+    
     
 }
