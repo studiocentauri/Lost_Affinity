@@ -53,11 +53,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ground
-    uniqueID: 776307175
-    locked: 0
   - name: Water
     uniqueID: 2246920157
+    locked: 0
+  - name: ground
+    uniqueID: 776307175
     locked: 0
   - name: postGround
     uniqueID: 2285380429
