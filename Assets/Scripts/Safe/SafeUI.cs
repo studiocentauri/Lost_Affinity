@@ -62,8 +62,8 @@ public class SafeUI : MonoBehaviour
         if(inputPasscode == "")
             displayText.text = "Enter Passcode";
         else{
-            displayText.text = new string('_', combinationLength-inputPasscode.Length);
-            displayText.text += inputPasscode;
+            displayText.text = inputPasscode;
+            displayText.text += new string('_', combinationLength-inputPasscode.Length);
         }
     }
 
