@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class trapArea : MonoBehaviour
 {
     public GameObject drowningPanel;
-
     void Start()
     {
         drowningPanel.SetActive(false);
@@ -18,8 +17,11 @@ public class trapArea : MonoBehaviour
             if(!other.gameObject.GetComponent<playermovement>().isAttachedToPlatform && !other.gameObject.GetComponent<topDownJump>().isJumping)
             {
                 drowningPanel.SetActive(true);
-                other.GetComponent<playermovement>().moveSpeed = 0f;
+                // other.GetComponent<playermovement>().enabled =false;
+                
+                Time.timeScale = 0f;
                 Invoke("ChangeScene", 4f);
+                Time.timeScale = 1f;
 //                Debug.Log("Drowned");
             }
         }
@@ -27,6 +29,8 @@ public class trapArea : MonoBehaviour
 
     void ChangeScene()
     {
+        //Time.timeScale = 1f;
+        // player.GetComponent<playermovement>().enabled =true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
