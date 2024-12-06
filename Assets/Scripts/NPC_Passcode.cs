@@ -23,11 +23,13 @@ public class NPC_Passcode : MonoBehaviour
     public TMP_Text speakerName;
 
     private SafeManager safeManager;
+    public GameObject panel;
 
     private int index;
     // Start is called before the first frame update
     void Start()
     {
+        panel.SetActive(false);
         dialoguePanel.SetActive(false);
         SetPasscodeDialogue();
     }
@@ -63,7 +65,10 @@ public class NPC_Passcode : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         
-        if(dialoguePanel != null) dialoguePanel.SetActive(false);
+        if(dialoguePanel != null){
+            dialoguePanel.SetActive(false);
+            panel.SetActive(false);
+        }
     }
     public void NextLine()
     {
@@ -104,6 +109,7 @@ public class NPC_Passcode : MonoBehaviour
         {
             playerClose = true;
             promptText.text = "Press E to eavesdrop";
+            panel.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
