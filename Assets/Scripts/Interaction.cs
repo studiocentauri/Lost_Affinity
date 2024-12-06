@@ -30,9 +30,9 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerClose && Input.GetKeyDown(KeyCode.Return))
+        if (playerClose && Input.GetKeyDown(KeyCode.E))
         {
-            if(dialoguePanel.activeInHierarchy)
+            if (dialoguePanel.activeInHierarchy)
             {
                 NextLine();
             }
@@ -42,14 +42,14 @@ public class Interaction : MonoBehaviour
                 StartCoroutine(Typing());
             }
         }
-        if(dialogueText.text == dialogue[index])
+        if (dialogueText.text == dialogue[index])
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 //NextLine();
             }
         }
-        
+
     }
 
     public void zeroText()
@@ -57,12 +57,12 @@ public class Interaction : MonoBehaviour
         StopAllCoroutines();
         dialogueText.text = "";
         index = 0;
-        
+
         dialoguePanel.SetActive(false);
     }
     public void NextLine()
     {
-        if(index < dialogue.Length - 1)
+        if (index < dialogue.Length - 1)
         {
             index++;
             dialogueText.text = "";
@@ -80,16 +80,16 @@ public class Interaction : MonoBehaviour
         rawImage.texture = speakerImage[index];
         speakerName.text = speaker[index];
         int i = index;
-        foreach ( char letter in dialogue[index].ToCharArray())
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
-            if(i != index)
+            if (i != index)
             {
                 break;
             }
         }
-        
+
         //istyping = false;
     }
 
