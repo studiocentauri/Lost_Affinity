@@ -12,6 +12,8 @@ public class activateAutoPlayerMove : MonoBehaviour
         {
             AutoMovePlayerOnEnd _autoMovePlayerOnEnd = collision.gameObject.GetComponent<AutoMovePlayerOnEnd>();
             _autoMovePlayerOnEnd.enabled = true;
+            /*ControlAutoMoveAnimation controlAutoMoveAnimation = collision.gameObject.GetComponent<ControlAutoMoveAnimation>();
+            controlAutoMoveAnimation.enabled = true;*/
         }
     }
 }
