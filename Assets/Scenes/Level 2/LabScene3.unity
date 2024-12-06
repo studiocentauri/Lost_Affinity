@@ -3377,15 +3377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3433,7 +3433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627670950378881600, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: min_scale
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3909,7 +3909,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 9, y: 2, z: 0}
@@ -4744,7 +4744,7 @@ PrefabInstance:
       objectReference: {fileID: 1719909366}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: distance
-      value: 0.5
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: redSlotImage
@@ -6000,15 +6000,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2946024552622955294, guid: 59b030c06576acf49bad8b6977479184, type: 3}
       propertyPath: m_LocalPosition.x
