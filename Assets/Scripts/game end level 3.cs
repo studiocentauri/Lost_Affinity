@@ -9,29 +9,33 @@ public class gameendlevel3 : MonoBehaviour
     public float helmetOpenTime = 7f;
     public float helmetOpenDuration = 0f;
     public bool inTrigger = false;
-    public float t=2f;
+    public float t = 2f;
+    public GameObject DangerText;
 
     // Start is called before the first frame update
     void Start()
     {
+        DangerText.SetActive(false);
         poison.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(helmet.GetBool("Helmet") == true)
+        if (helmet.GetBool("Helmet") == true)
         {
+            DangerText.SetActive(false);
             helmetOpenDuration = 0f;
         }
-        else if(helmet.GetBool("Helmet") == false && inTrigger == true)
+        else if (helmet.GetBool("Helmet") == false && inTrigger == true)
         {
+            DangerText.SetActive(true);
             helmetOpenDuration += Time.deltaTime;
-            if(helmetOpenDuration >= helmetOpenTime)
+            if (helmetOpenDuration >= helmetOpenTime)
             {
-                helmetOpenTime -= Time.deltaTime*2;
+                helmetOpenTime -= Time.deltaTime * 2;
                 poison.SetActive(true);
-                if(helmetOpenTime <= 0)
+                if (helmetOpenTime <= 0)
                 {
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level3 New");
                 }
@@ -49,11 +53,11 @@ public class gameendlevel3 : MonoBehaviour
     public void Activate()
     {
         Time.timeScale = 0f;
-        
+
         poison.SetActive(true);
         Debug.Log(helmetOpenDuration);
         helmetOpenDuration -= Time.deltaTime;
-        if(helmetOpenDuration <= 0)
+        if (helmetOpenDuration <= 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Level3 New");
         }
