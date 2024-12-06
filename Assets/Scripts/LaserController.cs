@@ -39,11 +39,8 @@ public class LaserController : MonoBehaviour
 
     void Update()
     {
-        if (playerObject.GetComponent<Rigidbody2D>().velocity != new Vector2(0, 0))
-        {
-            lastNonZeroVelocity = playerObject.GetComponent<Rigidbody2D>().velocity.normalized;
-            //Debug.Log(lastNonZeroVelocity);
-        }
+        lastNonZeroVelocity = new Vector2(playerObject.GetComponentInChildren<Animator>().GetFloat("X"), playerObject.GetComponentInChildren<Animator>().GetFloat("Y"));
+        //Debug.Log(lastNonZeroVelocity);
         laserStartPosition = transform.position;
         // Listen for key press to start the laser
         if (Input.GetKeyDown(KeyCode.K))
