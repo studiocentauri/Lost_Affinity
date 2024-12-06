@@ -1754,6 +1754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 0CompletePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2005471589885512534, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: blueSlot
       value: 

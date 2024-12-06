@@ -3787,7 +3787,6 @@ Tilemap:
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       m_AnimationSpeed: 10
-      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: -9, z: 0}
@@ -4695,6 +4694,10 @@ PrefabInstance:
     - target: {fileID: 1778690190272691283, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: m_Offset.y
       value: 0.006658554
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005471589885512534, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2102449869573487020, guid: 3dffa657c0c34428093710cae93e06c4, type: 3}
       propertyPath: blueSlot
@@ -21045,3 +21048,4 @@ SceneRoots:
   - {fileID: 1383851567}
   - {fileID: 434215591}
   - {fileID: 588744809}
+  - {fileID: 1748699733}
