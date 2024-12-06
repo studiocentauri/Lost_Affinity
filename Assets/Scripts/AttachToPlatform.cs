@@ -28,7 +28,7 @@ public class AttachToPlatform : MonoBehaviour
     {
         if(playerAttached)
         {
-            playerTransform.position = playerTransform.position + GetComponent<PlatformOscillation>().direction * GetComponent<PlatformOscillation>().speed * Time.deltaTime;
+           playerTransform.position = playerTransform.position + GetComponent<PlatformOscillation>().direction * GetComponent<PlatformOscillation>().speed * Time.deltaTime;
         }
     }
 }
