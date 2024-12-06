@@ -2688,7 +2688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 30
-  radius: 1
+  radius: 3
   Destiny: {fileID: 761711382}
   Player: {fileID: 4364800333772181236}
   time: 0
@@ -8079,7 +8079,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.046258155, b: 0.5999999, a: 1}
+  m_Color: {r: 0, g: 0.046258155, b: 0.5999999, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
