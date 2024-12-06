@@ -20,6 +20,8 @@ public class playermovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        AutoMovePlayerOnEnd autoMovePlayerOnEnd = GetComponent<AutoMovePlayerOnEnd>();
+        autoMovePlayerOnEnd.enabled = false;
     }
     
     void OnCollisionEnter2D(Collision2D other)
