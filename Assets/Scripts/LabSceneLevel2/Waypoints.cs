@@ -5,6 +5,7 @@ using UnityEngine;
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] private bool canLoop;
+    public bool onLastWaypoint;
     private void OnDrawGizmos()
     {
         foreach( Transform t in transform)
@@ -42,6 +43,7 @@ public class Waypoints : MonoBehaviour
             }
             else
             {
+                onLastWaypoint = true;
                 return transform.GetChild(currentWaypoint.GetSiblingIndex());
             }
             
