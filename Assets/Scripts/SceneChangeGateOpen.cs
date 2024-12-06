@@ -18,25 +18,25 @@ public class SceneChangeGateOpen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Collide");
             StartCoroutine(CheckGateOpen());
-            
+
         }
     }
 
     IEnumerator CheckGateOpen()
     {
-            isOpen = animator.GetBool("IsOpen");
-            if (isOpen)
-            {
-                fade.StartFadeOut();
-                yield return new WaitForSeconds(fade.fadeDuration);
-                Debug.Log("SceneChange");
-                SceneManager.LoadScene(SceneName);
-                yield return null;
-            }
+        isOpen = animator.GetBool("IsOpen");
+        if (isOpen)
+        {
+            fade.StartFadeOut();
+            yield return new WaitForSeconds(fade.fadeDuration);
+            Debug.Log("SceneChange");
+            SceneManager.LoadScene(SceneName);
+            yield return null;
+        }
     }
 }
