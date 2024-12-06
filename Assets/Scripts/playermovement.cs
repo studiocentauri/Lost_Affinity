@@ -20,10 +20,12 @@ public class playermovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
         AutoMovePlayerOnEnd autoMovePlayerOnEnd = GetComponent<AutoMovePlayerOnEnd>();
-        autoMovePlayerOnEnd.enabled = false;
+        if (autoMovePlayerOnEnd != null)
+            autoMovePlayerOnEnd.enabled = false;
     }
-    
+
     void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other.gameObject.name);
@@ -49,15 +51,18 @@ public class playermovement : MonoBehaviour
             }
         }
 
-        else if (horizontal != 0){
+        else if (horizontal != 0)
+        {
             moveDirection = new Vector2(horizontal, 0).normalized;
         }
 
-        else if (vertical != 0){
+        else if (vertical != 0)
+        {
             moveDirection = new Vector2(0, vertical).normalized;
         }
 
-        else{
+        else
+        {
             moveDirection = Vector2.zero; // No input, stop movement
         }
 
