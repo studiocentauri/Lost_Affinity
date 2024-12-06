@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
         if (item.CompareTag("BlueItem") && blueSlot == null)
         {
             blueSlot = item;
-            item.transform.localScale = new Vector3(1f, 1f, 1f);
+            item.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
         if (item.CompareTag("GreenItem") && greenSlot == null)
         {
