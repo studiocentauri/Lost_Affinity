@@ -27,6 +27,9 @@ public class GateOpener : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             StartCoroutine(CheckGateOpen());
+            collision.GetComponent<playermovement>().enabled = false;
+            collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            collision.GetComponentInChildren<Animator>().enabled = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
