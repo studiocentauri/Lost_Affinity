@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 174349237}
   - component: {fileID: 174349238}
   m_Layer: 0
-  m_Name: Col
+  m_Name: Collider ki mkc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
