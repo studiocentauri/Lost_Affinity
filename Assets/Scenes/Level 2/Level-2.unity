@@ -5719,6 +5719,10 @@ PrefabInstance:
       value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7939712698336109101, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: spawnPositions.Array.data[3].x
+      value: 27.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939712698336109101, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: spawnPositions.Array.data[3].y
       value: -54
       objectReference: {fileID: 0}
