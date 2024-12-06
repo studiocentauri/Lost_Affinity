@@ -97,9 +97,10 @@ public class InventoryManager : MonoBehaviour
     {
         float _x = player.GetComponent<Animator>().GetFloat("X");
         float _y = player.GetComponent<Animator>().GetFloat("Y");
+        if(_y == -1) _y = -1.8f;
         offset = new Vector3(_x ,_y, 0) * distance;
             
-        if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude, layerMask)) canSpawn = false;
+        if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude+0.75f, layerMask)) canSpawn = false;
         else canSpawn = true;
         
     }
