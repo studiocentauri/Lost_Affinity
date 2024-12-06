@@ -23,7 +23,9 @@ public class SceneChangeGateOpen : MonoBehaviour
         {
             Debug.Log("Collide");
             StartCoroutine(CheckGateOpen());
-
+            collision.GetComponent<playermovement>().enabled = false;
+            collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            collision.GetComponentInChildren<Animator>().enabled = false;
         }
     }
 
