@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     public Image greenSlotImage;
     public Image redSlotImage;
     public GameObject player;
+    public float distance = 2f;
     [SerializeField] Vector3 offset;
     public GameObject onCollisionText;
     public float delayTimeForText = 3f;
@@ -30,18 +32,13 @@ public class InventoryManager : MonoBehaviour
         {
             blueSlot = item;
         }
-        else if (item.CompareTag("GreenItem") && greenSlot == null)
+        if (item.CompareTag("GreenItem") && greenSlot == null)
         {
             greenSlot = item;
         }
-        else if (item.CompareTag("RedItem") && redSlot == null)
+        if (item.CompareTag("RedItem") && redSlot == null)
         {
             redSlot = item;
-        }
-        else
-        {
-            Debug.Log("Inventory is full or item does not match any slot.");
-            return;
         }
 
         item.SetActive(false);
@@ -99,7 +96,7 @@ public class InventoryManager : MonoBehaviour
     {
         float _x = player.GetComponent<Animator>().GetFloat("X");
         float _y = player.GetComponent<Animator>().GetFloat("Y");
-        offset = new Vector3(_x ,_y, 0) * 2.0f;
+        offset = new Vector3(_x ,_y, 0) * distance;
             
         if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude)) canSpawn = false;
         else canSpawn = true;
