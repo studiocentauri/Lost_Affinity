@@ -8107,7 +8107,7 @@ MonoBehaviour:
   greenSlotImage: {fileID: 1236053046}
   redSlotImage: {fileID: 1666225794}
   player: {fileID: 6169057957312916571}
-  distance: 2
+  distance: 0.5
   offset: {x: 3, y: 0, z: 0}
   onCollisionText: {fileID: 0}
   delayTimeForText: 3
