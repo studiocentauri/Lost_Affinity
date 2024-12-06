@@ -39,7 +39,7 @@ public class Interaction : MonoBehaviour
             else
             {
                 dialoguePanel.SetActive(true);
-                GetComponent<AutoMoveNPCs>().enabled = false;
+                if(GetComponent<AutoMoveNPCs>() != null) GetComponent<AutoMoveNPCs>().enabled = false;
                 StartCoroutine(Typing());
             }
         }
@@ -58,7 +58,7 @@ public class Interaction : MonoBehaviour
         StopAllCoroutines();
         dialogueText.text = "";
         index = 0;
-        GetComponent<AutoMoveNPCs>().enabled = true;
+        if(GetComponent<AutoMoveNPCs>() != null) GetComponent<AutoMoveNPCs>().enabled = true;
 
         dialoguePanel.SetActive(false);
     }
