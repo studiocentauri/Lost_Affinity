@@ -30,7 +30,7 @@ public class PlatformOscillation : MonoBehaviour
         direction = (targetPosition - transform.position).normalized; 
         if(movementIsTriggered)
         {
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
             {
