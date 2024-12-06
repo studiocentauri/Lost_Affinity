@@ -15,8 +15,7 @@ public class SafeManager : MonoBehaviour
     public GameObject safeCanvas; //to enable or disable the safeInput canvas
     private bool playerInContact;
     public GameObject panel1;
-    public GameObject panel2;
-
+    
     void Awake()
     {
         // Generate a random string of length 4 with distinct digits
@@ -37,7 +36,7 @@ public class SafeManager : MonoBehaviour
         safeCanvas.SetActive(false);
         playerInContact = false;
         panel1.SetActive(false);
-        panel2.SetActive(false);
+        
     }
 
 
@@ -68,14 +67,14 @@ public class SafeManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && playerInContact && !safeCanvas.activeSelf){
             safeCanvas.SetActive(true);
             panel1.SetActive(false);
-            panel2.SetActive(true);
+            
             promptText.gameObject.SetActive(false);
             return;
         }
         if(Input.GetKeyDown(KeyCode.E) && playerInContact && safeCanvas.activeSelf){
             safeCanvas.SetActive(false);
             panel1.SetActive(true);
-            panel2.SetActive(false);
+            
             promptText.gameObject.SetActive(true);
         }
 
