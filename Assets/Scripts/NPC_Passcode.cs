@@ -49,14 +49,6 @@ public class NPC_Passcode : MonoBehaviour
                 StartCoroutine(Typing());
             }
         }
-        if(dialogueText.text == dialogue[index])
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                //NextLine();
-            }
-        }
-        
     }
 
     public void zeroText()
