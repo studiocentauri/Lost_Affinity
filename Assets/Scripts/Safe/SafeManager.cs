@@ -13,7 +13,9 @@ public class SafeManager : MonoBehaviour
     public string passcode; //actual passcode
     public TextMeshProUGUI promptText; //set the prompt text
     public GameObject safeCanvas; //to enable or disable the safeInput canvas
-    private bool playerInContact; //to check if the player is in contact with the safe
+    private bool playerInContact;
+    public GameObject panel1;
+    public GameObject panel2;
 
     void Awake()
     {
@@ -34,14 +36,17 @@ public class SafeManager : MonoBehaviour
     {
         safeCanvas.SetActive(false);
         playerInContact = false;
+        panel1.SetActive(false);
+        panel2.SetActive(false);
     }
 
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-            promptText.text = "You have found a safe! \nPress E to enter the passcode to unlock it.";
+            promptText.text = "You found the lab \nPress E to enter the passcode to unlock it.";
             promptText.gameObject.SetActive(true);
+            panel1.SetActive(true);
             playerInContact = true;
         }
     }
@@ -49,6 +54,7 @@ public class SafeManager : MonoBehaviour
     {
         if (other.CompareTag("Player")){
             promptText.gameObject.SetActive(false);
+            panel1.SetActive(false);
             safeCanvas.SetActive(false);
             playerInContact = false;
         }
@@ -61,11 +67,15 @@ public class SafeManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E) && playerInContact && !safeCanvas.activeSelf){
             safeCanvas.SetActive(true);
+            panel1.SetActive(false);
+            panel2.SetActive(true);
             promptText.gameObject.SetActive(false);
             return;
         }
         if(Input.GetKeyDown(KeyCode.E) && playerInContact && safeCanvas.activeSelf){
             safeCanvas.SetActive(false);
+            panel1.SetActive(true);
+            panel2.SetActive(false);
             promptText.gameObject.SetActive(true);
         }
 
