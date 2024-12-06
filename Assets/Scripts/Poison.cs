@@ -38,12 +38,12 @@ public class Poison : MonoBehaviour
     }
     void KillByPoison()
     {
-        Debug.Log("killed by poison");
+        //Debug.Log("killed by poison");
         start=false;
     }
     void Kill()
     {
-        Debug.Log("killed at start");
+        //Debug.Log("killed at start");
         start=false;
         timer=0f;
     }
