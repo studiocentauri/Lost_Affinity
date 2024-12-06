@@ -12,7 +12,12 @@ public class GateOpenerPlayer : MonoBehaviour
         {
             animator.SetBool("IsOpen", true);
             animator.SetBool("IsClose", false);
-            collider.enabled = false;
+            Invoke("CollideOff",0.3f);
         }
+    }
+
+    void CollideOff()
+    {
+        collider.enabled = false;
     }
 }
