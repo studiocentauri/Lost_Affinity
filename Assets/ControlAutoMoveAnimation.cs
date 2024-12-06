@@ -21,15 +21,17 @@ public class ControlAutoMoveAnimation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log("Hello");
         float distanceMovedX = transform.position.x - previousPosition.x;
         //Debug.Log(distanceMovedX);
         float distanceMovedY = transform.position.y - previousPosition.y;
 
         moveSpeedX = distanceMovedX / Time.deltaTime;
-        moveSpeedX /= mover.moveSpeed;
+        moveSpeedX /= 3.0f;
         moveSpeedY = distanceMovedY / Time.deltaTime;
-        moveSpeedY /= mover.moveSpeed;
-
+        moveSpeedY /= 3.0f;
+        Debug.Log(moveSpeedX);
+        Debug.Log(moveSpeedY);
         if (moveSpeedX != 0 || moveSpeedY != 0)
         {
             animator.SetBool("isMoving", true);
