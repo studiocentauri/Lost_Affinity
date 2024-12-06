@@ -16,6 +16,7 @@ public class trapArea : MonoBehaviour
         {
             if(!other.gameObject.GetComponent<playermovement>().isAttachedToPlatform && !other.gameObject.GetComponent<topDownJump>().isJumping)
             {
+                other.gameObject.SetActive(false);
                 drowningPanel.SetActive(true);
                 // other.GetComponent<playermovement>().enabled =false;
                 
