@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class SafeUI : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SafeUI : MonoBehaviour
     private string passcode; //actual passcode
     private string inputPasscode; //input passcode
     public Sprite[] fingerprintSprites; // Array of sprites to use as hints
+    public FadeOut fadeOut;
 
     GameObject SafeManager;
 
@@ -38,12 +40,12 @@ public class SafeUI : MonoBehaviour
         if(inputPasscode == passcode){
             promptText.text = "Safe Unlocked!";
             promptText.gameObject.SetActive(true);
+            //StartCoroutine(SceneChange());
             gameObject.SetActive(false);
-
-            // Do something to unlock the safe
-
+            fadeOut.StartFadeOut();
             Destroy(SafeManager);
-            SceneManager.LoadScene(sceneToLoad);
+            Invoke("SceneChange", fadeOut.fadeDuration);
+            // Do something to unlock the safe
             //SceneManager.LoadScene(sceneToLoad);
         }
         else{
@@ -69,5 +71,10 @@ public class SafeUI : MonoBehaviour
                 button.GetComponent<Image>().sprite = fingerprintSprites[index]; // Set the button's image
             }
         }
+    }
+
+    void SceneChange()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
