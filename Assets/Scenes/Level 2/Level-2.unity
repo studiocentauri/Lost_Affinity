@@ -4758,6 +4758,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalSortingOrder: 0
   insideSortingOrder: 0
+--- !u!1 &1290654813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290654814}
+  m_Layer: 0
+  m_Name: mapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290654814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290654813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: -26.5, z: -0.37510452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311488567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,6 +5466,18 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -649621193
       objectReference: {fileID: 0}
+    - target: {fileID: 3249138710109176239, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: intersectionPoint.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249138710109176239, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: spawnPositions.Array.data[3].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249138710109176239, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: spawnPositions.Array.data[3].y
+      value: -26.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3312683079421320578, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_SortingLayer
       value: 6
@@ -5670,6 +5713,14 @@ PrefabInstance:
     - target: {fileID: 7838921072846365366, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_SortingLayerID
       value: -649621193
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939712698336109101, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: intersectionPoint.x
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939712698336109101, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
+      propertyPath: spawnPositions.Array.data[3].y
+      value: -54
       objectReference: {fileID: 0}
     - target: {fileID: 8001496988894106048, guid: a2f1f7a3cbdee6740913150f55ca400f, type: 3}
       propertyPath: m_SortingLayer
@@ -8427,3 +8478,4 @@ SceneRoots:
   - {fileID: 1085487308}
   - {fileID: 339163301}
   - {fileID: 8088823091141456315}
+  - {fileID: 1290654814}
