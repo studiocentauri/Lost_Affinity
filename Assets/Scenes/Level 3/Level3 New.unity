@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ed7b16dca449f49a4a094277c9bdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryManager: {fileID: 0}
+  inventoryManager: {fileID: 2102449869929317482}
 --- !u!1 &298677969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,7 +1513,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1250277794}
   - {fileID: 254396223}
   - {fileID: 583153332}
   m_Father: {fileID: 0}
