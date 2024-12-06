@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject onCollisionText;
     public float delayTimeForText = 3f;
     [SerializeField] bool canSpawn;
+    public LayerMask layerMask;
 
     private void Start()
     {
@@ -98,7 +99,7 @@ public class InventoryManager : MonoBehaviour
         float _y = player.GetComponent<Animator>().GetFloat("Y");
         offset = new Vector3(_x ,_y, 0) * distance;
             
-        if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude)) canSpawn = false;
+        if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude, layerMask)) canSpawn = false;
         else canSpawn = true;
         
     }

@@ -11,7 +11,6 @@ public class Poison : MonoBehaviour
     public float timelevel;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
