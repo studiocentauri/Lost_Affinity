@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
         if (item.CompareTag("BlueItem") && blueSlot == null)
         {
             blueSlot = item;
-            item.transform.localScale = new Vector3(1f, 1f, 1f);
+            item.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
         if (item.CompareTag("GreenItem") && greenSlot == null)
         {
@@ -98,7 +98,7 @@ public class InventoryManager : MonoBehaviour
     {
         float _x = player.GetComponent<Animator>().GetFloat("X");
         float _y = player.GetComponent<Animator>().GetFloat("Y");
-        if(_y == -1) _y = -2.8f;
+        if(_y == -1) _y = -1.9f;
         offset = new Vector3(_x ,_y, 0) * distance;
             
         if(Physics2D.Raycast(transform.GetChild(0).position, offset, offset.magnitude+0.75f, layerMask)) canSpawn = false;

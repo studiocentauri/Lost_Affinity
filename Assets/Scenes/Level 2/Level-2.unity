@@ -5011,15 +5011,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5063,7 +5063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627670950378881600, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: min_scale
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8030,7 +8030,7 @@ MonoBehaviour:
   greenSlotImage: {fileID: 1236053046}
   redSlotImage: {fileID: 1666225794}
   player: {fileID: 6169057957312916571}
-  distance: 0.5
+  distance: 0.85
   offset: {x: 3, y: 0, z: 0}
   onCollisionText: {fileID: 0}
   delayTimeForText: 3
