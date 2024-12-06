@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Ending : MonoBehaviour
         if (collision.CompareTag("Player") && check.CanEnd)
         {
                 animator.SetBool("GateOpen", true);
-                Invoke("SceneChange", 0.3f);
+                Invoke("SceneChange", 1f);
                 collision.GetComponent<playermovement>().enabled = false;
                 collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 collision.GetComponentInChildren<Animator>().enabled = false;
@@ -22,5 +23,6 @@ public class Ending : MonoBehaviour
     void SceneChange()
     {
         //To add Ending Cutscene Scene
+        SceneManager.LoadScene(0);
     }
 }
