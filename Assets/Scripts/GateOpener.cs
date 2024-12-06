@@ -26,10 +26,14 @@ public class GateOpener : MonoBehaviour
 
         if(collision.CompareTag("Player"))
         {
-            StartCoroutine(CheckGateOpen());
-            collision.GetComponent<playermovement>().enabled = false;
-            collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            collision.GetComponentInChildren<Animator>().enabled = false;
+            bool isOpen = animator.GetBool("GateOpen");
+            if (isOpen)
+            {
+                StartCoroutine(CheckGateOpen());
+                collision.GetComponent<playermovement>().enabled = false;
+                collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                collision.GetComponentInChildren<Animator>().enabled = false;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -43,16 +47,12 @@ public class GateOpener : MonoBehaviour
 
     IEnumerator CheckGateOpen()
     {
-        bool isOpen = animator.GetBool("GateOpen");
-        if (isOpen)
-        {
             Invoke("ColliderOff", 0.25f);
             fade.StartFadeOut();
             yield return new WaitForSeconds(fade.fadeDuration);
             Debug.Log("SceneChange");
             SceneManager.LoadScene("Level-2 1");
             yield return null;
-        }
     }
 
     void ColliderOff()
