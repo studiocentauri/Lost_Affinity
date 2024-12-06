@@ -7558,7 +7558,7 @@ Transform:
   m_GameObject: {fileID: 1939120169}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 32.75, y: -39.25, z: -0.011515377}
+  m_LocalPosition: {x: 32.75, y: -6.5, z: -0.011515377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7627,10 +7627,12 @@ MonoBehaviour:
   dialoguePanel: {fileID: 130531424}
   dialogueText: {fileID: 130531422}
   dialogue:
-  - You see the protected gate?
-  - I bet you don't know the code.
-  - (Coded Dialogue)
-  - No way to know, I guess.
+  - The weird cube is in the lab. All our work and research have always been focused
+    there. If it's anywhere, it has to be in the lab.
+  - Are you sure? The warehouse area is where we keep everything safe. It would make
+    more sense for it to be there.
+  - Maybe. But do you happen to know the passcode of the lab?
+  - (Code Dialogue)
   speakerImage:
   - {fileID: 2800000, guid: 95e22a5878b0eb6479a9e8741f3ca54e, type: 3}
   - {fileID: 2800000, guid: 95e22a5878b0eb6479a9e8741f3ca54e, type: 3}
@@ -7643,7 +7645,7 @@ MonoBehaviour:
   - Alice
   wordSpeed: 0.06
   playerClose: 0
-  passcodeIndexInDialogue: 2
+  passcodeIndexInDialogue: 3
   rawImage: {fileID: 130531421}
   speakerName: {fileID: 130531423}
 --- !u!70 &1939120175
