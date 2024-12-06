@@ -7,7 +7,6 @@ public class UITutorial : MonoBehaviour
     public GameObject promptText;
     private bool isPlayerNearby = false;
     public GameObject colliders;
-    public GameObject Temp;
     public string[] key;
 
     void Start()
@@ -24,14 +23,13 @@ public class UITutorial : MonoBehaviour
         foreach(string k in key){
             if (isPlayerNearby && Input.GetKeyDown(k))
             {
+                colliders.SetActive(false);
                 // Hide the text after pressing E
                 if (promptText != null)
                 {
                     promptText.SetActive(false);
                 }
-                if(Temp!=null){
-                    Temp.SetActive(false);
-                }
+                
             }
         }
     }
@@ -41,10 +39,12 @@ public class UITutorial : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerNearby = true;
-
+            
             if (promptText != null)
             {
+                // Temp.SetActive(true);
                 promptText.SetActive(true);
+                
             }
         }
     }
@@ -59,10 +59,7 @@ public class UITutorial : MonoBehaviour
             {
                 promptText.SetActive(false); // Hide the "Press E to Talk" text
             }
-            if(colliders != null)
-            {
-                colliders.SetActive(false);
-            }
+            
         }
 
     }
