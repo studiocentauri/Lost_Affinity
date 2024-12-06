@@ -6,6 +6,8 @@ public class SceneChanger : MonoBehaviour
 {
     public string SceneName;
     public float delay = 0.5f;
+    public Fade fade;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -16,6 +18,8 @@ public class SceneChanger : MonoBehaviour
     }
     IEnumerator ChangeScene()
     {
+        delay = fade.fadeDuration;
+        fade.StartFadeOut();
         yield return new WaitForSeconds(delay);
         Debug.Log("SceneChange");
         SceneManager.LoadScene(SceneName);
