@@ -43,11 +43,17 @@ public class GateOpener : MonoBehaviour
         bool isOpen = animator.GetBool("GateOpen");
         if (isOpen)
         {
+            Invoke("ColliderOff", 0.25f);
             fade.StartFadeOut();
             yield return new WaitForSeconds(fade.fadeDuration);
             Debug.Log("SceneChange");
             SceneManager.LoadScene("Level-2 1");
             yield return null;
         }
+    }
+
+    void ColliderOff()
+    {
+        animator.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
