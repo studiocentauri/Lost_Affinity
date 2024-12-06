@@ -965,7 +965,7 @@ MonoBehaviour:
   - NPC
   - Player
   - NPC
-  wordSpeed: 0.09
+  wordSpeed: 0.06
   playerClose: 0
   rawImage: {fileID: 130531421}
   speakerName: {fileID: 130531423}
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   - NPC
   - Player
   - NPC
-  wordSpeed: 0.09
+  wordSpeed: 0.06
   playerClose: 0
   rawImage: {fileID: 130531421}
   speakerName: {fileID: 130531423}
@@ -3877,7 +3877,7 @@ MonoBehaviour:
   - Lab NPC
   - Lab NPC
   - Player
-  wordSpeed: 0.09
+  wordSpeed: 0.06
   playerClose: 0
   rawImage: {fileID: 130531421}
   speakerName: {fileID: 130531423}
@@ -9299,9 +9299,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7939812306997177902, guid: 5550f3c6428627f49a608c55cab3bc77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1006937316}
-    - targetCorrespondingSourceObject: {fileID: 4645444450833573572, guid: 5550f3c6428627f49a608c55cab3bc77, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 301525926}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5550f3c6428627f49a608c55cab3bc77, type: 3}
 --- !u!4 &8088823091141456316 stripped
