@@ -7,6 +7,7 @@ public class UITutorial : MonoBehaviour
     public GameObject promptText;
     private bool isPlayerNearby = false;
     public GameObject colliders;
+    public GameObject Temp;
     public string[] key;
 
     void Start()
@@ -15,10 +16,7 @@ public class UITutorial : MonoBehaviour
         {
             promptText.SetActive(false); // Ensure the text is hidden initially
         }
-        else
-        {
-            Debug.LogWarning("PromptText is not assigned!");
-        }
+      
     }
 
     void Update()
@@ -30,6 +28,9 @@ public class UITutorial : MonoBehaviour
                 if (promptText != null)
                 {
                     promptText.SetActive(false);
+                }
+                if(Temp!=null){
+                    Temp.SetActive(false);
                 }
             }
         }
@@ -58,7 +59,10 @@ public class UITutorial : MonoBehaviour
             {
                 promptText.SetActive(false); // Hide the "Press E to Talk" text
             }
-            colliders.SetActive(false);
+            if(colliders != null)
+            {
+                colliders.SetActive(false);
+            }
         }
 
     }
