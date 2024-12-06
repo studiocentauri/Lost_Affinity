@@ -15,13 +15,4 @@ public class GateOpenerPlayer : MonoBehaviour
             collider.enabled = false;
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            animator.SetBool("IsOpen", false);
-            animator.SetBool("IsClose", true);
-        }
-    }
 }
