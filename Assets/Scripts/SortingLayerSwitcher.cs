@@ -3,11 +3,12 @@ using UnityEngine;
 public class SortingLayerSwitcher : MonoBehaviour
 {
     //Switch player's sprite renderer order in layer from 2 to 5 on crossing the box collider from one value to other and vice versa
+    //The trigger must be where you want to switch the order.
     public int sortingOrder1;
     public int sortingOrder2;
     SpriteRenderer spriteRenderer;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //Switches order of the layers
     {
         if (other.CompareTag("Player"))
         {
