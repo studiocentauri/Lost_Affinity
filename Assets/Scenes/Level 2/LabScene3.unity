@@ -3352,7 +3352,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 3478750265608531337}
   dialogueText: {fileID: 2353784241146354666}
   dialogue:
-  - WTF!!!
+  - What the hell!!!
   - ......?!?!?
   wordSpeed: 0.06
   player: {fileID: 1948224021}
@@ -5632,7 +5632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2174407945667669359
 RectTransform:
   m_ObjectHideFlags: 0
