@@ -18,7 +18,7 @@ public class NPC_Passcode : MonoBehaviour
     public float wordSpeed;
     [SerializeField]
     private bool playerClose;
-    public int passcodeIndexInDialogue=2;
+    public int passcodeIndexInDialogue=3;
     public RawImage rawImage;
     public TMP_Text speakerName;
 
@@ -122,8 +122,8 @@ public class NPC_Passcode : MonoBehaviour
         if (safeManager != null){
             string combination = safeManager.passcode;
             combination = combination.Substring(0,combination.Length-2);
-            string text = $"The code to the safe is: {combination}_ _"; //set the dialogue text
-            Debug.Log(combination);
+            string text = $"I remember the first two digits: {combination[0]} and {combination[1]}. The rest, we need to ask someone else."; //set the dialogue text
+            //Debug.Log(combination);
             dialogue[passcodeIndexInDialogue] = text;
 
         }
