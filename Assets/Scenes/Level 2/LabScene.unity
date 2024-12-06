@@ -15664,14 +15664,14 @@ MonoBehaviour:
   greenSlotImage: {fileID: 1484713643}
   redSlotImage: {fileID: 2156763}
   player: {fileID: 6169057957287326801}
-  distance: 2
+  distance: 1
   offset: {x: 1.5, y: 0, z: 0}
   onCollisionText: {fileID: 2017103333}
   delayTimeForText: 3
   canSpawn: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 9
 --- !u!95 &2603259888298790054
 Animator:
   serializedVersion: 5
