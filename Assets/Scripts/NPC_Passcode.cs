@@ -39,6 +39,7 @@ public class NPC_Passcode : MonoBehaviour
     {
         if(playerClose && Input.GetKeyDown(KeyCode.E))
         {
+            panel.SetActive(false);
             if(dialoguePanel.activeInHierarchy)
             {
                 NextLine();
@@ -55,6 +56,9 @@ public class NPC_Passcode : MonoBehaviour
             {
                 //NextLine();
             }
+        }
+        if(playerClose == false){
+            panel.SetActive(false);
         }
         
     }

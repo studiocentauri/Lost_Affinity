@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class i1j : MonoBehaviour
 {
-    public GameObject o1;
+    
     public GameObject o2;
     public GameObject o3;
     // Start is called before the first frame update
@@ -16,12 +16,6 @@ public class i1j : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("i"))
-        {
-            o1.SetActive(false);
-            o2.SetActive(true);
-            
-        }
         if(Input.GetKeyDown("1"))
             {
                 

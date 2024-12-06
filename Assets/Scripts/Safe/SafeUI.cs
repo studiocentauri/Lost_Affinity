@@ -32,6 +32,7 @@ public class SafeUI : MonoBehaviour
     }
 
     public void Delete(){
+        if(inputPasscode.Length>0)
         inputPasscode = inputPasscode.Substring(0, inputPasscode.Length - 1);
         updateDisplay();
     }
@@ -50,17 +51,20 @@ public class SafeUI : MonoBehaviour
         }
         else{
             inputPasscode = "";
+            displayText.text = "Wrong Passcode!"; //separated from updateDisplay() to cover the all deleted case
         }
-        updateDisplay();
+        //updateDisplay();
     }
 
     void updateDisplay(){
         if(inputPasscode.Length > combinationLength)
             inputPasscode = inputPasscode.Substring(0, combinationLength);
         if(inputPasscode == "")
-            displayText.text = "Wrong Passcode!";
-        else
-            displayText.text = inputPasscode.ToString();
+            displayText.text = "Enter Passcode";
+        else{
+            displayText.text = inputPasscode;
+            displayText.text += new string('_', combinationLength-inputPasscode.Length);
+        }
     }
 
     void GiveHint(){

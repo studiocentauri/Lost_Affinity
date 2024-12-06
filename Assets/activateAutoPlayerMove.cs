@@ -14,6 +14,9 @@ public class activateAutoPlayerMove : MonoBehaviour
     private float time = 0;
 
     private CinemachineBasicMultiChannelPerlin _cbmcp;
+    public FadeOut fadeout;
+    public bool CanEnd = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(inventoryManager.redSlot != null && inventoryManager.blueSlot != null && inventoryManager.greenSlot != null)
@@ -22,6 +25,8 @@ public class activateAutoPlayerMove : MonoBehaviour
             AutoMovePlayerOnEnd _autoMovePlayerOnEnd = collision.gameObject.GetComponent<AutoMovePlayerOnEnd>();
             _autoMovePlayerOnEnd.enabled = true;
             
+            fadeout.StartFadeOut();
+            CanEnd = true;
             /*ControlAutoMoveAnimation controlAutoMoveAnimation = collision.gameObject.GetComponent<ControlAutoMoveAnimation>();
             controlAutoMoveAnimation.enabled = true;*/
         }
