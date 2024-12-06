@@ -1132,6 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canLoop: 0
+  onLastWaypoint: 0
 --- !u!1 &434215588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,6 +2569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canLoop: 0
+  onLastWaypoint: 0
 --- !u!4 &947706198
 Transform:
   m_ObjectHideFlags: 0
@@ -3374,6 +3376,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915999284602021647, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.63377
       objectReference: {fileID: 0}
@@ -3416,6 +3430,10 @@ PrefabInstance:
     - target: {fileID: 5637786290103361149, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
       propertyPath: m_Radius
       value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627670950378881600, guid: e4a4a32a124508b4daaa9ad7f54b5ba4, type: 3}
+      propertyPath: min_scale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
