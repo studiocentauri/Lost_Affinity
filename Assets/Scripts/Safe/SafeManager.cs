@@ -28,7 +28,7 @@ public class SafeManager : MonoBehaviour
             passcode += digits[index].ToString();
             digits.RemoveAt(index);
         }*/
-        Debug.Log("Hi "+passcode);
+        Debug.Log("The safe passcode is: "+passcode);
     }
     void Start()
     {
