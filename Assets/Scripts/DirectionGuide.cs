@@ -9,7 +9,7 @@ public class DirectionGuide : MonoBehaviour
     [SerializeField] Transform Destiny;
     [SerializeField] Transform Player;
     Vector2 Origin, direction, destiny;
-    float time;
+    [SerializeField] float time;
     void Start()
     {
         time = 0;
@@ -23,12 +23,12 @@ public class DirectionGuide : MonoBehaviour
         if(time < timeToWait)
         {
             time += Time.deltaTime;
-            gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
             return;
         }
         else
         {
-            gameObject.SetActive(true);
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
         if(Destiny == null)
         {
