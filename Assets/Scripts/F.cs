@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class F : MonoBehaviour
 {
+    public GameObject panel;
+    public GameObject continued;
     // Update is called once per frame
+    void Start(){
+        continued.SetActive(false);
+    }
     void Update()
     {
-        if(Input.GetKeyDown("f"))
-        {
-            gameObject.SetActive(false);
+        
+            if(panel.activeSelf){
+                continued.SetActive(true);
+            }
+        if(!panel.activeSelf){ 
+            continued.SetActive(false);
         }
 
     }
