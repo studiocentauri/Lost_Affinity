@@ -23,6 +23,6 @@ public class Ending : MonoBehaviour
     void SceneChange()
     {
         //To add Ending Cutscene Scene
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Ending");
     }
 }

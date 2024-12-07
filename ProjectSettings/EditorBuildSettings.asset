@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu/StoryBoard.unity
     guid: 0a4b7a7675b7fd544a087832455762ac
+  - enabled: 1
+    path: Assets/Scenes/ComingSoon/Ending.unity
+    guid: add1a2fd86f8ee743bbc26a1174dd28c
   m_configObjects: {}

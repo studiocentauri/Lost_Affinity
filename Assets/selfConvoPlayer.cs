@@ -62,6 +62,7 @@ public class selfConvoPlayer : MonoBehaviour
 
         convoDone = true;
         if (SceneManager.GetActiveScene().name == "Level-1 1") { Invoke("Level2", .5f); isSelfconvo = false; }
+        //if (SceneManager.GetActiveScene().name == "Ending") {  }
         if (SceneManager.GetActiveScene().name == "Level-2")
         {
             if(convoStartCollider != null) Destroy(convoStartCollider);
