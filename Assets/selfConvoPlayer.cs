@@ -25,6 +25,7 @@ public class selfConvoPlayer : MonoBehaviour
     public bool convoDone = false;
     public GameObject convoStartCollider;
     private bool isSelfconvo = false;
+    public FadeOut fadeOut;
     public void StartDialogues()
     {
         isSelfconvo=true;
@@ -62,7 +63,12 @@ public class selfConvoPlayer : MonoBehaviour
 
         convoDone = true;
         if (SceneManager.GetActiveScene().name == "Level-1 1") { Invoke("Level2", .5f); isSelfconvo = false; }
-        //if (SceneManager.GetActiveScene().name == "Ending") {  }
+        if (SceneManager.GetActiveScene().name == "Ending") 
+        {
+            isSelfconvo = false;
+            fadeOut.StartFadeOut();
+            Invoke("ComingSoon", fadeOut.fadeDuration);
+        }
         if (SceneManager.GetActiveScene().name == "Level-2")
         {
             if(convoStartCollider != null) Destroy(convoStartCollider);
@@ -76,6 +82,12 @@ public class selfConvoPlayer : MonoBehaviour
             ResetPlayer();
         }
     }
+
+    void ComingSoon()
+    {
+        SceneManager.LoadScene("ToBeContinued");
+    }
+
     void Level2()
     {
         // Load level 2

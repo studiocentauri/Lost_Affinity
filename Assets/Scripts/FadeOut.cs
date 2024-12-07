@@ -11,11 +11,13 @@ public class FadeOut : MonoBehaviour
     private void Start()
     {
         // Ensure the fadeImage is fully opaque at the start
+        fadeImage.gameObject.SetActive(false);
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 0f);
     }
 
     public void StartFadeOut()
     {
+        fadeImage.gameObject.SetActive(true);
         StartCoroutine(fadeOut());
     }
 

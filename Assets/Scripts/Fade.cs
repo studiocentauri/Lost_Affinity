@@ -18,6 +18,7 @@ public class Fade : MonoBehaviour
 
     public void StartFadeOut()
     {
+        fadeImage.gameObject.SetActive(true); // Enable the fadeImage before the fade-out effect.
         StartCoroutine(FadeOut());
     }
 
@@ -37,7 +38,6 @@ public class Fade : MonoBehaviour
 
     public IEnumerator FadeOut()
     {
-        fadeImage.gameObject.SetActive(true); // Enable the fadeImage before the fade-out effect.
         float elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {
