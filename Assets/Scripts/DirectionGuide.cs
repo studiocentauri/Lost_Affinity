@@ -22,6 +22,15 @@ public class DirectionGuide : MonoBehaviour
 
     void Update()
     {
+
+        if(NxtArrow != null)
+        {
+            if(Vector3.Distance(Player.position, destiny) < inactiveDistance)
+            {
+                NxtArrow.SetActive(true);
+                gameObject.SetActive(false);
+            }
+        }
         if(time < timeToWait)
         {
             time += Time.deltaTime;
@@ -35,14 +44,6 @@ public class DirectionGuide : MonoBehaviour
         if(Destiny == null)
         {
             Destroy(gameObject);
-        }
-        if(NxtArrow != null)
-        {
-            if(Vector3.Distance(transform.position, destiny) < inactiveDistance)
-            {
-                NxtArrow.SetActive(true);
-                gameObject.SetActive(false);
-            }
         }
         
         Origin = new Vector2(Player.position.x, Player.position.y);

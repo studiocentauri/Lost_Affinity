@@ -1903,7 +1903,7 @@ MonoBehaviour:
   Destiny: {fileID: 1939120171}
   Player: {fileID: 4364800333772181236}
   NxtArrow: {fileID: 371786045}
-  inactiveDistance: 0
+  inactiveDistance: 5
   time: 0
 --- !u!212 &245434533
 SpriteRenderer:
@@ -20377,6 +20377,7 @@ MonoBehaviour:
   speakerName: {fileID: 6348854368993765249}
   convoDone: 0
   convoStartCollider: {fileID: 677392636}
+  fadeOut: {fileID: 0}
 --- !u!222 &9052219731354590778
 CanvasRenderer:
   m_ObjectHideFlags: 0
