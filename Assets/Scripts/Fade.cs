@@ -32,10 +32,12 @@ public class Fade : MonoBehaviour
             yield return null;
         }
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 0f); // Ensure fully transparent at the end.
+        fadeImage.gameObject.SetActive(false); // Disable the fadeImage after the fade-in effect.
     }
 
     public IEnumerator FadeOut()
     {
+        fadeImage.gameObject.SetActive(true); // Enable the fadeImage before the fade-out effect.
         float elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {
