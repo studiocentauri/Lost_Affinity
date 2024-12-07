@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SortingOrderVolumeSwitcher : MonoBehaviour
 {
-    public int originalSortingOrder;
+    public int originalSortingOrder = 10;
     public int insideSortingOrder;
 
     SpriteRenderer spriteRenderer;
@@ -13,7 +13,7 @@ void OnTriggerEnter2D(Collider2D other) //Changes order of the layers
     if (other.CompareTag("Player"))
     {
         spriteRenderer = other.GetComponent<SpriteRenderer>();
-            originalSortingOrder = spriteRenderer.sortingOrder;
+            //originalSortingOrder = spriteRenderer.sortingOrder;
             spriteRenderer.sortingOrder = insideSortingOrder;
 
         if (other.transform.childCount > 0)
@@ -36,5 +36,8 @@ void OnTriggerExit2D(Collider2D other) //Reverts order of the layers
             childSpriteRenderer.sortingOrder = originalSortingOrder;
         }
     }
+}
+void Start(){
+    originalSortingOrder = 10;
 }
 }
