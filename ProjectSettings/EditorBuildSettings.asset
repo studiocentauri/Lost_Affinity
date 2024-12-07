@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ComingSoon/Ending.unity
     guid: add1a2fd86f8ee743bbc26a1174dd28c
+  - enabled: 1
+    path: Assets/Scenes/ComingSoon/ToBeContinued.unity
+    guid: 70829e32b8f65db4585fb4de342cd80c
   m_configObjects: {}
