@@ -7954,7 +7954,7 @@ MonoBehaviour:
   - Secretary
   - Secretary
   - Secretary
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   playerClose: 0
   rawImage: {fileID: 416058355}
   speakerName: {fileID: 341832923}

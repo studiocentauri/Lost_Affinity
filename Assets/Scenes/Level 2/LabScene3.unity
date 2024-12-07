@@ -3011,7 +3011,7 @@ MonoBehaviour:
   dialogue:
   - What the he!!!
   - ......?!?!?
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   player: {fileID: 1625309857860403932}
 --- !u!1001 &1383851567
 PrefabInstance:
@@ -11380,7 +11380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: Cooper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c233f29061ea8a74f92fa300c1c2fe41, type: 2}
   m_sharedMaterial: {fileID: -7500044766708575455, guid: c233f29061ea8a74f92fa300c1c2fe41, type: 2}

@@ -1575,11 +1575,11 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a10552d128cdff145a8793f3cfcd78e5, type: 3}
   - {fileID: 2800000, guid: 0a1b8677a94338442a692cbfa0c53279, type: 3}
   speaker:
-  - Player
+  - Cooper
   - NPC
-  - Player
+  - Cooper
   - NPC
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   playerClose: 0
   rawImage: {fileID: 1810364943950158126}
   speakerName: {fileID: 6348854370204463625}
@@ -2202,11 +2202,11 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a10552d128cdff145a8793f3cfcd78e5, type: 3}
   - {fileID: 2800000, guid: 0a1b8677a94338442a692cbfa0c53279, type: 3}
   speaker:
-  - Player
+  - Cooper
   - NPC
-  - Player
+  - Cooper
   - NPC
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   playerClose: 0
   rawImage: {fileID: 1810364943880608399}
   speakerName: {fileID: 6348854370269131176}
@@ -7532,15 +7532,15 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 87580c862830de046b6babcde8d7b726, type: 3}
   - {fileID: 2800000, guid: a10552d128cdff145a8793f3cfcd78e5, type: 3}
   speaker:
-  - Player
+  - Cooper
   - Lab NPC
-  - Player
+  - Cooper
   - Lab NPC
-  - Player
+  - Cooper
   - Lab NPC
   - Lab NPC
-  - Player
-  wordSpeed: 0.06
+  - Cooper
+  wordSpeed: 0.04
   playerClose: 0
   rawImage: {fileID: 1810364943661703879}
   speakerName: {fileID: 6348854369412680160}
@@ -27497,7 +27497,7 @@ MonoBehaviour:
   - Alice
   - Bob
   - Alice
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   playerClose: 0
   passcodeIndexInDialogue: 3
   rawImage: {fileID: 1810364944137601240}
@@ -31227,10 +31227,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a10552d128cdff145a8793f3cfcd78e5, type: 3}
   - {fileID: 2800000, guid: a10552d128cdff145a8793f3cfcd78e5, type: 3}
   speaker:
-  - Player
-  - Player
-  - Player
-  wordSpeed: 0.06
+  - Cooper
+  - Cooper
+  - Cooper
+  wordSpeed: 0.04
   rawImage: {fileID: 1810364945155378342}
   speakerName: {fileID: 6348854368993765249}
   convoDone: 0

@@ -765,7 +765,7 @@ MonoBehaviour:
   speaker:
   - Lab assistent
   - Lab assistent
-  wordSpeed: 0.06
+  wordSpeed: 0.04
   playerClose: 0
   rawImage: {fileID: 304800827}
   speakerName: {fileID: 1120265878}
