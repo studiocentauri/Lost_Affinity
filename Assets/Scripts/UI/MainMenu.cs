@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level-1 1");
+        SceneManager.LoadScene("StoryBoard");
     }
     
     public void Settings(){
