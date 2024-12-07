@@ -2833,7 +2833,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 3478750265608531337}
   dialogueText: {fileID: 2353784241146354666}
   dialogue:
-  - What the hell!!!
+  - What the he!!!
   - ......?!?!?
   wordSpeed: 0.06
   player: {fileID: 1948224021}
@@ -9252,7 +9252,7 @@ Tilemap:
       - {fileID: -599824450, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 1033264373, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
       - {fileID: 995865553, guid: 335c6574951144d8082aaf3d7c1bfb73, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -4, y: 2, z: 0}

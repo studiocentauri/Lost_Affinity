@@ -1,0 +1,95 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class selfConvoPlayer : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject dialoguePanel;
+    [SerializeField]
+    public TextMeshProUGUI dialogueText;
+    [SerializeField]
+    public string[] dialogue;
+    public Texture[] speakerImage;
+    public string[] speaker;
+    [SerializeField]
+    public float wordSpeed;
+    
+    public RawImage rawImage;
+    public TMP_Text speakerName;
+
+    private int index;
+    public bool convoDone = false;
+    public GameObject convoStartCollider;
+
+    public void StartDialogues()
+    {
+        Debug.Log(SceneManager.GetActiveScene().name);
+        dialoguePanel.SetActive(true);
+        Debug.Log(dialoguePanel.activeInHierarchy);
+        StartCoroutine(Typing());
+    }
+    private void Update()
+    {
+        if(dialoguePanel.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
+        {
+            NextLine();
+        }
+    }
+   
+    public void zeroText()
+    {
+        StopAllCoroutines();
+        dialogueText.text = "";
+        index = 0;
+        if (GetComponent<AutoMoveNPCs>() != null) GetComponent<AutoMoveNPCs>().enabled = true;
+
+        dialoguePanel.SetActive(false);
+        convoDone = true;
+        if(SceneManager.GetActiveScene().name == "Level-1 1") Invoke("Level2", .5f);
+        if (SceneManager.GetActiveScene().name == "Level-2")
+        {
+            if(convoStartCollider != null) Destroy(convoStartCollider);
+        }
+    }
+    void Level2()
+    {
+        // Load level 2
+        SceneManager.LoadScene("Level-2");
+    }
+    public void NextLine()
+    {
+        if (index < dialogue.Length - 1)
+        {
+            index++;
+            dialogueText.text = "";
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            zeroText();
+        }
+    }
+
+    IEnumerator Typing()
+    {
+        //istyping = true;
+        rawImage.texture = speakerImage[index];
+        speakerName.text = speaker[index];
+        int i = index;
+        foreach (char letter in dialogue[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
+            if (i != index)
+            {
+                break;
+            }
+        }
+
+        //istyping = false;
+    }
+}
