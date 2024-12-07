@@ -5,6 +5,7 @@ public class ArtifactDetection : MonoBehaviour
     private InventoryManager inventoryManager;
     private GameObject NearbyItem;
     GameObject triggerObject;
+    public trapArea traparea;
 
     void Start()
     {
@@ -83,6 +84,8 @@ public class ArtifactDetection : MonoBehaviour
         {
             SetNearbyItem(other.gameObject);
             triggerObject = other.gameObject;
+            traparea.hint=true;
+
         }
         if (other.gameObject.CompareTag("BlueItem"))
         {
