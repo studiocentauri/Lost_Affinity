@@ -17968,6 +17968,8 @@ MonoBehaviour:
   radius: 3
   Destiny: {fileID: 643034273}
   Player: {fileID: 4364800333772181236}
+  NxtArrow: {fileID: 0}
+  inactiveDistance: 5
   time: 0
 --- !u!212 &748647520
 SpriteRenderer:
@@ -28574,7 +28576,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625309857387599686}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff107abc4f2c64327b5ab3de148db7ae, type: 3}
   m_Name: 
@@ -29088,6 +29090,7 @@ MonoBehaviour:
   speakerName: {fileID: 1682425818}
   convoDone: 0
   convoStartCollider: {fileID: 1508612944}
+  fadeOut: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
