@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716324112412039240}
   - component: {fileID: 8553005850940328817}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 7554071214016677708}
   - component: {fileID: 8648198415011403243}
   - component: {fileID: 3085550605005421660}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4202866757341366181}
   - component: {fileID: 323854481731292070}
   - component: {fileID: 5214614829075395150}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 2804893548162073012}
   - component: {fileID: 4358850098771478073}
   - component: {fileID: 6269042904411473915}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 7104678013348642812}
   - component: {fileID: 2383076940881363734}
   - component: {fileID: 2309766421278668848}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 8227164450068957688}
   - component: {fileID: 8410530024134023018}
   - component: {fileID: 7597332508921211830}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8410530024134023018
 MonoBehaviour:
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 4467485069170420451}
   - component: {fileID: 5164297941841926179}
   - component: {fileID: 101603652110458033}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 3398742330334022546}
   - component: {fileID: 7036247936520864155}
   - component: {fileID: 1054975504628249852}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7533355027762261264}
   - component: {fileID: 310563902658692121}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5571253541791885718}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 5642862208800195843}
   - component: {fileID: 7320692585762602712}
   - component: {fileID: 686681500272603649}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
