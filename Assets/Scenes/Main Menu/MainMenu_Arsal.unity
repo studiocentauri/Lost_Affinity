@@ -1376,7 +1376,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851168190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 65e9f87fecfef4a39aca9cf3a0c20f22, type: 2}
   m_CullingMode: 0
@@ -1411,7 +1411,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
-    m_FontSize: 70
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2251,9 +2251,9 @@ RectTransform:
   - {fileID: 851168191}
   m_Father: {fileID: 368678753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 230, y: -278}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -40, y: -25}
   m_SizeDelta: {x: 105.91, y: 58.940002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446443738
@@ -7613,7 +7613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -230, y: -278}
+  m_AnchoredPosition: {x: 0, y: -266}
   m_SizeDelta: {x: 105.910034, y: 58.940002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864553931
