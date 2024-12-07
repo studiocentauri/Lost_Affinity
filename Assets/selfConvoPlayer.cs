@@ -28,7 +28,11 @@ public class selfConvoPlayer : MonoBehaviour
     public void StartDialogues()
     {
         isSelfconvo=true;
-        Debug.Log(SceneManager.GetActiveScene().name);
+        GetComponent<playermovement>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GetComponentInChildren<PlayerAnimation>().enabled = false;
+        Debug.LogWarning("Dialogue Started");
+        //Debug.Log(SceneManager.GetActiveScene().name);
         dialoguePanel.SetActive(true);
         Debug.Log(dialoguePanel.activeInHierarchy);
         StartCoroutine(Typing());
@@ -39,6 +43,12 @@ public class selfConvoPlayer : MonoBehaviour
         {
             NextLine();
         }
+    }
+    void ResetPlayer()
+    {
+        GetComponent<playermovement>().enabled = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GetComponentInChildren<PlayerAnimation>().enabled = true;
     }
    
     public void zeroText()
@@ -56,6 +66,13 @@ public class selfConvoPlayer : MonoBehaviour
         {
             if(convoStartCollider != null) Destroy(convoStartCollider);
             isSelfconvo = false;
+            ResetPlayer();
+        }
+        else
+        {
+            isSelfconvo = false;
+            if(convoStartCollider != null) Destroy(convoStartCollider);
+            ResetPlayer();
         }
     }
     void Level2()
