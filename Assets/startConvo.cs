@@ -11,9 +11,7 @@ public class startConvo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<playermovement>().enabled = false;
-            other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            other.GetComponentInChildren<PlayerAnimation>().enabled = false;
+            
             other.GetComponent<selfConvoPlayer>().StartDialogues();
         }
     }
