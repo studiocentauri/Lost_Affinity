@@ -84,7 +84,7 @@ public class ArtifactDetection : MonoBehaviour
         {
             SetNearbyItem(other.gameObject);
             triggerObject = other.gameObject;
-            traparea.hint=true;
+            if(traparea!=null)traparea.hint=true;
 
         }
         if (other.gameObject.CompareTag("BlueItem"))
