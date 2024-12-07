@@ -139,6 +139,8 @@ public class LaserController : MonoBehaviour
                 {
                     hit.collider.gameObject.GetComponent<Animator>().SetBool("GateOpen", true);
                     hit.collider.gameObject.GetComponent<Animator>().SetBool("GateClose", false);
+                    var coroutine = ColliderOff(hit.collider);
+                    StartCoroutine(coroutine);
                 }
             }
         }
@@ -248,5 +250,10 @@ public class LaserController : MonoBehaviour
         }
         
     }
-    
+
+    IEnumerator ColliderOff(Collider2D collider)
+    {
+        yield return new WaitForSeconds(0.3f);
+        collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+    }
 }
