@@ -865,6 +865,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173079450814753571, guid: 748bc0706195dea4594b6345befc03e6, type: 3}
+      propertyPath: laserDeathPanel
+      value: 
+      objectReference: {fileID: 966446017}
+    - target: {fileID: 2417726980067977048, guid: 748bc0706195dea4594b6345befc03e6, type: 3}
+      propertyPath: laserDeathPanel
+      value: 
+      objectReference: {fileID: 966446017}
     - target: {fileID: 5863038802598411463, guid: 748bc0706195dea4594b6345befc03e6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
       value: 12.000001
@@ -1609,6 +1617,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+--- !u!1 &966446017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 404536371970107192, guid: cf20578bb0039f743a9e56638abb5ef7, type: 3}
+  m_PrefabInstance: {fileID: 966446016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986970243
 PrefabInstance:
   m_ObjectHideFlags: 0
