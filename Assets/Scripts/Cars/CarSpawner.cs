@@ -13,7 +13,8 @@ public class CarSpawner : MonoBehaviour
 
     private GameObject carPrefab; // The car prefab to spawn
     public float spawnInterval = 1f; // Time interval between spawns
-    public Vector3[] spawnPositions; // Array of spawn positions
+    public Transform[] spawnTransforms; // Array of spawn transforms
+    private Vector3[] spawnPositions; // Array of spawn positions
 
     public Vector2 intersectionPoint; // Intersection point defined in Inspector
 
@@ -27,6 +28,11 @@ public class CarSpawner : MonoBehaviour
     void Start(){
         InvokeRepeating("SpawnCar",0f,spawnInterval);
         cars = new GameObject[][] {pinkCar, lightBlueCar, greenCar, darkBlueCar};
+        spawnPositions = new Vector3[spawnTransforms.Length];
+        for (int i = 0; i < spawnTransforms.Length; i++){
+            spawnPositions[i] = spawnTransforms[i].position;
+        }
+
     }
 
     void SpawnCar()
