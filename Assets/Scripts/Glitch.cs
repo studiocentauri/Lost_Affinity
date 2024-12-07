@@ -1,11 +1,21 @@
+using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Glitch : MonoBehaviour
 {
     public GameObject Player;
+    public CinemachineVirtualCamera _cinemachineVirtualCamera;
+    public float shakeIntensity = 1.0f;
+    public float shakeTime = 0.5f;
+    private float time = 0;
+
+    private CinemachineBasicMultiChannelPerlin _cbmcp;
     void Start()
     {
         if(SceneManager.GetActiveScene().name == "Level-2")
@@ -16,6 +26,7 @@ public class Glitch : MonoBehaviour
             Animator anim = Player.GetComponentInChildren<Animator>();
             anim.SetBool("Glitch", true);
             Invoke("GlitchOff", 1.25f);
+            Player.GetComponent<selfConvoPlayer>().StartDialogues();
         }
     }
 
@@ -28,7 +39,8 @@ public class Glitch : MonoBehaviour
             other.GetComponentInChildren<PlayerAnimation>().enabled = false;
             Animator anim = other.GetComponentInChildren<Animator>();
             anim.SetBool("Glitch", true);
-            Invoke("Level2", 1.25f);
+            ShakeCamera();
+            other.GetComponent<selfConvoPlayer>().StartDialogues();
         }
     }
 
@@ -40,10 +52,38 @@ public class Glitch : MonoBehaviour
         anim.SetBool("Glitch", false);
         Destroy(gameObject);
     }
-
     void Level2()
     {
         // Load level 2
         SceneManager.LoadScene("Level-2");
     }
+    public void ShakeCamera()
+    {
+        CinemachineBasicMultiChannelPerlin _cbmcp = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        _cbmcp.m_AmplitudeGain = shakeIntensity;
+        _cbmcp.m_FrequencyGain = shakeIntensity;
+        Debug.Log("shake");
+        time = shakeTime;
+
+    }
+    public void StopShake()
+    {
+        CinemachineBasicMultiChannelPerlin _cbmcp = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        _cbmcp.m_AmplitudeGain = 0;
+        _cbmcp.m_FrequencyGain = 0;
+        time = 0;
+    }
+    private void Update()
+    {
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StopShake();
+            }
+        }
+    }
+
+    
 }
