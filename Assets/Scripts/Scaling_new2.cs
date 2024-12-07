@@ -22,7 +22,7 @@ public class Scaling_new2 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isScaling)
+        if (Input.GetKeyDown(KeyCode.Z) && !isScaling)
         {
             // Move to the previous scale level, if possible
             if (currentScaleIndex > 0)

@@ -43,7 +43,7 @@ public class LaserController : MonoBehaviour
         //Debug.Log(lastNonZeroVelocity);
         laserStartPosition = transform.position;
         // Listen for key press to start the laser
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             a=true;
         }
@@ -64,7 +64,7 @@ public class LaserController : MonoBehaviour
             t2+=Time.deltaTime;
             if(t2<cooldown)
             {
-                if (Input.GetKeyDown(KeyCode.K))
+                if (Input.GetKeyDown(KeyCode.X))
                 {
                     a=true;
                 }

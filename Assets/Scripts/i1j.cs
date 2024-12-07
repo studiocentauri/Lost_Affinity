@@ -22,7 +22,7 @@ public class i1j : MonoBehaviour
                 o3.SetActive(true);
                 o2.SetActive(false);
             }
-            if(Input.GetKeyDown("f"))
+            if(Input.GetKeyDown("z"))
                 {
                     o3.SetActive(false);
                 }

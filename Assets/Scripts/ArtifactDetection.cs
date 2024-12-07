@@ -24,7 +24,7 @@ public class ArtifactDetection : MonoBehaviour
 
     void Update()
     {
-        if (NearbyItem != null && Input.GetKeyDown(KeyCode.I))
+        if (NearbyItem != null && Input.GetKeyDown(KeyCode.F))
         {
             inventoryManager.AddItem(NearbyItem);
             NearbyItem = null;

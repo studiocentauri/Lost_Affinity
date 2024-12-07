@@ -8,9 +8,9 @@ public AudioSource helmetsound;
 
 void Update()
 {
-    if (Input.GetKey(KeyCode.Q))
+    if (Input.GetKeyDown(KeyCode.Q))
     {
-        helmetsound.Play();
+        if(GetComponent<Rigidbody2D>().velocity.magnitude == 0)    helmetsound.Play();
     }
    /* else{
         helmetsound.enabled = false;
