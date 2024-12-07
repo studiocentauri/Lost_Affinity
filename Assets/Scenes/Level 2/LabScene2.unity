@@ -7498,6 +7498,7 @@ GameObject:
   - component: {fileID: 128687785}
   - component: {fileID: 128687784}
   - component: {fileID: 128687787}
+  - component: {fileID: 128687788}
   m_Layer: 0
   m_Name: GateOpenSceneChange
   m_TagString: Untagged
@@ -7593,6 +7594,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 2030168339}
   fadeDuration: 1
+--- !u!114 &128687788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128687783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c76147dded2cf540bb9de5f92214334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1678033328}
+  collider: {fileID: 918871386}
 --- !u!1 &152300259
 GameObject:
   m_ObjectHideFlags: 0
@@ -14155,7 +14170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
@@ -14171,11 +14186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[5].second.m_AnimationSpeed
-      value: 12
+      value: 12.000001
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[6].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[7].second.m_AnimationSpeed
@@ -14223,7 +14238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[18].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[19].second.m_AnimationSpeed
@@ -14299,11 +14314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[37].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[38].second.m_AnimationSpeed
-      value: 12
+      value: 12.000001
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[39].second.m_AnimationSpeed
@@ -14315,11 +14330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[41].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[42].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[43].second.m_AnimationSpeed
@@ -14427,7 +14442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[69].second.m_AnimationSpeed
-      value: 12.000001
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[70].second.m_AnimationSpeed
@@ -14459,7 +14474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[77].second.m_AnimationSpeed
-      value: 12
+      value: 12.000001
       objectReference: {fileID: 0}
     - target: {fileID: 8384360183785489984, guid: d1c5d6117b1387b4d865efd843aecac0, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[78].second.m_AnimationSpeed
@@ -16005,28 +16020,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1595102902}
   - component: {fileID: 1595102901}
-  - component: {fileID: 1595102900}
   m_Layer: 0
   m_Name: GateOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1595102900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595102899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c76147dded2cf540bb9de5f92214334, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1678033328}
-  collider: {fileID: 918871386}
+  m_IsActive: 0
 --- !u!61 &1595102901
 BoxCollider2D:
   m_ObjectHideFlags: 0

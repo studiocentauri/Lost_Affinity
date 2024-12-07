@@ -31,6 +31,7 @@ public class SceneChangeGateOpen : MonoBehaviour
 
     IEnumerator CheckGateOpen()
     {
+        yield return new WaitForSeconds(0.01f);
         isOpen = animator.GetBool("IsOpen");
         if (isOpen)
         {
