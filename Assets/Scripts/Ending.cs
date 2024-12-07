@@ -13,7 +13,7 @@ public class Ending : MonoBehaviour
         if (collision.CompareTag("Player") && check.CanEnd)
         {
                 animator.SetBool("GateOpen", true);
-                Invoke("SceneChange", 1f);
+                Invoke("SceneChange", 3f);
                 collision.GetComponent<playermovement>().enabled = false;
                 collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 collision.GetComponentInChildren<Animator>().enabled = false;
