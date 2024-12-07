@@ -1764,7 +1764,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13914204, y: -0.16909409}
+  m_Offset: {x: -0.13914204, y: -0.45114517}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1775,7 +1775,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6493359, y: 0.9822159}
+  m_Size: {x: 1.6493359, y: 1.546318}
   m_EdgeRadius: 0
 --- !u!114 &210331405
 MonoBehaviour:
@@ -24535,7 +24535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.244753, y: 1.0939522}
+  m_Offset: {x: 3.244753, y: 0.8119011}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -24546,7 +24546,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8470078, y: 2.1776505}
+  m_Size: {x: 1.8470078, y: 2.7417526}
   m_EdgeRadius: 0
 --- !u!1 &1575240394
 GameObject:
@@ -29088,6 +29088,7 @@ MonoBehaviour:
   speakerName: {fileID: 1682425818}
   convoDone: 0
   convoStartCollider: {fileID: 1508612944}
+  fadeOut: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
