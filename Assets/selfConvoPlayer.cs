@@ -69,9 +69,11 @@ public class selfConvoPlayer : MonoBehaviour
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            Debug.Log("Writing");
         }
         else
         {
+            Debug.Log("not Writing");
             zeroText();
         }
     }

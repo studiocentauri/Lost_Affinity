@@ -81,7 +81,7 @@ public class Waypoints : MonoBehaviour
             }
         }
 
-        Debug.Log(nextIndex);
+//        Debug.Log(nextIndex);
         return transform.GetChild(nextIndex);   
         
         

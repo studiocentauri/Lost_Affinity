@@ -80,6 +80,7 @@ public class Interaction : MonoBehaviour
     {
         //istyping = true;
         rawImage.texture = speakerImage[index];
+        Debug.Log(index);
         speakerName.text = speaker[index];
         int i = index;
         foreach (char letter in dialogue[index].ToCharArray())
