@@ -9,6 +9,8 @@ public class DirectionGuide : MonoBehaviour
     [SerializeField] Transform Destiny;
     [SerializeField] Transform Player;
     Vector2 Origin, direction, destiny;
+    [SerializeField] GameObject NxtArrow;
+    [SerializeField] float inactiveDistance = 5;
     [SerializeField] float time;
     void Start()
     {
@@ -33,6 +35,14 @@ public class DirectionGuide : MonoBehaviour
         if(Destiny == null)
         {
             Destroy(gameObject);
+        }
+        if(NxtArrow != null)
+        {
+            if(Vector3.Distance(transform.position, destiny) < inactiveDistance)
+            {
+                NxtArrow.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
         
         Origin = new Vector2(Player.position.x, Player.position.y);
