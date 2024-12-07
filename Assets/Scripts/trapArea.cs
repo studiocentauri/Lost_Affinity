@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class trapArea : MonoBehaviour
 {
-    public GameObject drowningPanel;
+    public GameObject drowningPanel,hintpanel;
+    public bool hint=false;
+    public int count=0;
     void Start()
     {
         drowningPanel.SetActive(false);
@@ -18,6 +20,8 @@ public class trapArea : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 drowningPanel.SetActive(true);
+                if(hintpanel!=null&& hint)hintpanel.SetActive(true);
+                Debug.Log(count);
                 // other.GetComponent<playermovement>().enabled =false;
                 
                 Time.timeScale = 0f;
