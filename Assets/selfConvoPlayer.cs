@@ -24,9 +24,10 @@ public class selfConvoPlayer : MonoBehaviour
     private int index;
     public bool convoDone = false;
     public GameObject convoStartCollider;
-
+    private bool isSelfconvo = false;
     public void StartDialogues()
     {
+        isSelfconvo=true;
         Debug.Log(SceneManager.GetActiveScene().name);
         dialoguePanel.SetActive(true);
         Debug.Log(dialoguePanel.activeInHierarchy);
@@ -34,7 +35,7 @@ public class selfConvoPlayer : MonoBehaviour
     }
     private void Update()
     {
-        if(dialoguePanel.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
+        if(dialoguePanel.activeInHierarchy && Input.GetKeyDown(KeyCode.E) && isSelfconvo)
         {
             NextLine();
         }
@@ -49,10 +50,11 @@ public class selfConvoPlayer : MonoBehaviour
 
         dialoguePanel.SetActive(false);
         convoDone = true;
-        if(SceneManager.GetActiveScene().name == "Level-1 1") Invoke("Level2", .5f);
+        if (SceneManager.GetActiveScene().name == "Level-1 1") { Invoke("Level2", .5f); isSelfconvo = false; }
         if (SceneManager.GetActiveScene().name == "Level-2")
         {
             if(convoStartCollider != null) Destroy(convoStartCollider);
+            isSelfconvo = false;
         }
     }
     void Level2()
