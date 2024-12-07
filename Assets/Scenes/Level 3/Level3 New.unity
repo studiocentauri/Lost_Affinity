@@ -338,6 +338,18 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: 13b2bda4f257b452b844373fa2c488e5, type: 2}
+    - target: {fileID: 3085550605005421660, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
+    - target: {fileID: 3416111521938987668, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214614829075395150, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 5571253541791885718, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -378,6 +390,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6269042904411473915, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 7879501582969981825, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_Name
       value: Pause prefab
@@ -6720,6 +6736,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1996565984193074092, guid: c7457f07af5c6144fa5536d53d047c06, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 7036945714980976311, guid: c7457f07af5c6144fa5536d53d047c06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.353485
@@ -6760,6 +6780,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713974887040669441, guid: c7457f07af5c6144fa5536d53d047c06, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

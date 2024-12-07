@@ -5911,6 +5911,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1106564470965473820, guid: f1b3f2babfe10a04c9daa8650d3e0806, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 1254485010563696170, guid: f1b3f2babfe10a04c9daa8650d3e0806, type: 3}
       propertyPath: m_Name
       value: Accident prefab
@@ -5919,6 +5923,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1969681188997858879, guid: f1b3f2babfe10a04c9daa8650d3e0806, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 2688176002036611272, guid: f1b3f2babfe10a04c9daa8650d3e0806, type: 3}
       propertyPath: m_LocalPosition.x
       value: 369.54803
@@ -7524,9 +7532,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3085550605005421660, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 3416111521938987668, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416111521938987668, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4124101505067795730, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_Layer
@@ -7540,6 +7556,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5214614829075395150, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 5571253541791885718, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7580,6 +7600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6269042904411473915, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0cf429f59201e14b8eb2a7557dc7ed0, type: 3}
     - target: {fileID: 7879501582969981825, guid: 82b42cde4c268c3409d283da283e8288, type: 3}
       propertyPath: m_Name
       value: Pause prefab

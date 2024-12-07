@@ -49,6 +49,7 @@ public class selfConvoPlayer : MonoBehaviour
         if (GetComponent<AutoMoveNPCs>() != null) GetComponent<AutoMoveNPCs>().enabled = true;
 
         dialoguePanel.SetActive(false);
+
         convoDone = true;
         if (SceneManager.GetActiveScene().name == "Level-1 1") { Invoke("Level2", .5f); isSelfconvo = false; }
         if (SceneManager.GetActiveScene().name == "Level-2")
