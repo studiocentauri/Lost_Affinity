@@ -46,7 +46,7 @@ public class Glitch : MonoBehaviour
 
     void GlitchOff()
     {
-        Player.GetComponent<playermovement>().enabled = true;
+        //Player.GetComponent<playermovement>().enabled = true;
         Player.GetComponentInChildren<PlayerAnimation>().enabled = true;
         Animator anim = Player.GetComponentInChildren<Animator>();
         anim.SetBool("Glitch", false);

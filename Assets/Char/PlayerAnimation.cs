@@ -21,6 +21,13 @@ public class PlayerAnimation : MonoBehaviour
     }
     void Move()
     {
+        if (playerTransform.GetComponent<topDownJump>().isJumping)
+        {
+
+            animator.SetBool("isJumping", true);
+            return;
+        }
+        animator.SetBool("isJumping", false);
         animator.SetBool("isMoving", true);
     }
     void Stop()
