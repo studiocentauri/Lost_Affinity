@@ -24,7 +24,7 @@ Welcome to our epic RPG adventure! Crafted by a team of game dev enthusiasts.
 Wanna flex your coding skills? Fork the repo, make some lit changes, and hit us up with a pull request. Let's make this game fire together!
 
 ## License
-This project is licensed under the Gamedev License.
+This project is licensed under the Apache-2.0 License.
 
 ## Contact
 Got questions or feedback? Reach out to us at [gamedeviitk@gmail.com](mailto:gamedeviitk@gmail.com).
