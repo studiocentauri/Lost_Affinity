@@ -1,7 +1,7 @@
-# RPG Game - Full Support
+# RPG Game - Lost Affinity - I
 
 ## Introduction
-Welcome to our epic RPG adventure! Crafted by a team of full bakchod enthusiasts, who cause a lot of nuisance in the workplace.
+Welcome to our epic RPG adventure! Crafted by a team of game dev enthusiasts.
 
 ## Features
 - **Engaging Storyline**: Immerse yourself in a captivating interstellar narrative with unexpected twists, going out to salvage for survival.
@@ -13,9 +13,8 @@ Welcome to our epic RPG adventure! Crafted by a team of full bakchod enthusiasts
     ```bash
     git clone https://github.com/studiocentauri/Full-Support.git
     ```
-2. You'll notice that you can't do that cuz you don't have the access, lol.
-3. But if you do, open the project in Unity.
-4. Build and run the game.
+2. Open the project in Unity.
+3. Build and run the game.
 
 ## How to Play
 - **Movement**: Use the arrow keys or WASD to navigate your character, Space bar for jump.
@@ -25,7 +24,7 @@ Welcome to our epic RPG adventure! Crafted by a team of full bakchod enthusiasts
 Wanna flex your coding skills? Fork the repo, make some lit changes, and hit us up with a pull request. Let's make this game fire together!
 
 ## License
-This project is licensed under the Gen-Z License.
+This project is licensed under the Gamedev License.
 
 ## Contact
 Got questions or feedback? Reach out to us at [gamedeviitk@gmail.com](mailto:gamedeviitk@gmail.com).
